@@ -2,15 +2,17 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Models\Program;
+use App\Models\Team;
 use Faker\Generator as Faker;
 
-$factory->define(Program::class, function (Faker $faker) {
+$factory->define(Team::class, function (Faker $faker) {
     return [
-        'title' => $faker->sentence,
-        'details' => $faker->paragraph,
-        'image' => "15799412595e2bfd8b0456b.png",
-        'tags' => $faker->word,
-        'posted_by' => $faker->name,
+        'name' => $faker->name,
+        'about' => $faker->sentence(),
+        'email' => $faker->email,
+        'phone' => $faker->phoneNumber,
+        'designation' => $faker->word,
+        'image' => "abc.png",
+
     ];
 });
