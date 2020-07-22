@@ -6,6 +6,10 @@ use App\Helpers\AdminHelper;
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use App\Models\ContactFeedback;
+use App\Models\Job;
+use App\Models\Program;
+use App\Models\Team;
+use App\Models\Testimonial;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -17,8 +21,26 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        $users = User::count();
-        return view('admin.dashboard', compact('users'));
+        $activities = Program::where('category', 'Activity')->count();
+        $events = Program::where('category', 'Event')->count();
+        $projects = Program::where('category', 'Event')->count();
+        $services = Program::where('category', 'Event')->count();
+        $affiliates = Program::where('category', 'Event')->count();
+        $branches = Program::where('category', 'Event')->count();
+        $teams = Team::count();
+        $testimonials = Testimonial::count();
+        $jobs = Job::count();
+        return view('admin.dashboard', compact(
+            'activities',
+            'events',
+            'projects',
+            'services',
+            'affiliates',
+            'branches',
+            'teams',
+            'testimonials',
+            'jobs'
+        ));
     }
 
     public function changePasswordView()

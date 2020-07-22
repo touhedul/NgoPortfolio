@@ -27,7 +27,7 @@ class TeamController extends Controller
                     return "<img style='height:80px; width:100px' src='" . asset('team_images/' . $team->image) . "' />";
                 })
                 ->addColumn('about', function (Team $team) {
-                    return Str::limit($team->about, 10);
+                    return Str::limit($team->about, 50);
                 })
                 ->addColumn('action', function (Team $team) {
                     return

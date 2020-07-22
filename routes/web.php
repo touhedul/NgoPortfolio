@@ -86,6 +86,12 @@ Route::prefix('rt-admin')->group(function () {
                 Route::resource('blog', 'BlogController');
                 //team
                 Route::resource('team', 'TeamController');
+                //team
+                Route::resource('testimonial', 'TestimonialController');
+                //gallery
+                Route::resource('gallery', 'GalleryController');
+                //job
+                Route::resource('job', 'JobController');
                 //blog
                 Route::resource('program', 'ProgramController');
                 Route::get('data-table-values/{category?}', 'ProgramController@dataTableValues')->name('data-table.values');

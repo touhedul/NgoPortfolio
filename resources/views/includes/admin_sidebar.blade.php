@@ -31,7 +31,7 @@
                   <li class="sidebar-item @isset($category) @if($category == "Activity") selected @endif @endisset">
 
                         <a class=" sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-move-resize-variant"></i>
+                              aria-expanded="false"><i class="mdi mdi-fan"></i>
                               <span class="hide-menu">Activities </span></a>
 
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Activity") in @endif @endisset">
@@ -65,7 +65,7 @@
                   <li class="sidebar-item @isset($category) @if($category == "Event") selected @endif @endisset">
 
                         <a class=" sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-move-resize-variant"></i>
+                              aria-expanded="false"><i class="mdi mdi-window-restore"></i>
                               <span class="hide-menu">Event </span></a>
 
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Event") in @endif @endisset">
@@ -98,7 +98,7 @@
                   {{-- Program --}}
                   <li class="sidebar-item @isset($category) @if($category == "Program") selected @endif @endisset""> <a
                               class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-move-resize-variant"></i>
+                              aria-expanded="false"><i class="mdi mdi-airplay"></i>
                               <span class="hide-menu">Programs </span></a>
 
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Program") in @endif @endisset">
@@ -164,7 +164,7 @@
                   {{-- Service --}}
                   <li class="sidebar-item @isset($category) @if($category == "Service") selected @endif @endisset""> <a
                               class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-move-resize-variant"></i>
+                              aria-expanded="false"><i class="mdi mdi-comment-outline"></i>
                               <span class="hide-menu">Services </span></a>
 
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Service") in @endif @endisset">
@@ -197,7 +197,7 @@
                   {{-- Affiliate --}}
                   <li class="sidebar-item @isset($category) @if($category == "Affiliate") selected @endif @endisset""> <a
                               class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-move-resize-variant"></i>
+                              aria-expanded="false"><i class="mdi mdi-comment-check"></i>
                               <span class="hide-menu">Affiliates </span></a>
 
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Affiliate") in @endif @endisset">
@@ -230,7 +230,7 @@
                   {{-- Branch --}}
                   <li class="sidebar-item @isset($category) @if($category == "Branch") selected @endif @endisset""> <a
                               class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-move-resize-variant"></i>
+                              aria-expanded="false"><i class="mdi mdi-collage"></i>
                               <span class="hide-menu">Branches </span></a>
 
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Branch") in @endif @endisset">
@@ -279,7 +279,7 @@
                   @endif
                   {{-- Team --}}
                   <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-move-resize-variant"></i>
+                              aria-expanded="false"><i class="mdi mdi-account-multiple-plus"></i>
                               <span class="hide-menu">Teams </span></a>
                   
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level">
@@ -290,6 +290,51 @@
                               <li class="sidebar-item"><a href="{{route('admin.team.index')}}" class="sidebar-link"><i
                                                 class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
                                                 Team </span></a></li>
+                        </ul>
+                  </li>
+                  {{-- Testimonials --}}
+                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                              aria-expanded="false"><i class="mdi mdi-account-check"></i>
+                              <span class="hide-menu">Testimonials </span></a>
+                  
+                        <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level">
+                              <li class="sidebar-item"><a href="{{route('admin.testimonial.create')}}" class="sidebar-link "><i
+                                                class="mdi mdi-creation"></i><span class="hide-menu"> Add Testimonial
+                                          </span></a></li>
+                  
+                              <li class="sidebar-item"><a href="{{route('admin.testimonial.index')}}" class="sidebar-link"><i
+                                                class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
+                                                Testimonial </span></a></li>
+                        </ul>
+                  </li>
+                  {{-- Job --}}
+                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                              aria-expanded="false"><i class="mdi mdi-cart"></i>
+                              <span class="hide-menu">Jobs </span></a>
+                  
+                        <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level">
+                              <li class="sidebar-item"><a href="{{route('admin.job.create')}}" class="sidebar-link "><i
+                                                class="mdi mdi-creation"></i><span class="hide-menu"> Add Job
+                                          </span></a></li>
+                  
+                              <li class="sidebar-item"><a href="{{route('admin.job.index')}}" class="sidebar-link"><i
+                                                class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
+                                                Job </span></a></li>
+                        </ul>
+                  </li>
+                  {{-- Gallery --}}
+                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                              aria-expanded="false"><i class="mdi mdi-file-image"></i>
+                              <span class="hide-menu">Galleries </span></a>
+                  
+                        <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level">
+                              <li class="sidebar-item"><a href="{{route('admin.gallery.create')}}" class="sidebar-link "><i
+                                                class="mdi mdi-creation"></i><span class="hide-menu"> Add Gallery
+                                          </span></a></li>
+                  
+                              <li class="sidebar-item"><a href="{{route('admin.gallery.index')}}" class="sidebar-link"><i
+                                                class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
+                                                Gallery </span></a></li>
                         </ul>
                   </li>
                   {{-- Contacts --}}
