@@ -19,7 +19,7 @@ Route::namespace('Frontend')->group(function () {
 
 // ********************************USER********************************
 
-Auth::routes();
+// Auth::routes();
 // Auth::routes(['verify' => true]);
 
 // Ckeditor Image Upload
@@ -77,13 +77,18 @@ Route::prefix('rt-admin')->group(function () {
                 Route::post('change-password', 'AdminController@changePassword')->name('change.password');
                 // contact and feedback
                 Route::get('contacts', 'AdminController@contacts')->name('contacts');
-                Route::get('feedbacks', 'AdminController@feedbacks')->name('feedbacks');
+                // Route::get('feedbacks', 'AdminController@feedbacks')->name('feedbacks');
 
                 Route::get('contact-feedback-delete/{contactFeedback}', 'AdminController@contactFeedbackDelete')->name('contact-feedback.delete');
                 // User
-                Route::resource('user', 'UserController');
+                // Route::resource('user', 'UserController');
                 //blog
                 Route::resource('blog', 'BlogController');
+                //team
+                Route::resource('team', 'TeamController');
+                //blog
+                Route::resource('program', 'ProgramController');
+                Route::get('data-table-values/{category?}', 'ProgramController@dataTableValues')->name('data-table.values');
             });
         });
     });

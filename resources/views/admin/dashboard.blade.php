@@ -14,7 +14,7 @@
                 <div class="circle-tile-content dark-blue">
                     <div class="circle-tile-description text-faded">Users </div>
                     <div class="circle-tile-number text-faded ">{{$users}}</div>
-                    <a class="circle-tile-footer" href="{{route('admin.user.index')}}">More Info <i
+                    <a class="circle-tile-footer" href="#">More Info <i
                             class="fa fa-chevron-circle-right"></i></a>
                 </div>
             </div>
