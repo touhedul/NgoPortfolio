@@ -2,6 +2,7 @@
 
 use App\Models\Blog;
 use App\Models\Gallery;
+use App\Models\Branch;
 use App\Models\Job;
 use App\Models\Team;
 use App\Models\Testimonial;
@@ -23,6 +24,7 @@ class DatabaseSeeder extends Seeder
         factory(Team::class, 20)->create();
         factory(Testimonial::class, 20)->create();
         factory(Job::class, 20)->create();
+        factory(Branch::class, 20)->create();
         // $this->call(UserSeeder::class);
         // $this->call(ContactFeedbackSeeder::class);
     }

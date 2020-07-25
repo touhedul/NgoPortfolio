@@ -37,6 +37,13 @@
                     <input required value="{{old('designation')}}" name="designation" style="background: #f5f6fa" type="text"
                         class="form-control " placeholder="Enter Designation">
                 </div>
+                <div class="form-group">
+                    <label>Type*</label>
+                    <select style="background: #f5f6fa" class="form-control" required name="type" id="">
+                        <option value="General">General</option>
+                        <option value="Executive">Executive</option>
+                    </select>
+                </div>
 
                 <div class="form-group">
                     <label>Image*</label>

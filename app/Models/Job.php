@@ -12,6 +12,6 @@ class Job extends Model
      
      public function jobUrl()
      {
-          return route('job.single', [$this->id, Str::slug($this->name, '-')]);
+          return route('job.single', [$this->id, Str::slug($this->title, '-')]);
      }
 }

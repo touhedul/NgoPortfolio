@@ -11,6 +11,7 @@ $factory->define(Team::class, function (Faker $faker) {
         'about' => $faker->sentence(),
         'email' => $faker->email,
         'phone' => $faker->phoneNumber,
+        'type' => 'Executive',
         'designation' => $faker->word,
         'image' => "15956534045f1bbd1ca2f7b.jpg",
 

@@ -22,11 +22,13 @@
                     <textarea rows="15" required style="background: #f5f6fa" name="details" class="form-control"
                         placeholder="Enter Email">{!!$program->details!!}</textarea>
                 </div>
+                @if($program->category != "Notice")
                 <div class="form-group">
                     <label>Image</label><br>
                     <img src="{{asset('program_images/'.$program->image)}}" alt=""> <br>
                     <input name="image" style="background: #f5f6fa" type="file" class="form-control is-valid">
                 </div>
+                @endif
                 <div class="form-footer pt-4 pt-2 mt-4 border-top">
                     <button type="submit" class="mb-1 btn btn-success">
                         <i class=" mdi mdi-checkbox-marked-outline mr-1"></i> Submit

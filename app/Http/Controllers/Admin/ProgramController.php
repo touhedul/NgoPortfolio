@@ -21,13 +21,13 @@ class ProgramController extends Controller
      */
     public function index(Request $request)
     {
-       $category = $request->category;
-       
-        return view('admin.programs',compact('category'));
+        $category = $request->category;
+
+        return view('admin.programs', compact('category'));
         // $programs = Program::orderBy('created_at', 'desc')->paginate(20);
         // return view('admin.programs', compact('programs'));
     }
-    public function dataTableValues($category=NULL)
+    public function dataTableValues($category = NULL)
     {
         $programs = Program::where('category', $category)->get();
         if (request()->ajax()) {
@@ -37,7 +37,7 @@ class ProgramController extends Controller
                     return Str::limit($program->details, 100);
                 })
                 ->addColumn('image', function (Program $program) {
-                    return "<img style='height:80px; width:100px' src='" . asset('program_images/' . $program->image) . "' />";
+                    return "<img alt='' style='height:80px; width:100px' src='" . asset('program_images/' . $program->image) . "' />";
                 })
                 ->addColumn('action', function (Program $program) {
                     return
@@ -76,7 +76,7 @@ class ProgramController extends Controller
         $this->validate($request, [
             'title' => 'required|max:191',
             'details' => 'required|max:65500',
-            'image' => 'required|image|max:15000',
+            'image' => 'nullable|image|max:15000',
             'category' => 'nullable|string|max:191',
         ]);
 
@@ -90,6 +90,8 @@ class ProgramController extends Controller
             Image::make($image)->resize(800, null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save('program_images/big-' . $imageName, 50);
+        } else {
+            $imageName = "";
         }
 
         Program::create(array_merge($request->all(), ['image' => $imageName]));

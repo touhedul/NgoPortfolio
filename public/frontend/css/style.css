@@ -229,6 +229,18 @@ a:hover, a:focus {
       BTN STYLE
 ========================================================*/
 
+img.mt-img {
+	width: 5%;
+	border: 3px solid;
+	border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+	img.mt-img {
+		width: 18%;
+	}
+}
+
 .btn {
 	border: none;
 	color: #fff;
@@ -643,7 +655,7 @@ header .navbar li.active a {
 	letter-spacing:9px;
 }
 .home-slide .slide-img-1 {
-	/* background: url(../images/slides/slide-1.jpg) no-repeat; */
+	background: url(../images/slides/slide-1.jpg) no-repeat;
 	background-size: cover;
 }
 .home-slide .slide-img-2 {
@@ -2124,10 +2136,10 @@ header .navbar li.active a {
 	display: inline-block;
 }
 .owl-dots div.active span {
-	background: #fff;
+	background: #1193d4;
 }
 .owl-dots div span:hover {
-	background: #fff;
+	background: rgb(71, 186, 221);
 }
 .clients .owl-nav {
 	display: none;

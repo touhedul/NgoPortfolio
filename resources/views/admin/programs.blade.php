@@ -23,9 +23,15 @@
                                     <th>
                                         <h5>Details</h5>
                                     </th>
+                                    @if($category == "Notice")
                                     <th>
-                                        <h5>Image</h5>
+                                        <h5></h5>
                                     </th>
+                                    @else
+                                    <th>
+                                        <h5>Images</h5>
+                                    </th>
+                                    @endif
                                     <th>
                                         <h5>Action</h5>
                                     </th>

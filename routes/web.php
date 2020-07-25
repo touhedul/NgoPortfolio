@@ -15,6 +15,16 @@ Route::namespace('Frontend')->group(function () {
     // Blog
     Route::get('blogs', 'BlogController@blogs')->name('blogs');
     Route::get('blog/{id}-{slug}', 'BlogController@blogSingle')->name('blog.single');
+    Route::get('/about', 'AllController@about')->name('about');
+
+    Route::get('/program/{category}', 'AllController@programDifferent')->name('program.different');
+    Route::get('/single/{program}-{slug}', 'AllController@programSingle')->name('program.single');
+    Route::get('/branches', 'AllController@branches')->name('branches');
+    Route::get('/single-branch/{branch}', 'AllController@branchSingle')->name('branch.single');
+    Route::get('/teams', 'AllController@teams')->name('teams');
+    Route::get('/galleries', 'AllController@galleries')->name('galleries');
+    Route::get('/jobs', 'AllController@jobs')->name('jobs');
+    Route::get('/notices', 'AllController@notices')->name('notices');
 });
 
 // ********************************USER********************************
@@ -83,7 +93,7 @@ Route::prefix('rt-admin')->group(function () {
                 // User
                 // Route::resource('user', 'UserController');
                 //blog
-                Route::resource('blog', 'BlogController');
+                // Route::resource('blog', 'BlogController');
                 //team
                 Route::resource('team', 'TeamController');
                 //team
@@ -92,6 +102,8 @@ Route::prefix('rt-admin')->group(function () {
                 Route::resource('gallery', 'GalleryController');
                 //job
                 Route::resource('job', 'JobController');
+                //branch
+                Route::resource('branch', 'BranchController');
                 //blog
                 Route::resource('program', 'ProgramController');
                 Route::get('data-table-values/{category?}', 'ProgramController@dataTableValues')->name('data-table.values');

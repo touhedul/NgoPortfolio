@@ -38,12 +38,20 @@
                     <input required value="{{$team->designation}}" name="designation" style="background: #f5f6fa"
                         type="text" class="form-control " placeholder="Enter Designation">
                 </div>
+                <div class="form-group">
+                    <label>Type*</label>
+                    <select style="background: #f5f6fa" class="form-control" required name="type" id="">
+                        <option @if ($team->type == "General") selected
+                            @endif value="General">General</option>
+                        <option @if ($team->type == "Executive") selected
+                            @endif value="Executive">Executive</option>
+                    </select>
+                </div>
 
                 <div class="form-group">
                     <label>Image*</label>
                     <img src="{{asset('team_images/'.$team->image)}}" alt=""> <br>
-                    <input autofocus name="image" style="background: #f5f6fa" type="file"
-                        class="form-control ">
+                    <input autofocus name="image" style="background: #f5f6fa" type="file" class="form-control ">
                 </div>
                 <div class="form-footer pt-4 pt-2 mt-4 border-top">
                     <button type="submit" class="mb-1 btn btn-success">

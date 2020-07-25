@@ -26,7 +26,7 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,800,200,500' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,400italic,300,300italic,600,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic,400,700' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <!-- COLORS -->
     <link rel="stylesheet" id="color" href="css/colors/default.css">
 
@@ -107,6 +107,7 @@
                             <li> <a href="events.php">Events </a> </li>
                             <li> <a href="services.php">Services </a> </li>
                             <li> <a href="jobs.php">Job </a> </li>
+                            <li> <a href="notice.php">Notice </a> </li>
 
 
                             <li> <a href="contact.php">Contact</a> </li>

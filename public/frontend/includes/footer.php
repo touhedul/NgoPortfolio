@@ -41,15 +41,35 @@
             <!-- Photostream -->
             <div class="col-md-4">
                 <h6>Photo Gallery</h6>
-                <ul class="photo-steam">
-                    <li><a href="#."><img src="https://source.unsplash.com/113x80" alt=""></a></li>
-                    <li><a href="#."><img src="https://source.unsplash.com/113x80" alt=""></a></li>
-                    <li><a href="#."><img src="https://source.unsplash.com/113x80" alt=""></a></li>
-                    <li><a href="#."><img src="https://source.unsplash.com/113x80" alt=""></a></li>
-                    <li><a href="#."><img src="https://source.unsplash.com/113x80" alt=""></a></li>
-                    <li><a href="#."><img src="https://source.unsplash.com/113x80" alt=""></a></li>
+                <ul class="photo-steam ">
+
+                    <li>
+                        <a href="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" data-fancybox="roadtrip">
+                            <img class="img-responsive" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" data-fancybox="roadtrip">
+                            <img class="img-responsive" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" data-fancybox="roadtrip">
+                            <img class="img-responsive" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" data-fancybox="roadtrip">
+                            <img class="img-responsive" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg">
+                        </a>
+                    </li>
+
                 </ul>
             </div>
+
 
         </div>
     </div>
@@ -78,8 +98,24 @@
 <script src="js/jquery.cubeportfolio.min.js"></script>
 <script src="js/jquery.colio.min.js"></script>
 <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
+<script>
+    $(document).ready(function() {
 
+        $("#owl-example").owlCarousel({
+            items: 1
+        });
+
+    });
+    $(document).ready(function() {
+
+        $("#owl-example2").owlCarousel({
+            items: 1
+        });
+
+    });
+</script>
 
 </body>
 

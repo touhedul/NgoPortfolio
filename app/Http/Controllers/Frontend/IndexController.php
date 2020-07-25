@@ -15,15 +15,17 @@ class IndexController extends Controller
     {
         $sliders = Gallery::where('category', 'Slider')->get();
         $programs = Program::where('category', 'Program')->latest()->get();
+        $notices = Program::where('category', 'Notice')->latest()->get();
         $activities = Program::where('category', 'Activity')->latest()->take(3)->get();
         $services = Program::where('category', 'Service')->latest()->take(3)->get();
+        $events = Program::where('category', 'Event')->latest()->take(3)->get();
         $testimonials1 = Testimonial::latest()->take(2)->get();
         $testimonials2 = Testimonial::latest()->take(2)->skip(2)->get();
-        $numberOfActivity = Program::where('category','Activity')->count();
-        $numberOfProject = Program::where('category','Project')->count();
-        $numberOfProgram = Program::where('category','Program')->count();
-        $numberOfEvent = Program::where('category','Event')->count();
-        return view('frontend.index', compact('sliders', 'programs', 'activities', 'services', 'testimonials1', 'testimonials2', 'numberOfActivity', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
+        $numberOfActivity = Program::where('category', 'Activity')->count();
+        $numberOfProject = Program::where('category', 'Project')->count();
+        $numberOfProgram = Program::where('category', 'Program')->count();
+        $numberOfEvent = Program::where('category', 'Event')->count();
+        return view('frontend.index', compact('sliders', 'programs', 'activities', 'services', 'events', 'notices', 'testimonials1', 'testimonials2', 'numberOfActivity', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
     }
 
     // public function termsAndConditions()

@@ -1,4 +1,3 @@
-
 @extends('layouts.frontend')
 @section('title','Sotoful')
 @section('content')
@@ -7,7 +6,9 @@
     <ul class="slides">
         @foreach ($sliders as $slider)
         <!-- SLIDER 1 -->
-        <li class="slide-img-1" style="background: url('{{asset('gallery_images/big-'.$slider->image)}}') center center;" data-stellar-background-ratio="0.6">
+        <li class="slide-img-1"
+            style="background: url('{{asset('gallery_images/big-'.$slider->image)}}') center center;"
+            data-stellar-background-ratio="0.6">
             <div class="position-center-center">
                 <h1>Sotoful</h1>
                 <h5>NGO at your Service</h5>
@@ -78,7 +79,7 @@
             <div class="row blog-slide">
                 <!-- Blog Post -->
                 @foreach ($programs as $program)
-                    
+
                 <div class="col-md-12 no-padding">
                     <article> <img class="img-responsive" src="{{asset('program_images/'.$program->image)}}" alt="">
 
@@ -112,9 +113,10 @@
         <div class="ajax-work col-3">
             <!-- ITEMS -->
             @foreach ($activities as $activity)
-                
+
             <div class="cbp-item ana dial growth">
-                <article class="item"><img class="img-responsive" src="{{asset('program_images/'.$activity->image)}}" alt="">
+                <article class="item"><img class="img-responsive" src="{{asset('program_images/'.$activity->image)}}"
+                        alt="">
                     <!-- Hover -->
                     <div class="over-detail">
                         <!-- Link -->
@@ -184,7 +186,136 @@
 
 
 
-    <!-- Features -->
+
+
+    <!-- Counter -->
+    <section class="counter padding-top-50 padding-bottom-50">
+        <div class="container">
+
+            <!-- Team Member -->
+            <ul class="row">
+                <li class="col-md-3">
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{$numberOfActivity}}" data-from="0"></span> </span>
+                        <h5>Activities</h5>
+                    </div>
+                </li>
+
+                <!-- Line Of Codes -->
+                <li class="col-md-3">
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{$numberOfEvent}}" data-from="0"></span> </span>
+                        <h5>Events</h5>
+                    </div>
+                </li>
+
+                <!-- Satisfied Client -->
+                <li class="col-md-3">
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{$numberOfProject}}" data-from="0"></span> </span>
+                        <h5>Projects</h5>
+                    </div>
+                </li>
+
+                <!-- PSD file included -->
+                <li class="col-md-3">
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{$numberOfProgram}}" data-from="0"></span> </span>
+                        <h5>Programs</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Events -->
+    <section class="light-gray-bg  services padding-top-70 padding-bottom-70">
+        <div class="container">
+            <!-- Heading -->
+            <div class="heading text-center">
+                <h4>Events</h4>
+            </div>
+        </div>
+        <div class="blog blog-pages">
+            <!-- Row -->
+            <div class="container">
+                <ul class="row list ">
+                    <!-- Analytics -->
+                    @foreach ($events as $event)
+
+                    <li class="col-md-4">
+
+                        <div class="col-md-12">
+
+                            <!-- Post -->
+                            <article> <img class="img-responsive col-md-12"
+                                    src="{{asset('program_images/'.$event->image)}}" alt="">
+                                <!-- Date -->
+                                {{-- <div class="date"> 19 <span>MAY</span> </div> --}}
+                                <!-- Detail -->
+                                <div class="post-detail" style="border-bottom: 0px;"> <a href="event-details.php"
+                                        class="post-tittle padding-20">{{$event->title}}</a>
+
+                                </div>
+                            </article>
+
+                        </div>
+
+                    </li>
+                    @endforeach
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
+            <div> <a href="#" class="btn btn-1">
+                    View All Events <i class="fa fa-caret-right"></i>
+                </a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Notice -->
+    <section class="padding-top-100 padding-bottom-100">
+        <div class="heading text-center">
+            <h4>Notices</h4>
+        </div>
+
+        <div id="owl-example" class="owl-carousel">
+            @foreach ($notices as $notice)
+            <div class="container col-md-5 text-center" style="float: initial;">
+                <div class="job-content job-post-page margin-20" style="border: 0px;    padding-bottom: 20px;">
+                    <div class="panel panel-default" style="border: 0px;">
+                        <!-- Save -->
+                        <div class="star-save"><a href="notice-details.php"><i class="fa fa-caret-right"></i></a> </div>
+                        <!-- PANEL HEADING -->
+                        <div class="panel-heading" style="border: 0px;"> <a href="notice-details.php">
+                                <div class="job-tittle">
+                                    <div class="media-left">
+                                        {{-- <div class="date"> 19 <span>MAY</span> </div> --}}
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>{{$notice->title}}</h5>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </a>
+                            <p> {!!Str::limit($notice->details,100)!!}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+
+        </div>
+
+
+    </section>
+
+    <!-- Management -->
     <section class="features light-gray-bg padding-top-70 padding-bottom-70">
         <div class="container">
             <!-- Heading -->
@@ -241,48 +372,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-
-    <!-- Counter -->
-    <section class="counter padding-top-50 padding-bottom-50">
-        <div class="container">
-
-            <!-- Team Member -->
-            <ul class="row">
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{$numberOfActivity}}" data-from="0"></span> </span>
-                        <h5>Activities</h5>
-                    </div>
-                </li>
-
-                <!-- Line Of Codes -->
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{$numberOfEvent}}" data-from="0"></span> </span>
-                        <h5>Events</h5>
-                    </div>
-                </li>
-
-                <!-- Satisfied Client -->
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{$numberOfProject}}" data-from="0"></span> </span>
-                        <h5>Projects</h5>
-                    </div>
-                </li>
-
-                <!-- PSD file included -->
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{$numberOfProgram}}" data-from="0"></span> </span>
-                        <h5>Programs</h5>
-                    </div>
-                </li>
-            </ul>
         </div>
     </section>
 

@@ -29,18 +29,19 @@
         rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic,400,700' rel='stylesheet'
         type='text/css'>
-
+    <link rel="stylesheet"
+        href="https://cdn.js')}}delivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <!-- COLORS -->
     <link rel="stylesheet" id="color" href="{{asset('frontend/css/colors/default.css')}}">
 
     <!-- JavaScripts -->
-    <script src="js/modernizr.js"></script>
-    <script src="https://kit.fontawesome.com/12785a33f8.js" crossorigin="anonymous"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <script src="{{asset('frontend/js/modernizr.js')}}"></script>
+    <script src="https://kit.fontawesome.com/12785a33f8.js')}}" crossorigin="anonymous"></script>
+    <!-- HTML5 Shim and Respond.js')}} IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js')}} doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')}}"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script>
 <![endif]-->
 </head>
 
@@ -91,29 +92,30 @@
                     <div class="container">
 
                         <!-- LOGO -->
-                        <div class="logo"> <a href="{{route('index')}}"><img class="img-responsive" src="{{asset('frontend/images/logo.png')}}"
-                                    alt=""></a> </div>
+                        <div class="logo"> <a href="index.php"><img class="img-responsive"
+                                    src="{{asset('frontend/images/logo.png')}}" alt=""></a> </div>
 
                         <!-- Nav -->
                         <ul class="nav ownmenu">
-                            <li class="active"> <a href="{{route('index')}}">Home </a>
+                            <li class=""> <a href="{{route('index')}}">Home </a>
                             </li>
-                            <li> <a href="about-us.php">About Us</a>
+                            <li> <a href="{{route('about')}}">About Us</a>
                                 <ul class="dropdown">
-                                    <li> <a href="branches.php">Branches</a> </li>
-                                    <li> <a href="affiliate.php">Affiliate</a> </li>
-                                    <li> <a href="team.php">Team</a> </li>
-                                    <li> <a href="gallery.php">Gallery</a> </li>
+                                    <li> <a href="{{route('branches')}}">Branches</a> </li>
+                                    <li> <a href="{{route('program.different','Affiliate')}}">Affiliate</a> </li>
+                                    <li> <a href="{{route('teams')}}">Team</a> </li>
+                                    <li> <a href="{{route('galleries')}}">Gallery</a> </li>
                                 </ul>
                             </li>
-                            <li> <a href="projects.php">Projects </a> </li>
-                            <li> <a href="activities.php">Activities </a> </li>
-                            <li> <a href="events.php">Events </a> </li>
-                            <li> <a href="services.php">Services </a> </li>
-                            <li> <a href="jobs.php">Job </a> </li>
+                            <li> <a href="{{route('program.different','Project')}}">Projects </a> </li>
+                            <li> <a href="{{route('program.different','Activity')}}">Activities </a> </li>
+                            <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
+                            <li> <a href="{{route('program.different','Service')}}">Services </a> </li>
+                            <li> <a href="{{route('jobs')}}">Job </a> </li>
+                            <li> <a href="{{route('notices')}}">Notice </a> </li>
 
 
-                            <li> <a href="contact.php">Contact</a> </li>
+                            <li> <a href="{{route('contact')}}">Contact</a> </li>
                         </ul>
                         <!-- Search -->
                         <!-- <div class="search-icon"> <a href="#."><i class="fa fa-search"></i></a>
@@ -128,6 +130,7 @@
         </header>
         @yield('content')
 
+        <!-- FOOTER -->
         <!-- FOOTER -->
         <footer>
             <div class="container">
@@ -154,29 +157,37 @@
                     <div class="col-md-4">
                         <h6>Pages</h6>
                         <ul class="col-md-6 tweet">
-                            <li> <a href="branches.php">Branches</a> </li>
-                            <li> <a href="affiliate.php">Affiliate</a> </li>
-                            <li> <a href="projects.php">Projects </a> </li>
-                            <li> <a href="activities.php">Activities </a> </li>
+                            <li> <a href="{{route('program.different','Project')}}">Projects </a> </li>
+                            <li> <a href="{{route('program.different','Activity')}}">Activities </a> </li>
+                            <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
+                            <li> <a href="{{route('program.different','Service')}}">Services </a> </li>
 
                         </ul>
                         <ul class="col-md-6 tweet">
-                            <li> <a href="contact.php">Contact</a> </li>
-                            <li> <a href="events.php">Events </a> </li>
-                            <li> <a href="services.php">Services </a> </li>
-                            <li> <a href="jobs.php">Job </a> </li>
+                            <li> <a href="{{route('branches')}}">Branches</a> </li>
+                            <li> <a href="{{route('program.different','Affiliate')}}">Affiliate</a> </li>
+                            <li> <a href="{{route('teams')}}">Team</a> </li>
+                            <li> <a href="{{route('galleries')}}">Gallery</a> </li>
                         </ul>
                     </div>
 
                     <!-- Photostream -->
                     <div class="col-md-4">
                         <h6>Photo Gallery</h6>
-                        <ul class="photo-steam">
-                            @foreach (App\Models\Gallery::where('category','Gallery')->take(6)->latest()->get() as $gallery)
-                            <li><a href="#."><img width="100px" height="80px" src="{{asset('gallery_images/'.$gallery->image)}}" alt="No image found"></a></li>
+                        <ul class="photo-steam ">
+
+                            @foreach (App\Models\Gallery::where('category','gallery')->take(9)->get() as $gallery)
+
+                            <li>
+                                <a href="#" data-fancybox="roadtrip">
+                                    <img class="img-responsive" src="{{asset('gallery_images/'.$gallery->image)}}">
+                                </a>
+                            </li>
                             @endforeach
+
                         </ul>
                     </div>
+
 
                 </div>
             </div>
@@ -206,8 +217,24 @@
         <script src="{{asset('frontend/js/jquery.cubeportfolio.min.js')}}"></script>
         <script src="{{asset('frontend/js/jquery.colio.min.js')}}"></script>
         <script src="{{asset('frontend/js/main.js')}}"></script>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
-
+        <script>
+            $(document).ready(function() {
+    
+            $("#owl-example").owlCarousel({
+                items: 1
+            });
+    
+        });
+        $(document).ready(function() {
+    
+            $("#owl-example2").owlCarousel({
+                items: 1
+            });
+    
+        });
+        </script>
 
 </body>
 

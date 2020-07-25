@@ -227,37 +227,38 @@
 
                         </ul>
                   </li>
-                  {{-- Branch --}}
-                  <li class="sidebar-item @isset($category) @if($category == "Branch") selected @endif @endisset""> <a
-                              class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-collage"></i>
-                              <span class="hide-menu">Branches </span></a>
-
-                        <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Branch") in @endif @endisset">
+                 
+                  {{-- Notice --}}
+                  <li class="sidebar-item @isset($category) @if($category == " Notice") selected @endif @endisset">
+                  
+                        <a class=" sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="mdi mdi-window-restore"></i>
+                              <span class="hide-menu">Notices </span></a>
+                  
+                        <ul style="margin-left:20px" aria-expanded="false"
+                              class="collapse first-level @isset($category) @if($category == " Notice") in @endif @endisset">
                               {{-- Add --}}
                               <li class="sidebar-item">
-                                    <form id="add-form-branch" style="display: none"
-                                          action="{{route('admin.program.create')}}">
-                                          <input type="hidden" name="category" value="Branch">
+                                    <form id="add-form-notice" style="display: none" action="{{route('admin.program.create')}}">
+                                          <input type="hidden" name="category" value="Notice">
                                     </form>
-                                    <a onclick="document.getElementById('add-form-branch').submit();" href="#"
+                                    <a onclick="document.getElementById('add-form-notice').submit();" href="#"
                                           class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
-                                                Add Branch
+                                                Add Notice
                                           </span></a>
                               </li>
                               {{-- Manage --}}
                               <li class="sidebar-item">
-                                    <form id="manage-form-branch" style="display: none"
-                                          action="{{route('admin.program.index')}}">
-                                          <input type="hidden" name="category" value="Branch">
+                                    <form id="manage-form-notice" style="display: none" action="{{route('admin.program.index')}}">
+                                          <input type="hidden" name="category" value="Notice">
                                     </form>
-                                    <a onclick="document.getElementById('manage-form-branch').submit();" href="#"
-                                          class="sidebar-link active "><i class="mdi mdi-creation"></i><span class="hide-menu">
-                                                Manage Branch
+                                    <a onclick="document.getElementById('manage-form-notice').submit();" href="#"
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                                Manage Notice
                                           </span></a>
                               </li>
-
-
+                  
+                  
                         </ul>
                   </li>
                   {{-- Blog --}}
@@ -320,6 +321,21 @@
                               <li class="sidebar-item"><a href="{{route('admin.job.index')}}" class="sidebar-link"><i
                                                 class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
                                                 Job </span></a></li>
+                        </ul>
+                  </li>
+                  {{-- Branch --}}
+                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                              aria-expanded="false"><i class="mdi mdi-blogger"></i>
+                              <span class="hide-menu">Branches </span></a>
+                  
+                        <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level">
+                              <li class="sidebar-item"><a href="{{route('admin.branch.create')}}" class="sidebar-link "><i
+                                                class="mdi mdi-creation"></i><span class="hide-menu"> Add Branch
+                                          </span></a></li>
+                  
+                              <li class="sidebar-item"><a href="{{route('admin.branch.index')}}" class="sidebar-link"><i
+                                                class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
+                                                Branch </span></a></li>
                         </ul>
                   </li>
                   {{-- Gallery --}}

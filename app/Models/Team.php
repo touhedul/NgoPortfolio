@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Str;
 class Team extends Model
 {
-     protected $fillable=['name','about','image','email','phone','designation'];
+     protected $fillable=['name','about','image','email','phone','designation','type'];
      
      public function teamUrl()
      {
