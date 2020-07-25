@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(AdminSeeder::class);
         $this->call(ProgramSeeder::class);
-        $this->call(BlogSeeder::class);
-        factory(Gallery::class, 20)->create();
+        // $this->call(BlogSeeder::class);
+        factory(Gallery::class, 10)->create();
         factory(Team::class, 20)->create();
         factory(Testimonial::class, 20)->create();
         factory(Job::class, 20)->create();

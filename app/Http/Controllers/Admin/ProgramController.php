@@ -84,10 +84,10 @@ class ProgramController extends Controller
             $image = $request->file('image');
             $imageName = time() . uniqid() . '.' . $image->getClientOriginalExtension();
             // Image::make($image)->resize(570, 380)->save('program_images/' . $imageName, 50);
-            Image::make($image)->resize(300, null, function ($constraint) {
+            Image::make($image)->resize(400, null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save('program_images/' . $imageName, 50);
-            Image::make($image)->resize(600, null, function ($constraint) {
+            Image::make($image)->resize(800, null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save('program_images/big-' . $imageName, 50);
         }

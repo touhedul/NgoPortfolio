@@ -10,7 +10,7 @@ $factory->define(Testimonial::class, function (Faker $faker) {
         'name' => $faker->name,
         'message' => $faker->paragraph(),
         'about' => $faker->sentence(),
-        'image' => "abc.jpg",
+        'image' => "15956534045f1bbd1ca2f7b.jpg",
 
     ];
 });

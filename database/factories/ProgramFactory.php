@@ -10,8 +10,8 @@ $factory->define(Program::class, function (Faker $faker) {
     $categories = ["Activity","Event","Program","Project","Service","Affiliate","Branch"];
     return [
         'title' => $faker->sentence,
-        'details' => $faker->paragraph,
+        'details' => '<b>Hello </b>'.$faker->paragraph,
         'category' => $faker->randomElement($categories),
-        'image' => "15799412595e2bfd8b0456b.png",
+        'image' => "15956542645f1bc0788a00b.jpg",
     ];
 });

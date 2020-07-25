@@ -1,105 +1,215 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <meta name="description" content="">
+    <meta name="author" content="M_Adnan">
     <title>@yield('title')</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('parsley/parsley.min.js') }}" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('frontend/images/favicon.ico')}}">
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    {{-- parsley validator --}}
-  <link href="{{ asset('parsley/parsley.css') }}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <!-- <link href="{{asset('frontend/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"> -->
+    <link href="{{asset('frontend/css/ionicons.min.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/main.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/responsive.css')}}" rel="stylesheet">
+
+    <!-- Online Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,800,200,500' rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,400italic,300,300italic,600,700,700italic,800,800italic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic,400,700' rel='stylesheet'
+        type='text/css'>
+
+    <!-- COLORS -->
+    <link rel="stylesheet" id="color" href="{{asset('frontend/css/colors/default.css')}}">
+
+    <!-- JavaScripts -->
+    <script src="js/modernizr.js"></script>
+    <script src="https://kit.fontawesome.com/12785a33f8.js" crossorigin="anonymous"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+    <!-- Wrap -->
+    <div id="wrap">
 
-                    </ul>
+        <!-- header -->
+        <header>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                        <li class="nav-item">
-                            {{-- <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a> --}}
-                        </li>
-                        <li class="nav-item">
-                            {{-- <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a> --}}
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('contact') }}">{{ __('Contact') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('feedback') }}">{{ __('Feedback') }}</a>
-                        </li>
-                        @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
+            <!-- Top bar -->
+            <div class="top-bar">
+                <div class="top-info">
+                    <div class="container">
+                        <ul class="personal-info">
+                            <li>
+                                <p><i class="fa fa-phone"></i> +880 123 456 789 </p>
+                            </li>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('user.dashboard') }}">
-                                    Dashboard
-                                </a>
-                                <a class="dropdown-item" href="{{ route('user.profile.view') }}">
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="{{ route('user.change.password') }}">
-                                    Change Password
-                                </a>
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
+                            <li>
+                                <p><i class="fa fa-envelope"></i> contact@sotoful.com </p>
+                            </li>
+                        </ul>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                        @endguest
-                    </ul>
+                        <!-- Right Sec -->
+                        <div class="right-sec">
+
+                            <!-- Language -->
+                            <!-- <select class="selectpicker">
+              <option>English</option>
+              <option>French</option>
+              <option>Relish</option>
+            </select> -->
+
+                            <!-- social -->
+                            <ul class="social">
+                                <li><a href="#."><i class="fa fa-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
 
-        <main class="py-4">
-            @include('includes.message')
+            <!-- Navigation -->
+            <nav class="navbar">
+                <div class="sticky">
+                    <div class="container">
+
+                        <!-- LOGO -->
+                        <div class="logo"> <a href="{{route('index')}}"><img class="img-responsive" src="{{asset('frontend/images/logo.png')}}"
+                                    alt=""></a> </div>
+
+                        <!-- Nav -->
+                        <ul class="nav ownmenu">
+                            <li class="active"> <a href="{{route('index')}}">Home </a>
+                            </li>
+                            <li> <a href="about-us.php">About Us</a>
+                                <ul class="dropdown">
+                                    <li> <a href="branches.php">Branches</a> </li>
+                                    <li> <a href="affiliate.php">Affiliate</a> </li>
+                                    <li> <a href="team.php">Team</a> </li>
+                                    <li> <a href="gallery.php">Gallery</a> </li>
+                                </ul>
+                            </li>
+                            <li> <a href="projects.php">Projects </a> </li>
+                            <li> <a href="activities.php">Activities </a> </li>
+                            <li> <a href="events.php">Events </a> </li>
+                            <li> <a href="services.php">Services </a> </li>
+                            <li> <a href="jobs.php">Job </a> </li>
+
+
+                            <li> <a href="contact.php">Contact</a> </li>
+                        </ul>
+                        <!-- Search -->
+                        <!-- <div class="search-icon"> <a href="#."><i class="fa fa-search"></i></a>
+                            <form>
+                                <input class="form-control" type="search" placeholder="Type Here">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div> -->
+                    </div>
+                </div>
+            </nav>
+        </header>
+        @yield('content')
+
+        <!-- FOOTER -->
+        <footer>
             <div class="container">
-            @yield('content')
+                <div class="row">
+
+                    <!-- ABOUT -->
+                    <div class="col-md-4"> <img src="{{asset('frontend/images/logo-footer.png')}}" alt="">
+                        <div class="about-foot">
+                            <ul>
+                                <li>
+                                    <p><i class="fa fa-map-marker"></i> 795 Ave, Rajshahi, Bangladesh</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-phone"></i> (880) 123-456125</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-envelope"></i> contact@sotoful.com</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Twitter Feed -->
+                    <div class="col-md-4">
+                        <h6>Pages</h6>
+                        <ul class="col-md-6 tweet">
+                            <li> <a href="branches.php">Branches</a> </li>
+                            <li> <a href="affiliate.php">Affiliate</a> </li>
+                            <li> <a href="projects.php">Projects </a> </li>
+                            <li> <a href="activities.php">Activities </a> </li>
+
+                        </ul>
+                        <ul class="col-md-6 tweet">
+                            <li> <a href="contact.php">Contact</a> </li>
+                            <li> <a href="events.php">Events </a> </li>
+                            <li> <a href="services.php">Services </a> </li>
+                            <li> <a href="jobs.php">Job </a> </li>
+                        </ul>
+                    </div>
+
+                    <!-- Photostream -->
+                    <div class="col-md-4">
+                        <h6>Photo Gallery</h6>
+                        <ul class="photo-steam">
+                            @foreach (App\Models\Gallery::where('category','Gallery')->take(6)->latest()->get() as $gallery)
+                            <li><a href="#."><img width="100px" height="80px" src="{{asset('gallery_images/'.$gallery->image)}}" alt="No image found"></a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+
+                </div>
             </div>
-        </main>
-    </div>
+        </footer>
+
+        <!-- RIGHTS -->
+        <div class="rights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p> © All Rights Reserved <a class="primary-color" href="//skoder.co">SKODER</a> </p>
+                    </div>
+                    <div class="col-md-6 text-right"> <a href="#.">Privacy Policy</a> <a href="#.">Terms &
+                            Conditions</a> </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="{{asset('frontend/js/jquery-1.11.0.min.js')}}"></script>
+        <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('frontend/js/own-menu.js')}}"></script>
+        <script src="{{asset('frontend/js/jquery.isotope.min.js')}}"></script>
+        <script src="{{asset('frontend/js/jquery.flexslider-min.js')}}"></script>
+        <script src="{{asset('frontend/js/jquery.countTo.js')}}"></script>
+        <script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('frontend/js/jquery.cubeportfolio.min.js')}}"></script>
+        <script src="{{asset('frontend/js/jquery.colio.min.js')}}"></script>
+        <script src="{{asset('frontend/js/main.js')}}"></script>
+
+
+
 </body>
+
 
 </html>

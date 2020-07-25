@@ -70,7 +70,7 @@ class GalleryController extends Controller
             Image::make($image)->resize(300, null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save('gallery_images/' . $imageName, 50);
-            Image::make($image)->resize(600, null, function ($constraint) {
+            Image::make($image)->resize(1920, null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save('gallery_images/big-' . $imageName, 50);
         }

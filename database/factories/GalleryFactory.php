@@ -6,10 +6,10 @@ use App\Models\Gallery;
 use Faker\Generator as Faker;
 
 $factory->define(Gallery::class, function (Faker $faker) {
-    
-    $categories = ["Slider","Gallery"];
+
+    $categories = ["Slider", "Gallery"];
     return [
         'category' => $faker->randomElement($categories),
-        'image' => "15799412595e2bfd8b0456b.png",
+        'image' => "15956514755f1bb593a761d.jpg",
     ];
 });

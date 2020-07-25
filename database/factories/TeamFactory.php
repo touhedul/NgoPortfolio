@@ -12,7 +12,7 @@ $factory->define(Team::class, function (Faker $faker) {
         'email' => $faker->email,
         'phone' => $faker->phoneNumber,
         'designation' => $faker->word,
-        'image' => "abc.png",
+        'image' => "15956534045f1bbd1ca2f7b.jpg",
 
     ];
 });
