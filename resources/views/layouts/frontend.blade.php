@@ -189,11 +189,11 @@
         </footer>
 
         <!-- RIGHTS -->
-        <div class="rights">
+        <div class="rights" style="font-size: smaller;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>Shataphool © All Rights Reserved || Technology Partner <a href="//skoder.co">Skoder</a> </p>
+                        <p>Shataphool © All Rights Reserved || Technology Partner <a class="primary-color margin-0" href="//skoder.co">Skoder</a> </p>
                     </div>
                     <div class="col-md-6 text-right"> <a href="#.">Privacy Policy</a> <a href="#.">Terms &
                             Conditions</a> </div>
