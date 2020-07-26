@@ -8,8 +8,8 @@
             <h2>Edit Branch</h2>
         </div>
         <div class="card-body">
-            <form data-parsley-validate enctype="multipart/form-data" action="{{route('admin.branch.store',$branch->id)}}"
-                method="POST">
+            <form data-parsley-validate enctype="multipart/form-data"
+                action="{{route('admin.branch.store',$branch->id)}}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label>Title*</label>
@@ -18,8 +18,9 @@
                 </div>
                 <div class="form-group">
                     <label>Short Details*</label>
-                    <input autofocus value="{{$branch->short_details}}" required name="short_details" style="background: #f5f6fa"
-                        type="text" class="form-control " placeholder="Enter Short Details...">
+                    <input autofocus value="{{$branch->short_details}}" required name="short_details"
+                        style="background: #f5f6fa" type="text" class="form-control "
+                        placeholder="Enter Short Details...">
                 </div>
                 <div class="form-group">
                     <label>Details*</label>
@@ -28,14 +29,13 @@
                 </div>
                 <div class="form-group">
                     <label>Phone*</label>
-                    <input autofocus value="{{$branch->phone}}" required name="phone" style="background: #f5f6fa" type="text"
-                        class="form-control " placeholder="Enter Phone...">
+                    <input autofocus value="{{$branch->phone}}" required name="phone" style="background: #f5f6fa"
+                        type="text" class="form-control " placeholder="Enter Phone...">
                 </div>
                 <div class="form-group">
                     <label>Image(optional)</label><br>
                     <img src="{{asset('branch_images/'.$branch->image)}}" alt="No image found"><br>
-                    <input   name="image" style="background: #f5f6fa" type="file"
-                        class="form-control ">
+                    <input name="image" style="background: #f5f6fa" type="file" class="form-control ">
                 </div>
                 <div class="form-footer pt-4 pt-2 mt-4 border-top">
                     <button type="submit" class="mb-1 btn btn-success">
@@ -52,7 +52,7 @@
 <script>
     // CKEDITOR.replace( 'details' );
         CKEDITOR.replace( 'editor', {
-            filebrowserUploadUrl: "{{route('ckeditor.image.upload', ['_token' => csrf_token()]),}}",
+            filebrowserUploadUrl: "{{route('ckeditor.image.upload', ['_token' => csrf_token()])}}",
             filebrowserUploadMethod: 'form'
         });
 </script>

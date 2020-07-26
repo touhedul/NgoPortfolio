@@ -8,8 +8,8 @@
             <h2>Edit Testimonial</h2>
         </div>
         <div class="card-body">
-            <form data-parsley-validate enctype="multipart/form-data" action="{{route('admin.testimonial.update',$testimonial->id)}}"
-                method="POST">
+            <form data-parsley-validate enctype="multipart/form-data"
+                action="{{route('admin.testimonial.update',$testimonial->id)}}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
@@ -47,7 +47,7 @@
 <script>
     // CKEDITOR.replace( 'details' );
         CKEDITOR.replace( 'editor', {
-            filebrowserUploadUrl: "{{route('ckeditor.image.upload', ['_token' => csrf_token()]),}}",
+            filebrowserUploadUrl: "{{route('ckeditor.image.upload', ['_token' => csrf_token()])}}",
             filebrowserUploadMethod: 'form'
         });
 </script>

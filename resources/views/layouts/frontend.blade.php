@@ -30,13 +30,13 @@
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic,400,700' rel='stylesheet'
         type='text/css'>
     <link rel="stylesheet"
-        href="https://cdn.js')}}delivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+        href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <!-- COLORS -->
     <link rel="stylesheet" id="color" href="{{asset('frontend/css/colors/default.css')}}">
 
     <!-- JavaScripts -->
     <script src="{{asset('frontend/js/modernizr.js')}}"></script>
-    <script src="https://kit.fontawesome.com/12785a33f8.js')}}" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/12785a33f8.js" crossorigin="anonymous"></script>
     <!-- HTML5 Shim and Respond.js')}} IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js')}} doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -92,7 +92,7 @@
                     <div class="container">
 
                         <!-- LOGO -->
-                        <div class="logo"> <a href="index.php"><img class="img-responsive"
+                        <div class="logo"> <a href="{{route('index')}}"><img class="img-responsive"
                                     src="{{asset('frontend/images/logo.png')}}" alt=""></a> </div>
 
                         <!-- Nav -->

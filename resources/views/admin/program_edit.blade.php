@@ -45,7 +45,7 @@
 <script>
     // CKEDITOR.replace( 'details' );
         CKEDITOR.replace( 'details', {
-            filebrowserUploadUrl: "{{route('ckeditor.image.upload', ['_token' => csrf_token()]),}}",
+            filebrowserUploadUrl: "{{route('ckeditor.image.upload', ['_token' => csrf_token()])}}",
             filebrowserUploadMethod: 'form'
         });
 </script>

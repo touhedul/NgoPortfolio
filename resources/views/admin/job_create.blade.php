@@ -23,18 +23,17 @@
                 </div>
                 <div class="form-group">
                     <label>Location*</label>
-                    <input autofocus value="{{old('location')}}" required name="location" style="background: #f5f6fa" type="text"
-                        class="form-control " placeholder="Enter Location...">
+                    <input autofocus value="{{old('location')}}" required name="location" style="background: #f5f6fa"
+                        type="text" class="form-control " placeholder="Enter Location...">
                 </div>
                 <div class="form-group">
                     <label>Last apply date*</label>
-                    <input autofocus value="{{old('last_date')}}" required name="last_date" style="background: #f5f6fa" type="date"
-                        class="form-control " placeholder="Enter Last apply date...">
+                    <input autofocus value="{{old('last_date')}}" required name="last_date" style="background: #f5f6fa"
+                        type="date" class="form-control " placeholder="Enter Last apply date...">
                 </div>
                 <div class="form-group">
                     <label>Image(optional)</label>
-                    <input   name="image" style="background: #f5f6fa" type="file"
-                        class="form-control ">
+                    <input name="image" style="background: #f5f6fa" type="file" class="form-control ">
                 </div>
                 <div class="form-footer pt-4 pt-2 mt-4 border-top">
                     <button type="submit" class="mb-1 btn btn-success">
@@ -51,7 +50,7 @@
 <script>
     // CKEDITOR.replace( 'details' );
         CKEDITOR.replace( 'editor', {
-            filebrowserUploadUrl: "{{route('ckeditor.image.upload', ['_token' => csrf_token()]),}}",
+            filebrowserUploadUrl: "{{route('ckeditor.image.upload', ['_token' => csrf_token()])}}",
             filebrowserUploadMethod: 'form'
         });
 </script>

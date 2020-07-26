@@ -12,7 +12,7 @@
             <div class="position-center-center">
                 <h1>Sotoful</h1>
                 <h5>NGO at your Service</h5>
-                <a href="#." class="btn margin-top-30">Read More <i class="fa fa-caret-right"></i></a>
+                <a href="{{route('about')}}" class="btn margin-top-30">Read More <i class="fa fa-caret-right"></i></a>
             </div>
         </li>
         @endforeach
@@ -87,7 +87,8 @@
                         <!-- <div class="date"> 19 <span>MAY</span> </div> -->
 
                         <!-- Detail -->
-                        <div class="post-detail"> <a href="#." class="post-tittle">{{$program->title}}</a>
+                        <div class="post-detail"> <a href="{{$program->programUrl()}}"
+                                class="post-tittle">{{$program->title}}</a>
                             <p>{!!Str::limit($program->details,100)!!}</p>
                         </div>
                     </article>
@@ -120,7 +121,8 @@
                     <!-- Hover -->
                     <div class="over-detail">
                         <!-- Link -->
-                        <div class="top-detail"> <a href="" class=""><i class="fa fa-link"></i> </a> </div>
+                        <div class="top-detail"> <a href="{{$activity->programUrl()}}" class=""><i
+                                    class="fa fa-link"></i> </a> </div>
                         <!-- TITTLE HEADING -->
                         <div class="bottom-detail">
                             <h3>{{$activity->title}}</h3>
@@ -135,7 +137,7 @@
         <!-- LOAD MORE -->
 
         <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
-            <div> <a href="#" class="btn btn-1">
+            <div> <a href="{{route('program.different','Activity')}}" class="btn btn-1">
                     View All Activities <i class="fa fa-caret-right"></i>
                 </a>
             </div>
@@ -161,7 +163,7 @@
                         <div class="img-hover-zoom img-hover-zoom--slowmo">
                             <img src="{{asset('program_images/'.$service->image)}}" alt="">
                         </div>
-                        <article class="thumb"> <a class="button colio-link" href="#">
+                        <article class="thumb"><a class="" href="{{$service->programUrl()}}">
                                 <h5>{{$service->title}}</h5>
                                 <p>{!!Str::limit($service->details,100)!!}</p>
                             </a>
@@ -174,7 +176,7 @@
         </div>
 
         <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
-            <div> <a href="#" class="btn btn-1">
+            <div> <a href="{{route('program.different','Service')}}" class="btn btn-1">
                     View Services <i class="fa fa-caret-right"></i>
                 </a>
             </div>
@@ -253,7 +255,7 @@
                                 <!-- Date -->
                                 {{-- <div class="date"> 19 <span>MAY</span> </div> --}}
                                 <!-- Detail -->
-                                <div class="post-detail" style="border-bottom: 0px;"> <a href="event-details.php"
+                                <div class="post-detail" style="border-bottom: 0px;"> <a href="{{$event->programUrl()}}"
                                         class="post-tittle padding-20">{{$event->title}}</a>
 
                                 </div>
@@ -269,7 +271,7 @@
         </div>
 
         <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
-            <div> <a href="#" class="btn btn-1">
+            <div> <a href="{{route('program.different','Event')}}" class="btn btn-1">
                     View All Events <i class="fa fa-caret-right"></i>
                 </a>
             </div>
@@ -290,9 +292,10 @@
                 <div class="job-content job-post-page margin-20" style="border: 0px;    padding-bottom: 20px;">
                     <div class="panel panel-default" style="border: 0px;">
                         <!-- Save -->
-                        <div class="star-save"><a href="notice-details.php"><i class="fa fa-caret-right"></i></a> </div>
+                        <div class="star-save"><a href="{{$notice->programUrl()}}"><i class="fa fa-caret-right"></i></a>
+                        </div>
                         <!-- PANEL HEADING -->
-                        <div class="panel-heading" style="border: 0px;"> <a href="notice-details.php">
+                        <div class="panel-heading" style="border: 0px;"> <a href="{{$notice->programUrl()}}">
                                 <div class="job-tittle">
                                     <div class="media-left">
                                         {{-- <div class="date"> 19 <span>MAY</span> </div> --}}

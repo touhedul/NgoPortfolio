@@ -34,8 +34,8 @@
                 </div>
                 <div class="form-group">
                     <label>Designation*</label>
-                    <input required value="{{old('designation')}}" name="designation" style="background: #f5f6fa" type="text"
-                        class="form-control " placeholder="Enter Designation">
+                    <input required value="{{old('designation')}}" name="designation" style="background: #f5f6fa"
+                        type="text" class="form-control " placeholder="Enter Designation">
                 </div>
                 <div class="form-group">
                     <label>Type*</label>
@@ -65,7 +65,7 @@
 <script>
     // CKEDITOR.replace( 'details' );
         CKEDITOR.replace( 'editor', {
-            filebrowserUploadUrl: "{{route('ckeditor.image.upload', ['_token' => csrf_token()]),}}",
+            filebrowserUploadUrl: "{{route('ckeditor.image.upload', ['_token' => csrf_token()])}}",
             filebrowserUploadMethod: 'form'
         });
 </script>
