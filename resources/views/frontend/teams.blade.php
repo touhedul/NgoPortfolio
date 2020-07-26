@@ -17,13 +17,14 @@
 
 
                     <li class="col-md-4 item market">
-                        <article class="text-left"> <img class="img-responsive"
-                                src="{{asset('team_images/'.$team->image)}}" alt="">
+                        <article class="text-left"> <img class="img-responsive" src="{{asset('team_images/'.$team->image)}}" alt="">
                             <h5>{{$team->name}}</h5>
+                            <p>{{$team->designation}}</p>
                             <p>{!!$team->about!!}</p>
-                            <p>Email : {{$team->email}}</p>
-                            <p>Phone : {{$team->phone}}</p>
-                            <p>Designation : {{$team->designation}}</p>
+                            <ul class="social">
+                                <li><a href="tel:{{$team->phone}}"><i class="fa fa-phone" aria-hidden="true"></i>{{$team->phone}}</a></li>
+                                <li><a href="mailto:{{$team->email}}"><i class="fa fa-envelope" aria-hidden="true"></i>{{$team->email}}</a></li>
+                            </ul>
                         </article>
                     </li>
                     @endif
@@ -45,14 +46,15 @@
                     @if ($team->type == "Executive")
 
 
-                    <li class="col-md-4 item market">
-                        <article class="text-left"> <img class="img-responsive"
-                                src="{{asset('team_images/'.$team->image)}}" alt="">
+                    <li class="col-md-3 item market">
+                        <article class="text-left"> <img class="img-responsive" src="{{asset('team_images/'.$team->image)}}" alt="">
                             <h5>{{$team->name}}</h5>
+                            <p>{{$team->designation}}</p>
                             <p>{!!$team->about!!}</p>
-                            <p>Email : {{$team->email}}</p>
-                            <p>Phone : {{$team->phone}}</p>
-                            <p>Designation : {{$team->designation}}</p>
+                            <ul class="social">
+                                <li><a href="tel:{{$team->phone}}"><i class="fa fa-phone" aria-hidden="true"></i>{{$team->phone}}</a></li>
+                                <li><a href="mailto:{{$team->email}}"><i class="fa fa-envelope" aria-hidden="true"></i>{{$team->email}}</a></li>
+                            </ul>
                         </article>
                     </li>
                     @endif
