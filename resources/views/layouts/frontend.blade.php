@@ -175,7 +175,7 @@
                         <h6>Photo Gallery</h6>
                         <ul class="photo-steam ">
 
-                            @foreach (App\Models\Gallery::where('category','gallery')->take(9)->get() as $gallery)
+                            @foreach (App\Models\Gallery::where('category','gallery')->take(6)->get() as $gallery)
 
                             <li>
                                 <a href="{{asset('gallery_images/big-'.$gallery->image)}}" data-fancybox="roadtrip">
@@ -220,18 +220,18 @@
 
         <script>
             $(document).ready(function() {
-    
+
             $("#owl-example").owlCarousel({
                 items: 1
             });
-    
+
         });
         $(document).ready(function() {
-    
+
             $("#owl-example2").owlCarousel({
                 items: 1
             });
-    
+
         });
         </script>
 
