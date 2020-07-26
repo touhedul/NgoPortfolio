@@ -193,7 +193,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p> © All Rights Reserved <a class="primary-color" href="//skoder.co">SKODER</a> </p>
+                        <p>Shataphool © All Rights Reserved || Technology Partner <a href="//skoder.co">Skoder</a> </p>
                     </div>
                     <div class="col-md-6 text-right"> <a href="#.">Privacy Policy</a> <a href="#.">Terms &
                             Conditions</a> </div>
