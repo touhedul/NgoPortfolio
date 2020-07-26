@@ -24,11 +24,8 @@
 
     <!-- Online Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,800,200,500' rel='stylesheet' type='text/css'>
-    <link
-        href='https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,400italic,300,300italic,600,700,700italic,800,800italic'
-        rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic,400,700' rel='stylesheet'
-        type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,400italic,300,300italic,600,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <!-- COLORS -->
     <link rel="stylesheet" id="color" href="{{asset('frontend/css/colors/default.css')}}">
@@ -58,11 +55,11 @@
                     <div class="container">
                         <ul class="personal-info">
                             <li>
-                                <p><i class="fa fa-phone"></i> +880 123 456 789 </p>
+                                <p><i class="fa fa-phone"></i> +8801711062767 </p>
                             </li>
 
                             <li>
-                                <p><i class="fa fa-envelope"></i> contact@sotoful.com </p>
+                                <p><i class="fa fa-envelope"></i> shataphool@gmail.com </p>
                             </li>
                         </ul>
 
@@ -91,8 +88,7 @@
                     <div class="container">
 
                         <!-- LOGO -->
-                        <div class="logo"> <a href="{{route('index')}}"><img class="img-responsive"
-                                    src="{{asset('frontend/images/logo.png')}}" alt=""></a> </div>
+                        <div class="logo"> <a href="{{route('index')}}"><img class="img-responsive" src="{{asset('frontend/images/logo.png')}}" alt=""></a> </div>
 
                         <!-- Nav -->
                         <ul class="nav ownmenu">
@@ -140,13 +136,13 @@
                         <div class="about-foot">
                             <ul>
                                 <li>
-                                    <p><i class="fa fa-map-marker"></i> 795 Ave, Rajshahi, Bangladesh</p>
+                                    <p><i class="fa fa-map-marker"></i> Jahanabad, Mohanpur, Rajshahi</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-phone"></i> (880) 123-456125</p>
+                                    <p><i class="fa fa-phone"></i> +8801711062767 </p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-envelope"></i> contact@sotoful.com</p>
+                                    <p><i class="fa fa-envelope"></i> shataphool@gmail.com</p>
                                 </li>
                             </ul>
                         </div>
@@ -221,18 +217,18 @@
         <script>
             $(document).ready(function() {
 
-            $("#owl-example").owlCarousel({
-                items: 1
+                $("#owl-example").owlCarousel({
+                    items: 1
+                });
+
             });
+            $(document).ready(function() {
 
-        });
-        $(document).ready(function() {
+                $("#owl-example2").owlCarousel({
+                    items: 1
+                });
 
-            $("#owl-example2").owlCarousel({
-                items: 1
             });
-
-        });
         </script>
 
 </body>
