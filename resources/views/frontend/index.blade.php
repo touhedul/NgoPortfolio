@@ -318,78 +318,30 @@
 
     </section>
 
-    <!-- Management -->
-    <section class="features light-gray-bg padding-top-70 padding-bottom-70">
-        <div class="container">
-            <!-- Heading -->
-            <div class="heading text-center">
-                <h4>Management Thoughts</h4>
-            </div>
-            <!-- Features -->
-            <div class="list-style-featured">
-                <div class="row no-margin">
-                    <!-- LIST LEFT -->
-                    <div class="col-md-4 no-padding">
-                        <ul class="text-right">
-                            @foreach ($testimonials1 as $testimonial)
-                            <li>
-                                <div class="media">
-                                    <div class="media-body">
-                                        <h6>{{$testimonial->name}}</h6>
-                                        <p>
-                                            {!!$testimonial->message!!}
-                                        </p>
-                                    </div>
-                                    <div class="media-right">
-                                        <div class="icon"> <i class="fas fa-book-open fa-2x"></i> </div>
-                                    </div>
-                                </div>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-
-                    <!-- LIST IMAGE -->
-                    <div class="col-md-4 text-center no-padding"> <img class="img-responsive"
-                            src="https://source.unsplash.com/255x426" alt=""> </div>
-
-                    <!-- LIST ICON RIGHT -->
-                    <div class="col-md-4 no-padding">
-                        <ul class="text-right">
-                            @foreach ($testimonials2 as $testimonial)
-                            <li>
-                                <div class="media">
-                                    <div class="media-body">
-                                        <h6>{{$testimonial->name}}</h6>
-                                        <p>
-                                            {!!$testimonial->message!!}
-                                        </p>
-                                    </div>
-                                    <div class="media-right">
-                                        <div class="icon"> <i class="fas fa-book-open fa-2x"></i> </div>
-                                    </div>
-                                </div>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testi -->
+    <!-- Testimonial -->
     <section class="testi-bg padding-top-100 padding-bottom-100">
-        <div class="container">
-            <div class="testi">
-                <p>
-                    We don’t believe that people passively receive aid,
-                    they act as agents in their own lives. We are committed to creating opportunities for people in
-                    poverty.
-                </p>
-                <h6>MR. XYZ / <span class="primary-color">Sotoful</span></h6>
-            </div>
+        <div class="heading text-center">
+            <h4>Management Thoughts</h4>
         </div>
+
+        <div id="owl-example2" class="owl-carousel">
+            @foreach ($testimonials as $testimonial)
+            <div class="container col-md-12 text-center">
+                <img class="mt-img" src="{{asset('testimonial_images/'.$testimonial->image)}}" alt="">
+                <br>
+                <br>
+                <p class="font-bold font-italic" style="font-size: larger;">
+                    {!!$testimonial->message!!}
+                </p>
+                <span class="primary-color">
+                    {{$testimonial->name}}
+                </span>
+            </div>
+
+            @endforeach
+        </div>
+
+
     </section>
 </div>
 

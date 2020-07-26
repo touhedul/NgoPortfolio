@@ -29,8 +29,7 @@
         rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic,400,700' rel='stylesheet'
         type='text/css'>
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <!-- COLORS -->
     <link rel="stylesheet" id="color" href="{{asset('frontend/css/colors/default.css')}}">
 
@@ -179,7 +178,7 @@
                             @foreach (App\Models\Gallery::where('category','gallery')->take(9)->get() as $gallery)
 
                             <li>
-                                <a href="#" data-fancybox="roadtrip">
+                                <a href="{{asset('gallery_images/big-'.$gallery->image)}}" data-fancybox="roadtrip">
                                     <img class="img-responsive" src="{{asset('gallery_images/'.$gallery->image)}}">
                                 </a>
                             </li>
