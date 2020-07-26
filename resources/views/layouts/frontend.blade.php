@@ -189,7 +189,7 @@
         </footer>
 
         <!-- RIGHTS -->
-        <div class="rights" style="font-size: smaller;">
+        <div class="rights">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">

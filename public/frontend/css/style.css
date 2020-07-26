@@ -2304,8 +2304,16 @@ a.sm-tags:hover {
 }
 .rights {
 	padding: 15px 0;
-	background: #1a1a1a;
+    background: #1a1a1a;
+    font-size: small;
 }
+@media only screen and (max-width: 600px) {
+    .rights {
+
+        font-size: x-small;
+    }
+}
+
 .rights p {
 	color: #fff;
 	font-weight: 700;
