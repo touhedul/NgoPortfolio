@@ -6,9 +6,7 @@
     <ul class="slides">
         @foreach ($sliders as $slider)
         <!-- SLIDER 1 -->
-        <li class="slide-img-1"
-            style="background: url('{{asset('gallery_images/big-'.$slider->image)}}') center center;"
-            data-stellar-background-ratio="0.6">
+        <li class="slide-img-1" style="background: url('{{asset('gallery_images/big-'.$slider->image)}}') center center;" data-stellar-background-ratio="0.6">
             <div class="position-center-center">
                 <h1>Sotoful</h1>
                 <h5>NGO at your Service</h5>
@@ -28,19 +26,11 @@
             <div class="who-we">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3 class="font-normal">who we are</h3>
-                        <h6>Pushing out limits to provide the highest quality services</h6>
-                        <p>Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere
-                            libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel
-                            tempus metus leo non est. <br>
-                            <br>
-                            Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus
-                            ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede
-                            metus eget nisi.
-
-                            <br><br>
-
-                            Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor,</p>
+                        <h3 class="font-normal">Shataphool Bangladesh: At a glance</h3>
+                        <h6>Where We Started</h6>
+                        <p>Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have.
+                            In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. By 2001, Shataphool Bangladesh evolved into a formal institution offering micro-credit to poor rural women in Jahanabad Union of Mohanpur Upazila.
+                            Over the next decade the micro credit program diversified, and the organization began providing a variety of micro-credit products for its heterogeneous group of family entrepreneurs, alongside various types of social development programs.</p>
                     </div>
                     <div class="col-md-6">
 
@@ -50,15 +40,13 @@
                             <!-- SERVICES -->
                             <li class="col-sm-12"> <i class="fa fa-eye"></i>
                                 <h5>our vision</h5>
-                                <p>Phasellus congue lacus eget neque. Phasellus ornare, vitae consectetuer consequat,
-                                    purus sapien ultricies dolor,</p>
+                                <p>To ensure the sustainable economic development which provides human rights, mainstreams gender equality, ensures social justice, assures good governance by active participation of multi-tier people of society through poor friendly microfinance services.</p>
                             </li>
 
                             <!-- SERVICES -->
                             <li class="col-sm-12"> <i class="fa fa-rocket"></i>
                                 <h5>our mission</h5>
-                                <p>Phasellus congue lacus eget neque. Phasellus ornare, vitae consectetuer consequat,
-                                    purus sapien ultricies dolor,</p>
+                                <p>To establish an apolitical, cosmopolitan, not-for-profit, socioeconomic and philanthropic private voluntary organization which will work with the mission of making people self-dependent of all the religions and color, especially regenerating those who are impoverished and underprivileged.</p>
                             </li>
 
                         </ul>
@@ -87,8 +75,7 @@
                         <!-- <div class="date"> 19 <span>MAY</span> </div> -->
 
                         <!-- Detail -->
-                        <div class="post-detail"> <a href="{{$program->programUrl()}}"
-                                class="post-tittle">{{$program->title}}</a>
+                        <div class="post-detail"> <a href="{{$program->programUrl()}}" class="post-tittle">{{$program->title}}</a>
                             <p>{!!Str::limit($program->details,100)!!}</p>
                         </div>
                     </article>
@@ -116,13 +103,11 @@
             @foreach ($activities as $activity)
 
             <div class="cbp-item ana dial growth">
-                <article class="item"><img class="img-responsive" src="{{asset('program_images/'.$activity->image)}}"
-                        alt="">
+                <article class="item"><img class="img-responsive" src="{{asset('program_images/'.$activity->image)}}" alt="">
                     <!-- Hover -->
                     <div class="over-detail">
                         <!-- Link -->
-                        <div class="top-detail"> <a href="{{$activity->programUrl()}}" class=""><i
-                                    class="fa fa-link"></i> </a> </div>
+                        <div class="top-detail"> <a href="{{$activity->programUrl()}}" class=""><i class="fa fa-link"></i> </a> </div>
                         <!-- TITTLE HEADING -->
                         <div class="bottom-detail">
                             <h3>{{$activity->title}}</h3>
@@ -197,32 +182,28 @@
             <!-- Team Member -->
             <ul class="row">
                 <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{$numberOfActivity}}" data-from="0"></span> </span>
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfActivity}}" data-from="0"></span> </span>
                         <h5>Activities</h5>
                     </div>
                 </li>
 
                 <!-- Line Of Codes -->
                 <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{$numberOfEvent}}" data-from="0"></span> </span>
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfEvent}}" data-from="0"></span> </span>
                         <h5>Events</h5>
                     </div>
                 </li>
 
                 <!-- Satisfied Client -->
                 <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{$numberOfProject}}" data-from="0"></span> </span>
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfProject}}" data-from="0"></span> </span>
                         <h5>Projects</h5>
                     </div>
                 </li>
 
                 <!-- PSD file included -->
                 <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{$numberOfProgram}}" data-from="0"></span> </span>
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfProgram}}" data-from="0"></span> </span>
                         <h5>Programs</h5>
                     </div>
                 </li>
@@ -250,13 +231,11 @@
                         <div class="col-md-12">
 
                             <!-- Post -->
-                            <article> <img class="img-responsive col-md-12"
-                                    src="{{asset('program_images/'.$event->image)}}" alt="">
+                            <article> <img class="img-responsive col-md-12" src="{{asset('program_images/'.$event->image)}}" alt="">
                                 <!-- Date -->
                                 {{-- <div class="date"> 19 <span>MAY</span> </div> --}}
                                 <!-- Detail -->
-                                <div class="post-detail" style="border-bottom: 0px;"> <a href="{{$event->programUrl()}}"
-                                        class="post-tittle padding-20">{{$event->title}}</a>
+                                <div class="post-detail" style="border-bottom: 0px;"> <a href="{{$event->programUrl()}}" class="post-tittle padding-20">{{$event->title}}</a>
 
                                 </div>
                             </article>
