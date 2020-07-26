@@ -8,21 +8,21 @@
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
-body 
+body
  + WRAP
  + HEADER
  + NAVIGATION
  + BANNER
  + SERVICES
  + OUR FEATURED FOUNDERS
- + BLOG UPDATES 
+ + BLOG UPDATES
  + APPOINMENT
  + NEWS FROM BLOG
  + PARTNERS / CLIENTS
  + FOOTER
  + SOCIAL ICONS
  + MEGA MENU
- + 3 MENU LEVEL 
+ + 3 MENU LEVEL
 -------------------------------------------------------------------*/
 /*=======================================================
       IMPORT FILE
@@ -399,6 +399,12 @@ section {
 	margin: 0px;
 	padding: 0px;
 }
+@media only screen and (max-width: 600px) {
+    .top-info .social {
+        margin-top: -34px !important;
+    }
+}
+
 .top-info .social li a {
 	width: 25px;
 	height: 25px;
@@ -559,7 +565,7 @@ header .navbar li.active a {
 	border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .ownmenu ul.dropdown li a:hover{
-	
+
 }
 .sticky-wrapper {
 	height: auto !important;
@@ -1530,7 +1536,7 @@ header .navbar li.active a {
 	display: inline-block;
 	width: 100%;
 	padding-top: 15px;
-} 
+}
 .blog .owl-nav{
 	display:none;
 }
