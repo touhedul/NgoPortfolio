@@ -695,7 +695,7 @@ header .ownmenu {
 	float: left;
 }
 .home-slide .slide-img-1 {
-	background-position: center center !important;
+	/* background-position: center center !important; */
 }
 .home-slide .slide-img-2 {
 	background-position: center center !important;
