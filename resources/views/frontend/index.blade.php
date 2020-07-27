@@ -21,7 +21,7 @@
 <div id="content">
 
     <!-- WHO WE ARE -->
-    <section class="padding-top-70 padding-bottom-70">
+    <section class="padding-top-30 padding-bottom-30">
         <div class="container">
             <div class="who-we">
                 <div class="row">
@@ -57,7 +57,7 @@
     </section>
 
     <!-- BLOG -->
-    <section class="blog light-gray-bg padding-top-70 padding-bottom-70">
+    <section class="blog light-gray-bg padding-top-30 padding-bottom-30">
         <div class="container">
             <!-- Heading -->
             <div class="heading text-center">
@@ -88,7 +88,7 @@
 
 
     <!-- activites -->
-    <section class="portfolio  padding-top-70 padding-bottom-20">
+    <section class="portfolio  padding-top-30 padding-bottom-20">
         <div class="container">
             <!-- Heading -->
             <div class="heading text-center">
@@ -131,7 +131,7 @@
     </section>
 
     <!-- SERVICES -->
-    <section class="services padding-top-70 padding-bottom-70">
+    <section class="services padding-top-30 padding-bottom-30">
         <div class="container">
             <!-- Heading -->
             <div class="heading text-center">
@@ -176,7 +176,7 @@
 
 
     <!-- Counter -->
-    <section class="counter padding-top-50 padding-bottom-50">
+    <section class="counter padding-top-30 padding-bottom-30">
         <div class="container">
 
             <!-- Team Member -->
@@ -212,7 +212,7 @@
     </section>
 
     <!-- Events -->
-    <section class="light-gray-bg  services padding-top-70 padding-bottom-70">
+    <section class="light-gray-bg  services padding-top-30 padding-bottom-30">
         <div class="container">
             <!-- Heading -->
             <div class="heading text-center">
@@ -260,7 +260,7 @@
     </section>
 
     <!-- Notice -->
-    <section class="padding-top-100 padding-bottom-100">
+    <section class="padding-top-30 padding-bottom-30">
         <div class="heading text-center">
             <h4>Notices</h4>
         </div>
@@ -298,7 +298,7 @@
     </section>
 
     <!-- Testimonial -->
-    <section class="testi-bg padding-top-100 padding-bottom-100">
+    <section class="testi-bg padding-top-30 padding-bottom-30">
         <div class="heading text-center">
             <h4>Management Thoughts</h4>
         </div>
