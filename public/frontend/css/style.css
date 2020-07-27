@@ -661,9 +661,16 @@ header .navbar li.active a {
 	letter-spacing:9px;
 }
 .home-slide .slide-img-1 {
-	background: url(../images/slides/slide-1.jpg) no-repeat;
-	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: 100% 130%;
 }
+
+@media screen and (max-width: 600px) {
+    .home-slide .slide-img-1 {
+        background-size: 100% 50%;
+    }
+}
+
 .home-slide .slide-img-2 {
 	background: url(../images/slides/slide-2.jpg) center center no-repeat;
 	background-size: cover;
