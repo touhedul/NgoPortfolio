@@ -1,5 +1,5 @@
 @extends('layouts.frontend')
-@section('title') About @endsection
+@section('title') About Shataphool Bangladesh @endsection
 @section('content')
 @include('includes.banner',['programName'=>'About'])
 <!-- WHO WE ARE -->
@@ -34,7 +34,7 @@
                         <li class="col-sm-12"> <i class="fa fa-rocket"></i>
                             <h5>our mission</h5>
                             <p class="text-justify">To establish an apolitical, cosmopolitan, not-for-profit, socioeconomic and philanthropic private voluntary organization which will work with the mission of making people self-dependent of all the religions and color, especially regenerating those who are impoverished and underprivileged.
-                                
+
                             </p>
 
                         </li>
