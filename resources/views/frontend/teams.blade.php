@@ -22,8 +22,8 @@
                             <p>{{$team->designation}}</p>
                             <p>{!!$team->about!!}</p>
                             <ul class="social">
-                                <li><a href="tel:{{$team->phone}}"><i class="fa fa-phone" aria-hidden="true"></i>{{$team->phone}}</a></li>
-                                <li><a href="mailto:{{$team->email}}"><i class="fa fa-envelope" aria-hidden="true"></i>{{$team->email}}</a></li>
+                                <li><a href="tel:{{$team->phone}}"><i class="fas fa-phone-square-alt"></i>&nbsp;{{$team->phone}}</a></li>
+                                <li><a href="mailto:{{$team->email}}"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;{{$team->email}}</a></li>
                             </ul>
                         </article>
                     </li>
