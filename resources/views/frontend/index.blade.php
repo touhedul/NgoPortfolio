@@ -6,7 +6,7 @@
     <ul class="slides">
         @foreach ($sliders as $slider)
         <!-- SLIDER 1 -->
-        <li class="slide-img-1" style="background: url('{{asset('gallery_images/big-'.$slider->image)}}'); background-repeat: no-repeat;  background-size: cover;" data-stellar-background-ratio="0.6">
+        <li class="slide-img-1" style="background: url('{{asset('gallery_images/big-'.$slider->image)}}') 0% 50%; background-repeat: no-repeat;  background-size: cover;" data-stellar-background-ratio="0.6">
             <div class="position-center-center">
                 <!-- <h1>Sotoful</h1>
                 <h5>NGO at your Service</h5>
