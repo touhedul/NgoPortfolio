@@ -9,6 +9,28 @@
     <meta name="author" content="M_Adnan">
     <title>@yield('title')</title>
 
+    <meta name="description" content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Shataphool Bangladesh">
+    <meta itemprop="description" content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
+    <meta itemprop="image" content="https://portfolio.skoder.tech/gallery_images/big-15957512045f1d3b2467188.jpg">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://portfolio.skoder.tech">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shataphool Bangladesh">
+    <meta property="og:description" content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
+    <meta property="og:image" content="https://portfolio.skoder.tech/gallery_images/big-15957512045f1d3b2467188.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shataphool Bangladesh">
+    <meta name="twitter:description" content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
+    <meta name="twitter:image" content="https://portfolio.skoder.tech/gallery_images/big-15957512045f1d3b2467188.jpg">
+
+    <!-- Meta Tags Generated via http://heymeta.com -->
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('frontend/images/favicon.ico')}}">
 
