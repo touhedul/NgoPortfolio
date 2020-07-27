@@ -667,7 +667,7 @@ header .navbar li.active a {
 
 @media screen and (max-width: 600px) {
     .home-slide .slide-img-1 {
-        background-size: 100% 50%;
+        background-size: 100% 50% !important;
     }
 }
 
