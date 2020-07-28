@@ -28,8 +28,8 @@
                             <div class="panel-heading"> <a data-toggle="collapse" href="#job{{$notice->id}}">
                                     <div class="job-tittle">
                                         <div class="media-left">
-                                            <div class="date"> {{date('d ',strtotime($notice->last_date))}}
-                                                <span>{{date('M ',strtotime($notice->last_date))}}</span> </div>
+                                            <div class="date"> {{date('d ',strtotime($notice->created_at))}}
+                                                <span>{{date('M ',strtotime($notice->created_at))}}</span> </div>
                                         </div>
                                         <div class="media-body">
                                             <h5>{{$notice->title}}</h5>
