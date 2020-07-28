@@ -34,7 +34,9 @@
                               aria-expanded="false"><i class="mdi mdi-fan"></i>
                               <span class="hide-menu">Activities </span></a>
 
-                        <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Activity") in @endif @endisset">
+                        <ul style="margin-left:20px" aria-expanded="false"
+                              class="collapse first-level @isset($category) @if($category == "Activity") in @endif
+                              @endisset">
                               {{-- Add --}}
                               <li class="sidebar-item">
                                     <form id="add-form-activity" style="display: none"
@@ -42,7 +44,8 @@
                                           <input type="hidden" name="category" value="Activity">
                                     </form>
                                     <a onclick="document.getElementById('add-form-activity').submit();" href="#"
-                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Add Activity
                                           </span></a>
                               </li>
@@ -53,7 +56,8 @@
                                           <input type="hidden" name="category" value="Activity">
                                     </form>
                                     <a onclick="document.getElementById('manage-form-activity').submit();" href="#"
-                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Manage Activity
                                           </span></a>
                               </li>
@@ -68,7 +72,9 @@
                               aria-expanded="false"><i class="mdi mdi-window-restore"></i>
                               <span class="hide-menu">Event </span></a>
 
-                        <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Event") in @endif @endisset">
+                        <ul style="margin-left:20px" aria-expanded="false"
+                              class="collapse first-level @isset($category) @if($category == "Event") in @endif
+                              @endisset">
                               {{-- Add --}}
                               <li class="sidebar-item">
                                     <form id="add-form-event" style="display: none"
@@ -76,7 +82,8 @@
                                           <input type="hidden" name="category" value="Event">
                                     </form>
                                     <a onclick="document.getElementById('add-form-event').submit();" href="#"
-                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Add Event
                                           </span></a>
                               </li>
@@ -87,7 +94,8 @@
                                           <input type="hidden" name="category" value="Event">
                                     </form>
                                     <a onclick="document.getElementById('manage-form-event').submit();" href="#"
-                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Manage Event
                                           </span></a>
                               </li>
@@ -101,7 +109,9 @@
                               aria-expanded="false"><i class="mdi mdi-airplay"></i>
                               <span class="hide-menu">Programs </span></a>
 
-                        <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Program") in @endif @endisset">
+                        <ul style="margin-left:20px" aria-expanded="false"
+                              class="collapse first-level @isset($category) @if($category == "Program") in @endif
+                              @endisset">
                               {{-- Add --}}
                               <li class="sidebar-item">
                                     <form id="add-form-program" style="display: none"
@@ -109,7 +119,8 @@
                                           <input type="hidden" name="category" value="Program">
                                     </form>
                                     <a onclick="document.getElementById('add-form-program').submit();" href="#"
-                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Add Program
                                           </span></a>
                               </li>
@@ -120,7 +131,8 @@
                                           <input type="hidden" name="category" value="Program">
                                     </form>
                                     <a onclick="document.getElementById('manage-form-program').submit();" href="#"
-                                          class="sidebar-link active "><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active "><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Manage Program
                                           </span></a>
                               </li>
@@ -134,7 +146,9 @@
                               aria-expanded="false"><i class="mdi mdi-move-resize-variant"></i>
                               <span class="hide-menu">Projects </span></a>
 
-                        <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Project") in @endif @endisset">
+                        <ul style="margin-left:20px" aria-expanded="false"
+                              class="collapse first-level @isset($category) @if($category == "Project") in @endif
+                              @endisset">
                               {{-- Add --}}
                               <li class="sidebar-item">
                                     <form id="add-form-project" style="display: none"
@@ -142,7 +156,8 @@
                                           <input type="hidden" name="category" value="Project">
                                     </form>
                                     <a onclick="document.getElementById('add-form-project').submit();" href="#"
-                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Add Project
                                           </span></a>
                               </li>
@@ -153,7 +168,8 @@
                                           <input type="hidden" name="category" value="Project">
                                     </form>
                                     <a onclick="document.getElementById('manage-form-project').submit();" href="#"
-                                          class="sidebar-link active "><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active "><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Manage Project
                                           </span></a>
                               </li>
@@ -167,7 +183,9 @@
                               aria-expanded="false"><i class="mdi mdi-comment-outline"></i>
                               <span class="hide-menu">Services </span></a>
 
-                        <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Service") in @endif @endisset">
+                        <ul style="margin-left:20px" aria-expanded="false"
+                              class="collapse first-level @isset($category) @if($category == "Service") in @endif
+                              @endisset">
                               {{-- Add --}}
                               <li class="sidebar-item">
                                     <form id="add-form-service" style="display: none"
@@ -175,7 +193,8 @@
                                           <input type="hidden" name="category" value="Service">
                                     </form>
                                     <a onclick="document.getElementById('add-form-service').submit();" href="#"
-                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Add Service
                                           </span></a>
                               </li>
@@ -186,7 +205,8 @@
                                           <input type="hidden" name="category" value="Service">
                                     </form>
                                     <a onclick="document.getElementById('manage-form-service').submit();" href="#"
-                                          class="sidebar-link active "><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active "><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Manage Service
                                           </span></a>
                               </li>
@@ -195,12 +215,14 @@
                         </ul>
                   </li>
                   {{-- Affiliate --}}
-                  <li class="sidebar-item @isset($category) @if($category == "Affiliate") selected @endif @endisset""> <a
-                              class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                  <li class="sidebar-item @isset($category) @if($category == "Affiliate") selected @endif @endisset"">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                               aria-expanded="false"><i class="mdi mdi-comment-check"></i>
                               <span class="hide-menu">Affiliates </span></a>
 
-                        <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level @isset($category) @if($category == "Affiliate") in @endif @endisset">
+                        <ul style="margin-left:20px" aria-expanded="false"
+                              class="collapse first-level @isset($category) @if($category == "Affiliate") in @endif
+                              @endisset">
                               {{-- Add --}}
                               <li class="sidebar-item">
                                     <form id="add-form-affiliate" style="display: none"
@@ -208,7 +230,8 @@
                                           <input type="hidden" name="category" value="Affiliate">
                                     </form>
                                     <a onclick="document.getElementById('add-form-affiliate').submit();" href="#"
-                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Add Affiliate
                                           </span></a>
                               </li>
@@ -219,7 +242,8 @@
                                           <input type="hidden" name="category" value="Affiliate">
                                     </form>
                                     <a onclick="document.getElementById('manage-form-affiliate').submit();" href="#"
-                                          class="sidebar-link active "><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active "><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Manage Affiliate
                                           </span></a>
                               </li>
@@ -227,38 +251,81 @@
 
                         </ul>
                   </li>
-                 
+
                   {{-- Notice --}}
-                  <li class="sidebar-item @isset($category) @if($category == " Notice") selected @endif @endisset">
-                  
-                        <a class=" sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
-                                    class="mdi mdi-window-restore"></i>
+                  <li class="sidebar-item @isset($category) @if($category == "Notice") selected @endif @endisset">
+
+                        <a class=" sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                              aria-expanded="false"><i class="mdi mdi-window-restore"></i>
                               <span class="hide-menu">Notices </span></a>
-                  
+
                         <ul style="margin-left:20px" aria-expanded="false"
-                              class="collapse first-level @isset($category) @if($category == " Notice") in @endif @endisset">
+                              class="collapse first-level @isset($category) @if($category == "Notice") in @endif
+                              @endisset">
                               {{-- Add --}}
                               <li class="sidebar-item">
-                                    <form id="add-form-notice" style="display: none" action="{{route('admin.program.create')}}">
+                                    <form id="add-form-notice" style="display: none"
+                                          action="{{route('admin.program.create')}}">
                                           <input type="hidden" name="category" value="Notice">
                                     </form>
                                     <a onclick="document.getElementById('add-form-notice').submit();" href="#"
-                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Add Notice
                                           </span></a>
                               </li>
                               {{-- Manage --}}
                               <li class="sidebar-item">
-                                    <form id="manage-form-notice" style="display: none" action="{{route('admin.program.index')}}">
+                                    <form id="manage-form-notice" style="display: none"
+                                          action="{{route('admin.program.index')}}">
                                           <input type="hidden" name="category" value="Notice">
                                     </form>
                                     <a onclick="document.getElementById('manage-form-notice').submit();" href="#"
-                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
                                                 Manage Notice
                                           </span></a>
                               </li>
-                  
-                  
+
+
+                        </ul>
+                  </li>
+                  {{-- Publication --}}
+                  <li class="sidebar-item @isset($category) @if($category == "Publication") selected @endif @endisset">
+
+                        <a class=" sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                              aria-expanded="false"><i class="mdi mdi-window-restore"></i>
+                              <span class="hide-menu">Publications </span></a>
+
+                        <ul style="margin-left:20px" aria-expanded="false"
+                              class="collapse first-level @isset($category) @if($category == "Publication") in @endif
+                              @endisset">
+                              {{-- Add --}}
+                              <li class="sidebar-item">
+                                    <form id="add-form-publication" style="display: none"
+                                          action="{{route('admin.program.create')}}">
+                                          <input type="hidden" name="category" value="Publication">
+                                    </form>
+                                    <a onclick="document.getElementById('add-form-publication').submit();" href="#"
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
+                                                Add Publication
+                                          </span></a>
+                              </li>
+                              {{-- Manage --}}
+                              <li class="sidebar-item">
+                                    <form id="manage-form-publication" style="display: none"
+                                          action="{{route('admin.program.index')}}">
+                                          <input type="hidden" name="category" value="Publication">
+                                    </form>
+                                    <a onclick="document.getElementById('manage-form-publication').submit();" href="#"
+                                          class="sidebar-link active"><i class="mdi mdi-creation"></i><span
+                                                class="hide-menu">
+                                                Manage Publication
+                                          </span></a>
+                              </li>
+
+
                         </ul>
                   </li>
                   {{-- Blog --}}
@@ -279,77 +346,83 @@
                   </li>
                   @endif
                   {{-- Team --}}
-                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-account-multiple-plus"></i>
+                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                              href="javascript:void(0)" aria-expanded="false"><i
+                                    class="mdi mdi-account-multiple-plus"></i>
                               <span class="hide-menu">Teams </span></a>
-                  
+
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level">
                               <li class="sidebar-item"><a href="{{route('admin.team.create')}}" class="sidebar-link "><i
                                                 class="mdi mdi-creation"></i><span class="hide-menu"> Add Team
                                           </span></a></li>
-                  
+
                               <li class="sidebar-item"><a href="{{route('admin.team.index')}}" class="sidebar-link"><i
                                                 class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
                                                 Team </span></a></li>
                         </ul>
                   </li>
                   {{-- Testimonials --}}
-                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-account-check"></i>
+                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                              href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-check"></i>
                               <span class="hide-menu">Testimonials </span></a>
-                  
+
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level">
-                              <li class="sidebar-item"><a href="{{route('admin.testimonial.create')}}" class="sidebar-link "><i
-                                                class="mdi mdi-creation"></i><span class="hide-menu"> Add Testimonial
+                              <li class="sidebar-item"><a href="{{route('admin.testimonial.create')}}"
+                                          class="sidebar-link "><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                                Add Testimonial
                                           </span></a></li>
-                  
-                              <li class="sidebar-item"><a href="{{route('admin.testimonial.index')}}" class="sidebar-link"><i
-                                                class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
+
+                              <li class="sidebar-item"><a href="{{route('admin.testimonial.index')}}"
+                                          class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span
+                                                class="hide-menu"> Manage
                                                 Testimonial </span></a></li>
                         </ul>
                   </li>
                   {{-- Job --}}
-                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-cart"></i>
+                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                              href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-cart"></i>
                               <span class="hide-menu">Jobs </span></a>
-                  
+
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level">
                               <li class="sidebar-item"><a href="{{route('admin.job.create')}}" class="sidebar-link "><i
                                                 class="mdi mdi-creation"></i><span class="hide-menu"> Add Job
                                           </span></a></li>
-                  
+
                               <li class="sidebar-item"><a href="{{route('admin.job.index')}}" class="sidebar-link"><i
                                                 class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
                                                 Job </span></a></li>
                         </ul>
                   </li>
                   {{-- Branch --}}
-                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-blogger"></i>
+                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                              href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-blogger"></i>
                               <span class="hide-menu">Branches </span></a>
-                  
+
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level">
-                              <li class="sidebar-item"><a href="{{route('admin.branch.create')}}" class="sidebar-link "><i
-                                                class="mdi mdi-creation"></i><span class="hide-menu"> Add Branch
+                              <li class="sidebar-item"><a href="{{route('admin.branch.create')}}"
+                                          class="sidebar-link "><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                                Add Branch
                                           </span></a></li>
-                  
+
                               <li class="sidebar-item"><a href="{{route('admin.branch.index')}}" class="sidebar-link"><i
                                                 class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
                                                 Branch </span></a></li>
                         </ul>
                   </li>
                   {{-- Gallery --}}
-                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                              aria-expanded="false"><i class="mdi mdi-file-image"></i>
+                  <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                              href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-file-image"></i>
                               <span class="hide-menu">Galleries </span></a>
-                  
+
                         <ul style="margin-left:20px" aria-expanded="false" class="collapse first-level">
-                              <li class="sidebar-item"><a href="{{route('admin.gallery.create')}}" class="sidebar-link "><i
-                                                class="mdi mdi-creation"></i><span class="hide-menu"> Add Gallery
+                              <li class="sidebar-item"><a href="{{route('admin.gallery.create')}}"
+                                          class="sidebar-link "><i class="mdi mdi-creation"></i><span class="hide-menu">
+                                                Add Gallery
                                           </span></a></li>
-                  
-                              <li class="sidebar-item"><a href="{{route('admin.gallery.index')}}" class="sidebar-link"><i
-                                                class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
+
+                              <li class="sidebar-item"><a href="{{route('admin.gallery.index')}}"
+                                          class="sidebar-link"><i class="mdi mdi-multiplication-box"></i><span
+                                                class="hide-menu"> Manage
                                                 Gallery </span></a></li>
                         </ul>
                   </li>

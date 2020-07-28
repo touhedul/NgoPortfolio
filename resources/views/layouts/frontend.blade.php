@@ -9,24 +9,28 @@
     <meta name="author" content="M_Adnan">
     <title>@yield('title')</title>
 
-    <meta name="description" content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
+    <meta name="description"
+        content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
 
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Shataphool Bangladesh">
-    <meta itemprop="description" content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
+    <meta itemprop="description"
+        content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
     <meta itemprop="image" content="https://portfolio.skoder.tech/gallery_images/big-15957512045f1d3b2467188.jpg">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://portfolio.skoder.tech">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Shataphool Bangladesh">
-    <meta property="og:description" content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
+    <meta property="og:description"
+        content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
     <meta property="og:image" content="https://portfolio.skoder.tech/gallery_images/big-15957512045f1d3b2467188.jpg">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Shataphool Bangladesh">
-    <meta name="twitter:description" content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
+    <meta name="twitter:description"
+        content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
     <meta name="twitter:image" content="https://portfolio.skoder.tech/gallery_images/big-15957512045f1d3b2467188.jpg">
 
     <!-- Meta Tags Generated via http://heymeta.com -->
@@ -46,8 +50,11 @@
 
     <!-- Online Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,800,200,500' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,400italic,300,300italic,600,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic,400,700' rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,400italic,300,300italic,600,700,700italic,800,800italic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic,400,700' rel='stylesheet'
+        type='text/css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <!-- COLORS -->
     <link rel="stylesheet" id="color" href="{{asset('frontend/css/colors/default.css')}}">
@@ -110,7 +117,8 @@
                     <div class="container">
 
                         <!-- LOGO -->
-                        <div class="logo"> <a href="{{route('index')}}"><img class="img-responsive" src="{{asset('frontend/images/logo.png')}}" alt=""></a> </div>
+                        <div class="logo"> <a href="{{route('index')}}"><img class="img-responsive"
+                                    src="{{asset('frontend/images/logo.png')}}" alt=""></a> </div>
 
                         <!-- Nav -->
                         <ul class="nav ownmenu">
@@ -130,6 +138,7 @@
                             <li> <a href="{{route('program.different','Service')}}">Services </a> </li>
                             <li> <a href="{{route('jobs')}}">Job </a> </li>
                             <li> <a href="{{route('notices')}}">Notice </a> </li>
+                            <li> <a href="{{route('publications')}}">Publications </a> </li>
 
 
                             <li> <a href="{{route('contact')}}">Contact</a> </li>
@@ -215,7 +224,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>Shataphool © All Rights Reserved || Technology Partner <a class="primary-color margin-0" href="//skoder.co">Skoder</a> </p>
+                        <p>Shataphool © All Rights Reserved || Technology Partner <a class="primary-color margin-0"
+                                href="//skoder.co">Skoder</a> </p>
                     </div>
                     <div class="col-md-6 text-right"> <a href="#.">Privacy Policy</a> <a href="#.">Terms &
                             Conditions</a> </div>

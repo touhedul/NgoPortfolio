@@ -25,6 +25,7 @@ Route::namespace('Frontend')->group(function () {
     Route::get('/galleries', 'AllController@galleries')->name('galleries');
     Route::get('/jobs', 'AllController@jobs')->name('jobs');
     Route::get('/notices', 'AllController@notices')->name('notices');
+    Route::get('/publications', 'AllController@publications')->name('publications');
 });
 
 // ********************************USER********************************

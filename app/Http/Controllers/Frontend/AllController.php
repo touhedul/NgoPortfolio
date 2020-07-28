@@ -48,6 +48,11 @@ class AllController extends Controller
         $notices = Program::where('category', 'Notice')->latest()->paginate(10);
         return view('frontend.notices', compact('notices'));
     }
+    public function publications()
+    {
+        $publications = Program::where('category', 'Publication')->latest()->paginate(10);
+        return view('frontend.publications', compact('publications'));
+    }
     public function galleries()
     {
         $galleries = Gallery::where('category', 'gallery')->latest()->get();

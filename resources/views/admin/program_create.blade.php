@@ -23,7 +23,7 @@
                 </div>
 
 
-                @if($category != "Notice")
+                @if($category != "Notice" && $category != "Publication")
                 <div class="form-group">
                     <label>Image*</label>
                     <input autofocus required name="image" style="background: #f5f6fa" type="file"
