@@ -77,11 +77,11 @@
                 <br>
 
                 <!-- Share -->
-                <div class="col-md-4"> <a href="#." class="sm-tags">Apply for this Job</a> </div>
+                <div class="col-md-4"> <a href="#." class="sm-tags"></a> </div>
 
                 <!-- Clodes -->
-                <div class="col-md-3 text-right pull-right"> <a class="sm-tags" data-toggle="collapse" href="#job2"> <i
-                            class="fa fa-angle-up margin-right-5"></i>Less Info </a> </div>
+                <div class="col-md-3 text-right pull-right"> <a class="sm-tags" data-toggle="collapse"
+                        href="#job{{$job->id}}"> <i class="fa fa-angle-up margin-right-5"></i>Less Info </a> </div>
             </div>
         </div>
     </div>
