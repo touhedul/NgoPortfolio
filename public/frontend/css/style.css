@@ -170,10 +170,10 @@ p.intro-small {
 	font-weight: bold !important;
 }
 a:hover, a:focus {
-	color: #1193d4;
+	color: #52BE80;
 }
 .primary-color {
-	color: #1193d4 !important;
+	color: #52BE80 !important;
 }
 .position-center-center {
 	left: 50%;
@@ -266,7 +266,7 @@ img.mt-img {
 	transition: 0.4s ease-in-out;
 }
 .btn i {
-	color: #1193d4;
+	color: #52BE80;
 	background: #fff;
 	height: 41px;
 	padding: 0 15px;
@@ -420,7 +420,7 @@ section {
 }
 .top-info .social li a:hover {
 	color: #fff;
-	background: #1193d4;
+	background: #52BE80;
 }
 .right-sec {
 	float: right;
@@ -520,11 +520,11 @@ header .navbar li a {
 	text-transform: uppercase;
 }
 header .navbar li a:hover {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 }
 header .navbar li.active a {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 }
 .ownmenu ul.dropdown {
@@ -634,7 +634,7 @@ header .navbar li.active a {
 	width: 100%;
 }
 .search-icon a:hover {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 }
 /*=======================================================
@@ -742,7 +742,7 @@ header .navbar li.active a {
 }
 .sub-bnr .breadcrumb li a {
 	text-transform: uppercase;
-	color: #1193d4;
+	color: #52BE80;
 	font-size: 12px;
 }
 .sub-bnr .breadcrumb>li+li:before {
@@ -790,7 +790,7 @@ header .navbar li.active a {
 }
 .services article i {
 	font-size: 60px;
-	color: #1193d4;
+	color: #52BE80;
 	-webkit-transition: 0.4s ease-in-out;
 	-moz-transition: 0.4s ease-in-out;
 	-ms-transition: 0.4s ease-in-out;
@@ -831,7 +831,7 @@ header .navbar li.active a {
 	transition: 0.4s ease-in-out;
 }
 .services li:hover article a {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 }
 .services li:hover article a i {
@@ -846,7 +846,7 @@ header .navbar li.active a {
 .colio-active-item {
 }
 .services li.colio-active-item article a {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 }
 .services li.colio-active-item article a i {
@@ -864,7 +864,7 @@ header .navbar li.active a {
 	bottom: -5px;
 	font-family: 'FontAwesome';
 	font-size: 50px;
-	color: #1193d4;
+	color: #52BE80;
 	left: 0px;
 	right: 0px;
 	width: 100%;
@@ -879,7 +879,7 @@ header .navbar li.active a {
 	color: #fff;
 	font-size: 30px;
 	line-height: 80px;
-	background: #1193d4;
+	background: #52BE80;
 }
 .services-in li {
 	text-align: center;
@@ -923,11 +923,11 @@ header .navbar li.active a {
 	width: 100%;
 }
 .inside-colio .nav-stacked a:hover {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 }
 .inside-colio .nav-stacked>li.active {
-	background: #1193d4;
+	background: #52BE80;
 }
 /* Colio - Basic Styles
 ================================================== */
@@ -1237,7 +1237,7 @@ header .navbar li.active a {
 }
 .who-we li i {
 	font-size: 26px;
-	color: #1193d4;
+	color: #52BE80;
 	margin-bottom: 10px;
 }
 /*=======================================================
@@ -1303,7 +1303,7 @@ header .navbar li.active a {
 	font-size: 16px;
 }
 .portfolio .top-detail a:hover {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 }
 .portfolio .over-detail {
@@ -1342,23 +1342,23 @@ header .navbar li.active a {
 #ajax-work-filter .cbp-filter-item {
 	font-size: 12px;
 	font-weight: bold;
-	color: #1193d4;
+	color: #52BE80;
 	display: inline-block;
 	text-transform: uppercase;
 	padding: 5px 10px;
-	border: 2px solid #1193d4;
+	border: 2px solid #52BE80;
 	border-radius: 4px;
 }
 #ajax-work-filter .cbp-filter-item:hover {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 }
 #ajax-work-filter .cbp-filter-item-active {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 }
 .cbp-l-filters-buttonCenter .cbp-filter-counter {
-	background: #1193d4;
+	background: #52BE80;
 }
 .cbp-popup-singlePage .cbp-popup-close {
 	background: none;
@@ -1437,7 +1437,7 @@ header .navbar li.active a {
 .plan .price {
 	font-size: 45px;
 	padding: 0px;
-	background: #1193d4;
+	background: #52BE80;
 	border-bottom: 1px solid #ececec;
 	text-align: center;
 	padding: 40px 0;
@@ -1505,7 +1505,7 @@ header .navbar li.active a {
 	width: 60px;
 	color: #fff;
 	font-size: 30px;
-	background: #1193d4;
+	background: #52BE80;
 	float: left;
 	text-align: center;
 	font-weight: bold;
@@ -1561,7 +1561,7 @@ header .navbar li.active a {
 	display:none;
 }
 .blog .owl-dot.active span{
-	border-color:#1193d4;
+	border-color:#52BE80;
 }
 /*=======================================================
       Features
@@ -1575,7 +1575,7 @@ header .navbar li.active a {
 	line-height: 80px;
 	text-align: center;
 	color: #fff;
-	background: #1193d4;
+	background: #52BE80;
 	border-radius: 50%;
 	font-size: 20px;
 	margin-right: 10px;
@@ -1657,14 +1657,14 @@ header .navbar li.active a {
 	font-size: 14px;
 }
 .pagination>li>a:hover {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
-	border-color: #1193d4;
+	border-color: #52BE80;
 }
 .pagination>li>a.current {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
-	border-color: #1193d4;
+	border-color: #52BE80;
 }
 /*=======================================================
       JOB SECRION
@@ -1818,7 +1818,7 @@ header .navbar li.active a {
 	line-height: 32px;
 }
 .cate.result li:before {
-	color: #1193d4;
+	color: #52BE80;
 }
 .cate.result li a {
 	color: #666666;
@@ -1879,7 +1879,7 @@ header .navbar li.active a {
 }
 .job-content .share-info .social li a:hover {
 	color: #fff;
-	background: #1193d4;
+	background: #52BE80;
 }
 .job-skills .progress {
 	height: 14px;
@@ -1934,7 +1934,7 @@ header .navbar li.active a {
 	width: 38px;
 	color: #fff;
 	font-size: 18px;
-	background: #1193d4;
+	background: #52BE80;
 	float: left;
 	text-align: center;
 	font-weight: bold;
@@ -2013,7 +2013,7 @@ header .navbar li.active a {
 }
 .social li a:hover {
 	color: #fff;
-	background: #1193d4;
+	background: #52BE80;
 }
 /*=======================================================
       TEAM
@@ -2050,7 +2050,7 @@ header .navbar li.active a {
 	width: auto;
 }
 .team article .social li a:hover {
-	color: #1193d4;
+	color: #52BE80;
 }
 .team-list article {
 	text-align: left;
@@ -2076,11 +2076,11 @@ header .navbar li.active a {
 	border-radius: 4px;
 }
 .team-filter li a:hover {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 }
 .team-filter li a.active {
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 }
 .add img{
@@ -2090,7 +2090,7 @@ header .navbar li.active a {
       COUNTER
 ========================================================*/
 .counter {
-	background: #1193d4;
+	background: #52BE80;
 	text-align: center;
 }
 .counter .number {
@@ -2162,7 +2162,7 @@ header .navbar li.active a {
 	display: inline-block;
 }
 .owl-dots div.active span {
-	background: #1193d4;
+	background: #52BE80;
 }
 .owl-dots div span:hover {
 	background: rgb(71, 186, 221);
@@ -2295,7 +2295,7 @@ footer .photo-steam li a:hover {
 .tags li a {
 	display: inline-block;
 	padding: 5px 8px;
-	background: #1193d4;
+	background: #52BE80;
 	border: none !important;
 	border-radius: 4px;
 	color: #fff;
@@ -2305,7 +2305,7 @@ footer .photo-steam li a:hover {
 .sm-tags {
 	display: inline-block;
 	padding: 5px 8px;
-	background: #1193d4;
+	background: #52BE80;
 	border: none !important;
 	border-radius: 4px;
 	color: #fff;
@@ -2682,7 +2682,7 @@ a.sm-tags:hover {
 }
 .nav-pills>li>a {
 	border-radius: 0px;
-	background: #1193d4;
+	background: #52BE80;
 	color: #fff;
 	padding: 10px 30px;
 }
@@ -3093,10 +3093,10 @@ a.sm-tags:hover {
 	transition: all 0.4s ease-in-out;
 }
 .contact-form input:focus {
-	border: 1px solid #1193d4 !important;
+	border: 1px solid #52BE80 !important;
 }
 .contact-form textarea:focus {
-	border: 1px solid #1193d4 !important;
+	border: 1px solid #52BE80 !important;
 }
 /*=======================================================
 			ACCORDION
@@ -3210,7 +3210,7 @@ a.sm-tags:hover {
 	font-family: 'Open Sans', sans-serif;
 }
 .cate li a:hover {
-	color: #1193d4;
+	color: #52BE80;
 }
 /* TIMELINE */
 .history {
@@ -3295,7 +3295,7 @@ a.sm-tags:hover {
 	top: -33px;
 	width: 16px;
 	height: 16px;
-	background-color: #1193d4;
+	background-color: #52BE80;
 }
 .history #timeline #issues {
 	width: 100%;
@@ -3450,7 +3450,7 @@ a.sm-tags:hover {
 	margin-bottom: 15px;
 }
 .comments .media-heading a {
-	color: #1193d4;
+	color: #52BE80;
 }
 .comments .media-heading span {
 	color: #b3b3b3;
