@@ -14,8 +14,7 @@
                 <div class="col-md-12">
 
                     <!-- Post -->
-                    <article> <img class="img-responsive col-md-12"
-                            src="{{asset('program_images/big-'.$program->image)}}" alt="">
+                    <article> <img class="img-responsive col-md-12" src="{{asset('program_images/big-'.$program->image)}}" alt="">
                         <!-- Date -->
                         {{-- <div class="date"> 19 <span>MAY</span> </div> --}}
                         <!-- Detail -->
@@ -24,6 +23,14 @@
                             <p class="col-md-12 text-justify margin-bottom-30">
                                 {!!$program->details!!}
                             </p>
+
+                            <br>
+
+                            @if ($notice->image != NULL)
+                            <p style="color: blue"> <a download href="{{asset('files/'.$notice->image)}}">Download
+                                    File</a></p>
+
+                            @endif
 
 
 
