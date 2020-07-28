@@ -18,34 +18,55 @@
                 <!-- Job Content -->
                 <div id="accordion">
 
-
-
-
                     <!-- Job Section -->
+                    @foreach ($notices as $notice)
                     <div class="job-content job-post-page margin-top-20">
                         <div class="panel panel-default">
                             <!-- Save -->
-                            <div class="star-save"><a><i class="fa fa-caret-down"></i></a> </div>
+                            <div class="star-save"><a href="#."><i class="fa fa-caret-down"></i></a> </div>
                             <!-- PANEL HEADING -->
-                            @foreach ($notices as $notice)
-                            <div class="panel-heading"> <a data-toggle="collapse">
+                            <div class="panel-heading"> <a data-toggle="collapse" href="#job{{$notice->id}}">
                                     <div class="job-tittle">
                                         <div class="media-left">
+                                            <div class="date"> {{date('d ',strtotime($notice->last_date))}}
+                                                <span>{{date('M ',strtotime($notice->last_date))}}</span> </div>
                                         </div>
                                         <div class="media-body">
                                             <h5>{{$notice->title}}</h5>
                                         </div>
                                     </div>
                                 </a>
-                                <p> {!!$notice->details!!}</p>
-                                @if ($notice->image != NULL)
-                                <p style="color: blue"> <a download href="{{asset('files/'.$notice->image)}}">Download File</a></p>
+                                <p>{!!Str::limit($notice->details,100)!!}</p>
+                            </div>
 
-                                @endif
-                            </div><br><br><br>
-                            @endforeach
+                            <!-- ADD INFO HERE -->
+                            <div id="job{{$notice->id}}" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+
+                                        {!!substr($notice->details, 100, 65530)!!}
+                                        @if ($notice->image != NULL)
+                                        <p style="color: blue"> <a download
+                                                href="{{asset('files/'.$notice->image)}}">Download
+                                                File</a></p>
+
+                                        @endif
+                                    </p>
+
+                                    <br>
+
+                                    <!-- Share -->
+                                    {{-- <div class="col-md-4"> <a href="#." class="sm-tags"></a> </div> --}}
+
+                                    <!-- Clodes -->
+                                    <div class="col-md-3 text-right pull-right"> <a class="sm-tags"
+                                            data-toggle="collapse" href="#job{{$notice->id}}"> <i
+                                                class="fa fa-angle-up margin-right-5"></i>Less Info </a> </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    @endforeach
 
 
                 </div>
