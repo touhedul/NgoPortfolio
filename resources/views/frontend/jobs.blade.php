@@ -77,7 +77,7 @@
                 <br>
 
                 <!-- Share -->
-                <div class="col-md-4"> <a href="#." class="sm-tags"></a> </div>
+                {{-- <div class="col-md-4"> <a href="#." class="sm-tags"></a> </div> --}}
 
                 <!-- Clodes -->
                 <div class="col-md-3 text-right pull-right"> <a class="sm-tags" data-toggle="collapse"
