@@ -26,8 +26,8 @@
 
                             <br>
 
-                            @if ($notice->image != NULL)
-                            <p style="color: blue"> <a download href="{{asset('files/'.$notice->image)}}">Download
+                            @if ($program->image != NULL)
+                            <p style="color: blue"> <a download href="{{asset('files/'.$program->image)}}">Download
                                     File</a></p>
 
                             @endif
