@@ -166,6 +166,13 @@
                                 <li>
                                     <p><i class="fa fa-envelope"></i> shataphool@gmail.com</p>
                                 </li>
+                                <li>
+                                    <p>
+                                        <a href="#."><i class="fa fa-facebook"></i></a>
+                                        &nbsp;
+                                        <a href="#."><i class="fa fa-youtube-play"></i></a>
+                                    </p>
+                                </li>
                             </ul>
                         </div>
                     </div>
