@@ -79,7 +79,7 @@
         <header>
 
             <!-- Top bar -->
-            <div class="top-bar">
+            <!-- <div class="top-bar">
                 <div class="top-info">
                     <div class="container">
                         <ul class="personal-info">
@@ -90,26 +90,26 @@
                             <li>
                                 <p><i class="fa fa-envelope"></i> shataphool@gmail.com </p>
                             </li>
-                        </ul>
+                        </ul> -->
 
-                        <!-- Right Sec -->
-                        <div class="right-sec">
+            <!-- Right Sec -->
+            <!-- <div class="right-sec"> -->
 
-                            <!-- Language -->
-                            <!-- <select class="selectpicker">
+            <!-- Language -->
+            <!-- <select class="selectpicker">
               <option>English</option>
               <option>French</option>
               <option>Relish</option>
             </select> -->
 
-                            <!-- social -->
-                            <ul class="social">
+            <!-- social -->
+            <!-- <ul class="social">
                                 <li><a href="#."><i class="fa fa-facebook"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Navigation -->
             <nav class="navbar">
@@ -174,6 +174,13 @@
                                 </li>
                                 <li>
                                     <p><i class="fa fa-envelope"></i> shataphool@gmail.com</p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <a href="#."><i class="fa fa-facebook" style="color:#52BE80;"></i></a>
+                                        &nbsp;
+                                        <a href="#."><i class="fa fa-youtube-play" style="color:#52BE80;"></i></a>
+                                    </p>
                                 </li>
                             </ul>
                         </div>
