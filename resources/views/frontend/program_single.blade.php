@@ -26,7 +26,7 @@
 
                             <br>
 
-                            @if ($program->category == 'NOTICE' && $program->image != NULL)
+                            @if ($program->category == 'NOTICES' && $program->image != NULL)
                             <p style="color: blue"> <a download href="{{asset('files/'.$program->image)}}">Download
                                     File</a></p>
 
