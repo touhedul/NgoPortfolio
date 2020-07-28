@@ -565,7 +565,7 @@ header .navbar li.active a {
 	border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .ownmenu ul.dropdown li a:hover{
-    color: #52BE80;
+    background-color: #52BE80;
 
 }
 .sticky-wrapper {
