@@ -38,6 +38,10 @@
                                     </div>
                                 </a>
                                 <p> {!!$notice->details!!}</p>
+                                @if ($notice->image != NULL)
+                                <p style="color: blue"> <a download href="{{asset('files/'.$notice->image)}}">Download File</a></p>
+
+                                @endif
                             </div><br><br><br>
                             @endforeach
                         </div>

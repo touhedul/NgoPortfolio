@@ -29,6 +29,11 @@
                     <input autofocus required name="image" style="background: #f5f6fa" type="file"
                         class="form-control ">
                 </div>
+                @else
+                <div class="form-group">
+                    <label>File</label>
+                    <input autofocus name="file" style="background: #f5f6fa" type="file" class="form-control ">
+                </div>
                 @endif
                 <input type="hidden" name="category" value="{{$category}}">
                 <div class="form-footer pt-4 pt-2 mt-4 border-top">

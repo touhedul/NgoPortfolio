@@ -77,6 +77,7 @@ class ProgramController extends Controller
             'title' => 'required|max:191',
             'details' => 'required|max:65500',
             'image' => 'nullable|image|max:15000',
+            'file' => 'nullable|max:15000',
             'category' => 'nullable|string|max:191',
         ]);
 
@@ -90,6 +91,10 @@ class ProgramController extends Controller
             Image::make($image)->resize(800, null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save('program_images/big-' . $imageName, 50);
+        } elseif ($request->hasFile('file')) {
+            $image = $request->file('file');
+            $imageName = time() . uniqid() . '.' . $image->getClientOriginalExtension();
+            $image->move('files/', $imageName);
         } else {
             $imageName = "";
         }
@@ -173,6 +178,9 @@ class ProgramController extends Controller
         }
         if (File::exists('program_images/big-' . $program->image)) {
             File::delete('program_images/big-' . $program->image);
+        }
+        if (File::exists('files/' . $program->image)) {
+            File::delete('files/' . $program->image);
         }
         $program->delete();
         return back()->with('success', 'Delete Successful.');

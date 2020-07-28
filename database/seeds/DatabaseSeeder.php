@@ -18,13 +18,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(AdminSeeder::class);
-        $this->call(ProgramSeeder::class);
+        // $this->call(ProgramSeeder::class);
         // $this->call(BlogSeeder::class);
-        factory(Gallery::class, 10)->create();
-        factory(Team::class, 20)->create();
-        factory(Testimonial::class, 20)->create();
-        factory(Job::class, 20)->create();
-        factory(Branch::class, 20)->create();
+        // factory(Gallery::class, 10)->create();
+        // factory(Team::class, 20)->create();
+        // factory(Testimonial::class, 20)->create();
+        // factory(Job::class, 20)->create();
+        // factory(Branch::class, 20)->create();
         // $this->call(UserSeeder::class);
         // $this->call(ContactFeedbackSeeder::class);
     }
