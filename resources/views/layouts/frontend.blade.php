@@ -145,7 +145,7 @@
                             <li> <a href="{{route('publications')}}">Resources </a> </li>
                             <li> <a href="{{route('jobs')}}">Career </a> </li>
                             <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
-                            <li> <a href="{{route('notices')}}">Notice </a> </li>
+                            <li> <a href="{{route('notices')}}">Notices </a> </li>
                             <li> <a href="{{route('contact')}}">Contact</a> </li>
                         </ul>
                         <!-- Search -->
@@ -195,17 +195,17 @@
                     <div class="col-md-4">
                         <h6>Site Map</h6>
                         <ul class="col-md-6 tweet">
+                            <li> <a href="{{route('about')}}">About </a> </li>
+                            <li> <a href="{{route('program.different','Program')}}">Core Programs </a> </li>
                             <li> <a href="{{route('program.different','Project')}}">Projects </a> </li>
-                            <li> <a href="{{route('program.different','Program')}}">Programs </a> </li>
-                            <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
                             <li> <a href="{{route('program.different','Associate')}}">Associates </a> </li>
-
+                            
                         </ul>
                         <ul class="col-md-6 tweet">
-                            <li> <a href="{{route('branches')}}">Branches</a> </li>
                             <li> <a href="{{route('program.different','Resource')}}">Resource</a> </li>
-                            <li> <a href="{{route('terms.and.conditions')}}">Terms & Conditions</a> </li>
-                            <li> <a href="{{route('privacy.policy')}}">Privacy Policy</a> </li>
+                            <li> <a href="{{route('jobs')}}">Career</a> </li>
+                            <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
+                            <li> <a href="{{route('notices')}}">Notices </a> </li>
                         </ul>
                     </div>
 
@@ -241,7 +241,7 @@
                         <p>Shataphool © All Rights Reserved || Technology Partner <a class="primary-color margin-0"
                                 href="//skoder.co">Skoder</a> </p>
                     </div>
-                    <div class="col-md-6 text-right"> <a href="#.">Privacy Policy</a> <a href="#.">Terms &
+                    <div class="col-md-6 text-right"> <a href="{{route('privacy.policy')}}">Privacy Policy</a> <a href="{{route('terms.and.conditions')}}">Terms &
                             Conditions</a> </div>
                 </div>
             </div>

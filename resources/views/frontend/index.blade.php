@@ -29,7 +29,7 @@
                 <div class="row">
                     <marquee>
                     @foreach ($newses as $news)
-                   <a href="{{$news->programUrl()}}"> <span style="font-size: 20px; margin-right: 50px">{{$news->title}}</span></a>
+                   <a href="{{$news->programUrl()}}"> <span style="font-size: 20px; margin-right: 50px ; color : #52BE80">{{$news->title}}</span></a>
                     @endforeach
                     </marquee>
                 </div>
@@ -294,8 +294,9 @@
                         <!-- PANEL HEADING -->
                         <div class="panel-heading" style="border: 0px;"> <a href="{{$notice->programUrl()}}">
                                 <div class="job-tittle">
-                                    <div class="media-left">
-                                        {{-- <div class="date"> 19 <span>MAY</span> </div> --}}
+                                   <div class="media-left">
+                                        <div class="date"> {{date('d ',strtotime($notice->created_at))}}
+                                            <span>{{date('M ',strtotime($notice->created_at))}}</span> </div>
                                     </div>
                                     <div class="media-body">
                                         <h5>{{$notice->title}}</h5>

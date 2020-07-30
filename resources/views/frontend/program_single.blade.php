@@ -14,11 +14,13 @@
                 <div class="col-md-12">
 
                     <!-- Post -->
-                    <article> <img class="img-responsive col-md-12" src="{{asset('program_images/big-'.$program->image)}}" alt="">
+                    <article> <img class="img-responsive col-md-12"
+                            src="{{asset('program_images/big-'.$program->image)}}" alt="">
                         <!-- Date -->
                         {{-- <div class="date"> 19 <span>MAY</span> </div> --}}
                         <!-- Detail -->
-                        <div class="post-detail" style="border-bottom: 0px;"> <a class="post-tittle padding-30">{{$program->title}}</a>
+                        <div class="post-detail" style="border-bottom: 0px;"> <a
+                                class="post-tittle padding-30">{{$program->title}}</a>
 
                             <p class="col-md-12 text-justify margin-bottom-30">
                                 {!!$program->details!!}
@@ -42,6 +44,18 @@
                 </div>
 
             </div>
+            @if ($program->category == 'News')
+            @foreach (App\Models\Program::where('category','News')->latest()->get() as $news)
+                
+            <div class="row">
+
+
+                <div class="col-md-12">
+                   <a href="{{$news->programUrl()}}"> <h6 style="color: #52BE80">
+                    {{$news->title}}</h6></a>
+                </div>
+            </div>@endforeach
+            @endif
         </div>
     </section>
 </div>
