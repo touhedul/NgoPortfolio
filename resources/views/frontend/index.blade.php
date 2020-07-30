@@ -19,6 +19,23 @@
 
 <!-- Content -->
 <div id="content">
+    <section class="padding-top-30 padding-bottom-30">
+        <div class="container">
+            <div class="heading text-center">
+                <br><br>
+                <h4>Breaking News</h4>
+            </div>
+            <div class="who-we">
+                <div class="row">
+                    <marquee>
+                    @foreach ($newses as $news)
+                   <a href="{{$news->programUrl()}}"> <span style="font-size: 20px; margin-right: 50px">{{$news->title}}</span></a>
+                    @endforeach
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- WHO WE ARE -->
     <section class="padding-top-30 padding-bottom-30">
@@ -55,13 +72,14 @@
             </div>
         </div>
     </section>
+    
 
-    <!-- BLOG -->
+    <!-- Core Program -->
     <section class="blog light-gray-bg padding-top-30 padding-bottom-30">
         <div class="container">
             <!-- Heading -->
             <div class="heading text-center">
-                <h4>Specialized Programs</h4>
+                <h4>Core Programs</h4>
             </div>
             <!-- Blog Row -->
             <div class="row blog-slide">
@@ -87,12 +105,12 @@
     </section>
 
 
-    <!-- activites -->
+    <!-- OUr Projects -->
     <section class="portfolio  padding-top-30 padding-bottom-20">
         <div class="container">
             <!-- Heading -->
             <div class="heading text-center">
-                <h4>Our Activities</h4>
+                <h4>Our Projects</h4>
             </div>
 
         </div>
@@ -100,17 +118,17 @@
         <!-- PORTFOLIO ROW -->
         <div class="ajax-work col-3">
             <!-- ITEMS -->
-            @foreach ($activities as $activity)
+            @foreach ($projects as $project)
 
             <div class="cbp-item ana dial growth">
-                <article class="item"><img class="img-responsive" src="{{asset('program_images/'.$activity->image)}}" alt="">
+                <article class="item"><img class="img-responsive" src="{{asset('program_images/'.$project->image)}}" alt="">
                     <!-- Hover -->
                     <div class="over-detail">
                         <!-- Link -->
-                        <div class="top-detail"> <a href="{{$activity->programUrl()}}" class=""><i class="fa fa-link"></i> </a> </div>
+                        <div class="top-detail"> <a href="{{$project->programUrl()}}" class=""><i class="fa fa-link"></i> </a> </div>
                         <!-- TITTLE HEADING -->
                         <div class="bottom-detail">
-                            <h3>{{$activity->title}}</h3>
+                            <h3>{{$project->title}}</h3>
                         </div>
                     </div>
                 </article>
@@ -122,20 +140,20 @@
         <!-- LOAD MORE -->
 
         <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
-            <div> <a href="{{route('program.different','Activity')}}" class="btn btn-1">
-                    View All Activities <i class="fa fa-caret-right"></i>
+            <div> <a href="{{route('program.different','Project')}}" class="btn btn-1">
+                    View All  <i class="fa fa-caret-right"></i>
                 </a>
             </div>
         </div>
 
     </section>
 
-    <!-- SERVICES -->
+    <!-- Our associates -->
     <section class="services padding-top-30 padding-bottom-30">
         <div class="container">
             <!-- Heading -->
             <div class="heading text-center">
-                <h4>Our Services</h4>
+                <h4>Our Associates</h4>
             </div>
         </div>
         <div class="best-services">
@@ -143,14 +161,14 @@
             <div class="container">
                 <ul class="row list">
                     <!-- Analytics -->
-                    @foreach ($services as $service)
+                    @foreach ($associates as $associate)
                     <li class="col-md-4">
                         <div class="img-hover-zoom img-hover-zoom--slowmo">
-                            <img src="{{asset('program_images/'.$service->image)}}" alt="">
+                            <img src="{{asset('program_images/'.$associate->image)}}" alt="">
                         </div>
-                        <article class="thumb"><a class="" href="{{$service->programUrl()}}">
-                                <h5>{{$service->title}}</h5>
-                                <p>{!!Str::limit($service->details,100)!!}</p>
+                        <article class="thumb"><a class="" href="{{$associate->programUrl()}}">
+                                <h5>{{$associate->title}}</h5>
+                                <p>{!!Str::limit($associate->details,100)!!}</p>
                             </a>
                         </article>
                     </li>
@@ -161,8 +179,8 @@
         </div>
 
         <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
-            <div> <a href="{{route('program.different','Service')}}" class="btn btn-1">
-                    View Services <i class="fa fa-caret-right"></i>
+            <div> <a href="{{route('program.different','Associate')}}" class="btn btn-1">
+                    View All <i class="fa fa-caret-right"></i>
                 </a>
             </div>
         </div>
@@ -182,8 +200,8 @@
             <!-- Team Member -->
             <ul class="row">
                 <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfActivity}}" data-from="0"></span> </span>
-                        <h5>Activities</h5>
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfService}}" data-from="0"></span> </span>
+                        <h5>Associates</h5>
                     </div>
                 </li>
 
@@ -251,7 +269,7 @@
 
         <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
             <div> <a href="{{route('program.different','Event')}}" class="btn btn-1">
-                    View All Events <i class="fa fa-caret-right"></i>
+                    View All  <i class="fa fa-caret-right"></i>
                 </a>
             </div>
         </div>

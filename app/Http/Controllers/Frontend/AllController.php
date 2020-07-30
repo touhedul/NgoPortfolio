@@ -50,7 +50,7 @@ class AllController extends Controller
     }
     public function publications()
     {
-        $publications = Program::where('category', 'Publication')->latest()->paginate(10);
+        $publications = Program::where('category', 'Resource')->latest()->paginate(10);
         return view('frontend.publications', compact('publications'));
     }
     public function galleries()

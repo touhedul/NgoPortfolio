@@ -14,8 +14,8 @@
                     @foreach ($galleries as $gallery)
                     <!-- Member -->
                     <li class="col-md-4 item market">
-                        <a href="#" data-fancybox="gallery">
-                            <img style="margin-bottom: 20px" class="img-responsive" src="{{asset('gallery_images/big-'.$gallery->image)}}" />
+                        <a href="{{asset('gallery_images/big-'.$gallery->image)}}" data-fancybox="roadtrip">
+                            <img class="img-responsive" src="{{asset('gallery_images/'.$gallery->image)}}">
                         </a>
                     </li>
                     @endforeach

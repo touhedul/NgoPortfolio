@@ -5,20 +5,6 @@
 
 <div class="container bootstrap snippet">
     <div class="row">
-        <div class="col-lg-4 col-sm-6">
-            <div class="circle-tile ">
-                <a href="#">
-                    <div class="circle-tile-heading blue">
-                        <i class="fa fa-book fa-3x"></i></div>
-                </a>
-                <div class="circle-tile-content blue">
-                    <div class="circle-tile-description text-faded">Activities</div>
-                    <div class="circle-tile-number text-faded ">{{$activities}}</div>
-                    <a class="circle-tile-footer" href="#"> <i
-                            class="fa "></i></a>
-                </div>
-            </div>
-        </div>
         
         <div class="col-lg-4 col-sm-6">
             <div class="circle-tile ">
@@ -49,35 +35,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="col-lg-4 col-sm-6">
-            <div class="circle-tile ">
-                <a href="#">
-                    <div class="circle-tile-heading blue">
-                        <i class="fa fa-book fa-3x"></i></div>
-                </a>
-                <div class="circle-tile-content blue">
-                    <div class="circle-tile-description text-faded">Services</div>
-                    <div class="circle-tile-number text-faded ">{{$services}}</div>
-                    <a class="circle-tile-footer" href="#"> <i
-                            class="fa "></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-            <div class="circle-tile ">
-                <a href="#">
-                    <div class="circle-tile-heading purple">
-                        <i class="fa fa-book fa-3x"></i></div>
-                </a>
-                <div class="circle-tile-content purple">
-                    <div class="circle-tile-description text-faded">Affiliates</div>
-                    <div class="circle-tile-number text-faded ">{{$affiliates}}</div>
-                    <a class="circle-tile-footer" href="#"> <i
-                            class="fa "></i></a>
-                </div>
-            </div>
-        </div>
         <div class="col-lg-4 col-sm-6">
             <div class="circle-tile ">
                 <a href="#">
@@ -95,10 +52,10 @@
         <div class="col-lg-4 col-sm-6">
             <div class="circle-tile ">
                 <a href="#">
-                    <div class="circle-tile-heading blue">
+                    <div class="circle-tile-heading purple">
                         <i class="fa fa-book fa-3x"></i></div>
                 </a>
-                <div class="circle-tile-content blue">
+                <div class="circle-tile-content purple">
                     <div class="circle-tile-description text-faded">Teams</div>
                     <div class="circle-tile-number text-faded ">{{$teams}}</div>
                     <a class="circle-tile-footer" href="#"> <i

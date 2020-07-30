@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
-@section('title') Publications @endsection
+@section('title') Resource @endsection
 @section('content')
-@include('includes.banner',['programName'=>'Publications'])
+@include('includes.banner',['programName'=>'Resource'])
 <div id="content">
 
     <!-- Job -->
@@ -12,7 +12,7 @@
             <div class="col-md-8">
 
                 <!-- About Admin -->
-                <h4 class="font-normal margin-bottom-20">Latest Publication</h4>
+                <h4 class="font-normal margin-bottom-20">Latest Resource</h4>
 
 
                 <!-- Job Content -->

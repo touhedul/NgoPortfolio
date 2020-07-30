@@ -40,8 +40,11 @@
                 <div class="form-group">
                     <label>Type*</label>
                     <select style="background: #f5f6fa" class="form-control" required name="type" id="">
-                        <option value="General">General</option>
-                        <option value="Executive">Executive</option>
+                        <option value="General Committee">General Committee</option>
+                        <option value="Executive Committee">Executive Committee</option>
+                        <option value="Higher Management">Higher Management</option>
+                        <option value="Head Office">Head Office</option>
+                        <option value="Field">Field</option>
                     </select>
                 </div>
 

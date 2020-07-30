@@ -27,38 +27,36 @@
                   </ul>
                   </li>
                   @endif --}}
-                  {{-- Activity --}}
-                  <li class="sidebar-item @isset($category) @if($category == "Activity") selected @endif @endisset">
+                  {{-- News --}}
+                  <li class="sidebar-item @isset($category) @if($category == "News") selected @endif @endisset">
 
                         <a class=" sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                               aria-expanded="false"><i class="mdi mdi-fan"></i>
-                              <span class="hide-menu">Activities </span></a>
+                              <span class="hide-menu">News </span></a>
 
                         <ul style="margin-left:20px" aria-expanded="false"
-                              class="collapse first-level @isset($category) @if($category == "Activity") in @endif
+                              class="collapse first-level @isset($category) @if($category == "News") in @endif
                               @endisset">
-                              {{-- Add --}}
                               <li class="sidebar-item">
-                                    <form id="add-form-activity" style="display: none"
+                                    <form id="add-form-news" style="display: none"
                                           action="{{route('admin.program.create')}}">
-                                          <input type="hidden" name="category" value="Activity">
+                                          <input type="hidden" name="category" value="News">
                                     </form>
-                                    <a onclick="document.getElementById('add-form-activity').submit();" href="#"
+                                    <a onclick="document.getElementById('add-form-news').submit();" href="#"
                                           class="sidebar-link active"><i class="mdi mdi-creation"></i><span
                                                 class="hide-menu">
-                                                Add Activity
+                                                Add News
                                           </span></a>
                               </li>
-                              {{-- Manage --}}
                               <li class="sidebar-item">
-                                    <form id="manage-form-activity" style="display: none"
+                                    <form id="manage-form-news" style="display: none"
                                           action="{{route('admin.program.index')}}">
-                                          <input type="hidden" name="category" value="Activity">
+                                          <input type="hidden" name="category" value="News">
                                     </form>
-                                    <a onclick="document.getElementById('manage-form-activity').submit();" href="#"
+                                    <a onclick="document.getElementById('manage-form-news').submit();" href="#"
                                           class="sidebar-link active"><i class="mdi mdi-creation"></i><span
                                                 class="hide-menu">
-                                                Manage Activity
+                                                Manage News
                                           </span></a>
                               </li>
 
@@ -177,37 +175,37 @@
 
                         </ul>
                   </li>
-                  {{-- Service --}}
-                  <li class="sidebar-item @isset($category) @if($category == "Service") selected @endif @endisset""> <a
+                  {{-- Associate --}}
+                  <li class="sidebar-item @isset($category) @if($category == "Associate") selected @endif @endisset""> <a
                               class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                               aria-expanded="false"><i class="mdi mdi-comment-outline"></i>
-                              <span class="hide-menu">Services </span></a>
+                              <span class="hide-menu">Associates </span></a>
 
                         <ul style="margin-left:20px" aria-expanded="false"
-                              class="collapse first-level @isset($category) @if($category == "Service") in @endif
+                              class="collapse first-level @isset($category) @if($category == "Associate") in @endif
                               @endisset">
                               {{-- Add --}}
                               <li class="sidebar-item">
-                                    <form id="add-form-service" style="display: none"
+                                    <form id="add-form-associate" style="display: none"
                                           action="{{route('admin.program.create')}}">
-                                          <input type="hidden" name="category" value="Service">
+                                          <input type="hidden" name="category" value="Associate">
                                     </form>
-                                    <a onclick="document.getElementById('add-form-service').submit();" href="#"
+                                    <a onclick="document.getElementById('add-form-associate').submit();" href="#"
                                           class="sidebar-link active"><i class="mdi mdi-creation"></i><span
                                                 class="hide-menu">
-                                                Add Service
+                                                Add Associate
                                           </span></a>
                               </li>
                               {{-- Manage --}}
                               <li class="sidebar-item">
-                                    <form id="manage-form-service" style="display: none"
+                                    <form id="manage-form-associate" style="display: none"
                                           action="{{route('admin.program.index')}}">
-                                          <input type="hidden" name="category" value="Service">
+                                          <input type="hidden" name="category" value="Associate">
                                     </form>
-                                    <a onclick="document.getElementById('manage-form-service').submit();" href="#"
+                                    <a onclick="document.getElementById('manage-form-associate').submit();" href="#"
                                           class="sidebar-link active "><i class="mdi mdi-creation"></i><span
                                                 class="hide-menu">
-                                                Manage Service
+                                                Manage Associate
                                           </span></a>
                               </li>
 
@@ -215,7 +213,7 @@
                         </ul>
                   </li>
                   {{-- Affiliate --}}
-                  <li class="sidebar-item @isset($category) @if($category == "Affiliate") selected @endif @endisset"">
+                  {{-- <li class="sidebar-item @isset($category) @if($category == "Affiliate") selected @endif @endisset"">
                         <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                               aria-expanded="false"><i class="mdi mdi-comment-check"></i>
                               <span class="hide-menu">Affiliates </span></a>
@@ -223,7 +221,6 @@
                         <ul style="margin-left:20px" aria-expanded="false"
                               class="collapse first-level @isset($category) @if($category == "Affiliate") in @endif
                               @endisset">
-                              {{-- Add --}}
                               <li class="sidebar-item">
                                     <form id="add-form-affiliate" style="display: none"
                                           action="{{route('admin.program.create')}}">
@@ -235,7 +232,6 @@
                                                 Add Affiliate
                                           </span></a>
                               </li>
-                              {{-- Manage --}}
                               <li class="sidebar-item">
                                     <form id="manage-form-affiliate" style="display: none"
                                           action="{{route('admin.program.index')}}">
@@ -250,7 +246,7 @@
 
 
                         </ul>
-                  </li>
+                  </li> --}}
 
                   {{-- Notice --}}
                   <li class="sidebar-item @isset($category) @if($category == "Notice") selected @endif @endisset">
@@ -290,38 +286,38 @@
 
                         </ul>
                   </li>
-                  {{-- Publication --}}
-                  <li class="sidebar-item @isset($category) @if($category == "Publication") selected @endif @endisset">
+                  {{-- Resource --}}
+                  <li class="sidebar-item @isset($category) @if($category == "Resource") selected @endif @endisset">
 
                         <a class=" sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                               aria-expanded="false"><i class="mdi mdi-window-restore"></i>
-                              <span class="hide-menu">Publications </span></a>
+                              <span class="hide-menu">Resources </span></a>
 
                         <ul style="margin-left:20px" aria-expanded="false"
-                              class="collapse first-level @isset($category) @if($category == "Publication") in @endif
+                              class="collapse first-level @isset($category) @if($category == "Resource") in @endif
                               @endisset">
                               {{-- Add --}}
                               <li class="sidebar-item">
-                                    <form id="add-form-publication" style="display: none"
+                                    <form id="add-form-resource" style="display: none"
                                           action="{{route('admin.program.create')}}">
-                                          <input type="hidden" name="category" value="Publication">
+                                          <input type="hidden" name="category" value="Resource">
                                     </form>
-                                    <a onclick="document.getElementById('add-form-publication').submit();" href="#"
+                                    <a onclick="document.getElementById('add-form-resource').submit();" href="#"
                                           class="sidebar-link active"><i class="mdi mdi-creation"></i><span
                                                 class="hide-menu">
-                                                Add Publication
+                                                Add Resource
                                           </span></a>
                               </li>
                               {{-- Manage --}}
                               <li class="sidebar-item">
-                                    <form id="manage-form-publication" style="display: none"
+                                    <form id="manage-form-resource" style="display: none"
                                           action="{{route('admin.program.index')}}">
-                                          <input type="hidden" name="category" value="Publication">
+                                          <input type="hidden" name="category" value="Resource">
                                     </form>
-                                    <a onclick="document.getElementById('manage-form-publication').submit();" href="#"
+                                    <a onclick="document.getElementById('manage-form-resource').submit();" href="#"
                                           class="sidebar-link active"><i class="mdi mdi-creation"></i><span
                                                 class="hide-menu">
-                                                Manage Publication
+                                                Manage Resource
                                           </span></a>
                               </li>
 

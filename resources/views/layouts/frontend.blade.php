@@ -126,21 +126,26 @@
                             </li>
                             <li> <a href="{{route('about')}}">About Us</a>
                                 <ul class="dropdown">
-                                    <li> <a href="{{route('branches')}}">Branches</a> </li>
-                                    <li> <a href="{{route('program.different','Affiliate')}}">Affiliate</a> </li>
+                                    <li> <a href="{{route('founder')}}">Founder</a> </li>
+                                    <li> <a href="{{route('legal.entity')}}">Legal Entity</a> </li>
+                                    <li> <a href="{{route('partner.network')}}">Partner Network</a> </li>
                                     <li> <a href="{{route('teams')}}">Team</a> </li>
+                                    <li> <a href="{{route('branches')}}">Branches</a> </li>
+                                    {{-- <li> <a href="{{route('program.different','Affiliate')}}">Affiliate</a> </li> --}}
                                     <li> <a href="{{route('galleries')}}">Gallery</a> </li>
                                 </ul>
                             </li>
-                            <li> <a href="{{route('program.different','Project')}}">Projects </a> </li>
-                            <li> <a href="{{route('program.different','Activity')}}">Activities </a> </li>
+                            <li> <a href="#">Activities</a>
+                                <ul class="dropdown">
+                                    <li> <a href="{{route('program.different','Program')}}">Core Programs </a> </li>
+                                    <li> <a href="{{route('program.different','Project')}}">Projects </a> </li>
+                                </ul>
+                            </li>
+                            <li> <a href="{{route('program.different','Associate')}}">Associates </a> </li>
+                            <li> <a href="{{route('publications')}}">Resources </a> </li>
+                            <li> <a href="{{route('jobs')}}">Carrier </a> </li>
                             <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
-                            <li> <a href="{{route('program.different','Service')}}">Services </a> </li>
-                            <li> <a href="{{route('jobs')}}">Job </a> </li>
                             <li> <a href="{{route('notices')}}">Notice </a> </li>
-                            <li> <a href="{{route('publications')}}">Publications </a> </li>
-
-
                             <li> <a href="{{route('contact')}}">Contact</a> </li>
                         </ul>
                         <!-- Search -->
@@ -188,27 +193,29 @@
 
                     <!-- Twitter Feed -->
                     <div class="col-md-4">
-                        <h6>Pages</h6>
+                        <h6>Site Map</h6>
                         <ul class="col-md-6 tweet">
                             <li> <a href="{{route('program.different','Project')}}">Projects </a> </li>
-                            <li> <a href="{{route('program.different','Activity')}}">Activities </a> </li>
+                            <li> <a href="{{route('program.different','Program')}}">Programs </a> </li>
                             <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
-                            <li> <a href="{{route('program.different','Service')}}">Services </a> </li>
+                            <li> <a href="{{route('program.different','Associate')}}">Associates </a> </li>
 
                         </ul>
                         <ul class="col-md-6 tweet">
                             <li> <a href="{{route('branches')}}">Branches</a> </li>
-                            <li> <a href="{{route('program.different','Affiliate')}}">Affiliate</a> </li>
-                            <li> <a href="{{route('teams')}}">Team</a> </li>
-                            <li> <a href="{{route('galleries')}}">Gallery</a> </li>
+                            <li> <a href="{{route('program.different','Resource')}}">Resource</a> </li>
+                            <li> <a href="{{route('terms.and.conditions')}}">Terms & Conditions</a> </li>
+                            <li> <a href="{{route('privacy.policy')}}">Privacy Policy</a> </li>
                         </ul>
                     </div>
 
                     <!-- Photostream -->
                     <div class="col-md-4">
-                        <h6>Photo Gallery</h6>
+                        <a href="{{route('galleries')}}"><h6>Photo Gallery</h6></a>
+                        <a href="{{route('galleries')}}">
+                            <p>All Images</p>
+                        </a>
                         <ul class="photo-steam ">
-
                             @foreach (App\Models\Gallery::where('category','gallery')->take(6)->get() as $gallery)
 
                             <li>

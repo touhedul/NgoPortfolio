@@ -21,21 +21,15 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        $activities = Program::where('category', 'Activity')->count();
         $events = Program::where('category', 'Event')->count();
         $projects = Program::where('category', 'Event')->count();
-        $services = Program::where('category', 'Event')->count();
-        $affiliates = Program::where('category', 'Event')->count();
         $branches = Program::where('category', 'Event')->count();
         $teams = Team::count();
         $testimonials = Testimonial::count();
         $jobs = Job::count();
         return view('admin.dashboard', compact(
-            'activities',
             'events',
             'projects',
-            'services',
-            'affiliates',
             'branches',
             'teams',
             'testimonials',
