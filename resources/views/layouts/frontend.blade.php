@@ -143,7 +143,7 @@
                             </li>
                             <li> <a href="{{route('program.different','Associate')}}">Associates </a> </li>
                             <li> <a href="{{route('publications')}}">Resources </a> </li>
-                            <li> <a href="{{route('jobs')}}">Carrier </a> </li>
+                            <li> <a href="{{route('jobs')}}">Career </a> </li>
                             <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
                             <li> <a href="{{route('notices')}}">Notice </a> </li>
                             <li> <a href="{{route('contact')}}">Contact</a> </li>
