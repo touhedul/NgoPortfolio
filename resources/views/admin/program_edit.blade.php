@@ -22,7 +22,7 @@
                     <textarea rows="15" required style="background: #f5f6fa" name="details" class="form-control"
                         placeholder="Enter Email">{!!$program->details!!}</textarea>
                 </div>
-                @if($program->category != "Notice")
+                @if($program->category != "Notice" && $program->category != "Publication")
                 <div class="form-group">
                     <label>Image</label><br>
                     <img src="{{asset('program_images/'.$program->image)}}" alt=""> <br>

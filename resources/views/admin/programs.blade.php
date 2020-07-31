@@ -1,53 +1,53 @@
-    @extends('layouts.admin')
-    @section('title','Manage')
-    @section('content')
-    
-    <div class="row">
-        <div class="col-12">
-            <div class="card card-default">
-                <div class="card-header card-header-border-bottom d-flex justify-content-between">
-                    <h2>{{$category}} </h2>
-                </div>
-    
-                <div class="card-body">
-                    <div class="hoverable-data-table table-responsive">
-                        <table id="user-table" class="table table-bordered table-hover table-striped" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <h5>SL.</h5>
-                                    </th>
-                                    <th>
-                                        <h5>Title</h5>
-                                    </th>
-                                    <th>
-                                        <h5>Details</h5>
-                                    </th>
-                                    @if($category == "Notice")
-                                    <th>
-                                        <h5></h5>
-                                    </th>
-                                    @else
-                                    <th>
-                                        <h5>Images</h5>
-                                    </th>
-                                    @endif
-                                    <th>
-                                        <h5>Action</h5>
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
+@extends('layouts.admin')
+@section('title','Manage')
+@section('content')
+
+<div class="row">
+    <div class="col-12">
+        <div class="card card-default">
+            <div class="card-header card-header-border-bottom d-flex justify-content-between">
+                <h2>{{$category}} </h2>
+            </div>
+
+            <div class="card-body">
+                <div class="hoverable-data-table table-responsive">
+                    <table id="user-table" class="table table-bordered table-hover table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h5>SL.</h5>
+                                </th>
+                                <th>
+                                    <h5>Title</h5>
+                                </th>
+                                <th>
+                                    <h5>Details</h5>
+                                </th>
+                                @if($category == "Notice" || $category == "Publication")
+                                <th>
+                                    <h5></h5>
+                                </th>
+                                @else
+                                <th>
+                                    <h5>Images</h5>
+                                </th>
+                                @endif
+                                <th>
+                                    <h5>Action</h5>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-    @endsection
-    
-    @section('script')
-    <script>
-        $(document).ready(function () {
+</div>
+@endsection
+
+@section('script')
+<script>
+    $(document).ready(function () {
             $('#user-table').DataTable({
                 "aLengthMenu": [[20, 30, 50, 75, -1], [20, 30, 50, 75, "All"]],
                 "pageLength": 20,
@@ -66,5 +66,5 @@
                 order: [0,'desc']
             });
         });
-    </script>
-    @endsection
+</script>
+@endsection

@@ -9,8 +9,8 @@ Route::namespace('Frontend')->group(function () {
     Route::get('contact', 'IndexController@contact')->name('contact');
     Route::get('feedback', 'IndexController@feedback')->name('feedback');
     Route::post('feedback', 'IndexController@submitFeedback')->name('submit.feedback');
-    // Route::get('privacy-policy', 'IndexController@privacyPolicy')->name('privacy.policy');
-    // Route::get('terms-and-conditions', 'IndexController@termsAndConditions')->name('terms.and.conditions');
+    Route::get('privacy-policy', 'IndexController@privacyPolicy')->name('privacy.policy');
+    Route::get('terms-and-conditions', 'IndexController@termsAndConditions')->name('terms.and.conditions');
 
     // Blog
     Route::get('blogs', 'BlogController@blogs')->name('blogs');
@@ -25,7 +25,19 @@ Route::namespace('Frontend')->group(function () {
     Route::get('/galleries', 'AllController@galleries')->name('galleries');
     Route::get('/jobs', 'AllController@jobs')->name('jobs');
     Route::get('/notices', 'AllController@notices')->name('notices');
+    Route::get('/publications', 'AllController@publications')->name('publications');
+    Route::get('/founder',function(){
+        return view('frontend.founder');
+    })->name('founder');
+    Route::get('/legal-entity',function(){
+        return view('frontend.legal_entity');
+    })->name('legal.entity');
+    Route::get('/partner-network',function(){
+        return view('frontend.partner_network');
+    })->name('partner.network');
 });
+
+
 
 // ********************************USER********************************
 

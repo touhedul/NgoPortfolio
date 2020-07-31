@@ -45,6 +45,17 @@
                             @endif value="General">General</option>
                         <option @if ($team->type == "Executive") selected
                             @endif value="Executive">Executive</option>
+
+                        <option @if ($team->type == "General Committee") selected
+                            @endif value="General Committee">General Committee</option>
+                        <option @if ($team->type == "Executive Executive") selected
+                            @endif value="Executive Committee">Executive Committee</option>
+                        <option @if ($team->type == "Higher Management") selected
+                            @endif value="Higher Management">Higher Management</option>
+                        <option @if ($team->type == "Head Office") selected
+                            @endif value="Head Office">Head Office</option>
+                        <option @if ($team->type == "Field") selected
+                            @endif value="Field">Field</option>
                     </select>
                 </div>
 

@@ -60,6 +60,18 @@
 
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Goal</h6>
+                    <p class="text-justify">Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h6>Objective</h6>
+                    <p class="text-justify">Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have.
+                    </p>
+                </div>
+            </div>
         </div>
 
 

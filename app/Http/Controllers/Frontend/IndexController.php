@@ -14,28 +14,29 @@ class IndexController extends Controller
     public function index()
     {
         $sliders = Gallery::where('category', 'Slider')->get();
+        $projects = Program::where('category', 'Project')->latest()->get();
+        $newses = Program::where('category', 'News')->latest()->get();
         $programs = Program::where('category', 'Program')->latest()->get();
         $notices = Program::where('category', 'Notice')->latest()->get();
-        $activities = Program::where('category', 'Activity')->latest()->take(3)->get();
-        $services = Program::where('category', 'Service')->latest()->take(3)->get();
+        $associates = Program::where('category', 'Associate')->latest()->take(3)->get();
         $events = Program::where('category', 'Event')->latest()->take(3)->get();
         $testimonials = Testimonial::latest()->get();
-        $numberOfActivity = Program::where('category', 'Activity')->count();
+        $numberOfService = Program::where('category', 'Associate')->count();
         $numberOfProject = Program::where('category', 'Project')->count();
         $numberOfProgram = Program::where('category', 'Program')->count();
         $numberOfEvent = Program::where('category', 'Event')->count();
-        return view('frontend.index', compact('sliders', 'programs', 'activities', 'services', 'events', 'notices', 'testimonials', 'numberOfActivity', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
+        return view('frontend.index', compact('sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials','newses', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
     }
 
-    // public function termsAndConditions()
-    // {
-    //     return view('frontend.terms_and_conditions');
-    // }
+    public function termsAndConditions()
+    {
+        return view('frontend.terms_and_conditions');
+    }
 
-    // public function privacyPolicy()
-    // {
-    //     return view('frontend.privacy_policy');
-    // }
+    public function privacyPolicy()
+    {
+        return view('frontend.privacy_policy');
+    }
     public function contact()
     {
         return view('frontend.contact');
