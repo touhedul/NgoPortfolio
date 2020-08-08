@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Image;
 use File;
 use Str;
+
 class GalleryController extends Controller
 {
     /**
@@ -29,11 +30,12 @@ class GalleryController extends Controller
                 ->addColumn('action', function (Gallery $gallery) {
                     return
 
+                        "<a class='btn btn-primary' href='" . route('admin.gallery.edit', $gallery->id) . "'>Edit</a> ||  " .
                         '<a class="btn btn-danger"  onclick="if (confirm(\'Are you sure to delete?\')){document.getElementById(\'delete-form' . $gallery->id . '\').submit();}else{event.preventDefault()}" href="#" >Delete</a>
 
                      <form id="delete-form' . $gallery->id . '" action="' . route('admin.gallery.destroy', $gallery->id) . '" method="POST" style="display: none;"> "' . method_field('DELETE') . '" "' . csrf_field() . '"  </form>';
                 })
-                ->rawColumns(['action', 'image','about'])
+                ->rawColumns(['action', 'image', 'about'])
                 ->make(true);
         }
         return view('admin.galleries');
@@ -97,7 +99,6 @@ class GalleryController extends Controller
      */
     public function edit(Gallery $gallery)
     {
-        abort(404);
         return view('admin.gallery_edit', compact('gallery'));
     }
 
