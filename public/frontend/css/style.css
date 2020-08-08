@@ -1543,7 +1543,7 @@ header .navbar li.active a {
 .blog-pages .post-detail {
 	text-align: left;
 	border-bottom: 1px solid #e6e6e6;
-	margin-bottom: 50px;
+	margin-bottom: 0px;
 }
 .blog-pages .post-detail .tags {
 	margin-top: 20px;
