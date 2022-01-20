@@ -116,6 +116,9 @@ Route::prefix('rt-admin')->group(function () {
                 Route::resource('job', 'JobController');
                 //branch
                 Route::resource('branch', 'BranchController');
+                Route::get('setting', 'SettingController@setting')->name('setting');
+                Route::post('setting-office', 'SettingController@settingOffice')->name('settingOffice');
+                Route::post('setting-company', 'SettingController@settingCompany')->name('settingCompany');
                 //blog
                 Route::resource('program', 'ProgramController');
                 Route::get('data-table-values/{category?}', 'ProgramController@dataTableValues')->name('data-table.values');

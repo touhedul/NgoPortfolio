@@ -422,6 +422,10 @@
                                                 Gallery </span></a></li>
                         </ul>
                   </li>
+                  <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link "
+                              href="{{route('admin.setting')}}" aria-expanded="false">
+                              <i class="mdi mdi-settings"></i><span class="hide-menu">Setting</span></a>
+                  </li>
                   {{-- Contacts --}}
                   @if(Route::has('admin.contacts'))
                   <li class="sidebar-item "> <a class="sidebar-link waves-effect waves-dark sidebar-link "

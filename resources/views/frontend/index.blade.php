@@ -1,5 +1,7 @@
 @extends('layouts.frontend')
-@section('title','Shataphool Bangladesh')
+@section('title')
+{{setting('website_name')}}
+@endsection
 @section('content')
 <!-- HOME MAIN SLIDER -->
 <section class="home-slide">
@@ -72,7 +74,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <!-- Core Program -->
     <section class="blog light-gray-bg padding-top-30 padding-bottom-30">

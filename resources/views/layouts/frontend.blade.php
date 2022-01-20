@@ -117,8 +117,8 @@
                     <div class="container">
 
                         <!-- LOGO -->
-                        <div class="logo"> <a href="{{route('index')}}"><img class="img-responsive"
-                                    src="{{asset('frontend/images/logo.png')}}" alt=""></a> </div>
+                        <div class="logo" style="margin-top: -20px"> <a href="{{route('index')}}"><img
+                                    class="img-responsive" src="{{asset('images/'.setting('logo'))}}" alt=""></a> </div>
 
                         <!-- Nav -->
                         <ul class="nav ownmenu">
@@ -131,7 +131,8 @@
                                     <li> <a href="{{route('partner.network')}}">Partner Network</a> </li>
                                     <li> <a href="{{route('teams')}}">Team</a> </li>
                                     <li> <a href="{{route('branches')}}">Branches</a> </li>
-                                    {{-- <li> <a href="{{route('program.different','Affiliate')}}">Affiliate</a> </li> --}}
+                                    {{-- <li> <a href="{{route('program.different','Affiliate')}}">Affiliate</a> </li>
+                                    --}}
                                     <li> <a href="{{route('galleries')}}">Gallery</a> </li>
                                 </ul>
                             </li>
@@ -168,23 +169,27 @@
                 <div class="row">
 
                     <!-- ABOUT -->
-                    <div class="col-md-4"> <img src="{{asset('frontend/images/logo-footer.png')}}" alt="">
+                    <div class="col-md-4"> <img src="{{asset('images/'.setting('logo_footer'))}}" alt="">
                         <div class="about-foot">
                             <ul>
                                 <li>
-                                    <p><i class="fa fa-map-marker"></i> Jahanabad, Mohanpur, Rajshahi</p>
+                                    <p><i class="fa fa-map-marker"></i> {{setting('address')}}</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-phone"></i> +8801711062767 </p>
+                                    <p><i class="fa fa-phone"></i> {{setting('phone_number')}} </p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-envelope"></i> shataphool@gmail.com</p>
+                                    <p><i class="fa fa-envelope"></i> {{setting('email')}}</p>
                                 </li>
                                 <li>
                                     <p>
-                                        <a href="#."><i class="fa fa-facebook" style="color:#52BE80;"></i></a>
+                                        <a href=" {{setting('facebook')}}"><i class="fa fa-facebook"
+                                                style="color:#52BE80;"></i></a>
                                         &nbsp;
-                                        <a href="#."><i class="fa fa-youtube-play" style="color:#52BE80;"></i></a>
+                                        <a href=" {{setting('youtube')}}"><i class="fa fa-youtube-play"
+                                                style="color:#52BE80;"></i></a>
+                                        <a href=" {{setting('linkedin')}}"><i class="fa fa-linkedin"
+                                                style="color:#52BE80;"></i></a>
                                     </p>
                                 </li>
                             </ul>
@@ -199,7 +204,7 @@
                             <li> <a href="{{route('program.different','Program')}}">Core Programs </a> </li>
                             <li> <a href="{{route('program.different','Project')}}">Projects </a> </li>
                             <li> <a href="{{route('program.different','Associate')}}">Associates </a> </li>
-                            
+
                         </ul>
                         <ul class="col-md-6 tweet">
                             <li> <a href="{{route('program.different','Resource')}}">Resource</a> </li>
@@ -211,7 +216,9 @@
 
                     <!-- Photostream -->
                     <div class="col-md-4">
-                        <a href="{{route('galleries')}}"><h6>Photo Gallery</h6></a>
+                        <a href="{{route('galleries')}}">
+                            <h6>Photo Gallery</h6>
+                        </a>
                         <a href="{{route('galleries')}}">
                             <p>All Images</p>
                         </a>
@@ -241,7 +248,8 @@
                         <p>Shataphool © All Rights Reserved || Technology Partner <a class="primary-color margin-0"
                                 href="//skoder.co">Skoder</a> </p>
                     </div>
-                    <div class="col-md-6 text-right"> <a href="{{route('privacy.policy')}}">Privacy Policy</a> <a href="{{route('terms.and.conditions')}}">Terms &
+                    <div class="col-md-6 text-right"> <a href="{{route('privacy.policy')}}">Privacy Policy</a> <a
+                            href="{{route('terms.and.conditions')}}">Terms &
                             Conditions</a> </div>
                 </div>
             </div>
