@@ -126,9 +126,9 @@
                             </li>
                             <li> <a href="{{route('about')}}">About Us</a>
                                 <ul class="dropdown">
-                                    <li> <a href="{{route('founder')}}">Founder</a> </li>
-                                    <li> <a href="{{route('legal.entity')}}">Legal Entity</a> </li>
-                                    <li> <a href="{{route('partner.network')}}">Partner Network</a> </li>
+                                    <li> <a href="{{route('founder')}}">Advisor</a> </li>
+                                    {{-- <li> <a href="{{route('legal.entity')}}">Legal Entity</a> </li> --}}
+                                    {{-- <li> <a href="{{route('partner.network')}}">Partner Network</a> </li> --}}
                                     <li> <a href="{{route('teams')}}">Team</a> </li>
                                     <li> <a href="{{route('branches')}}">Branches</a> </li>
                                     {{-- <li> <a href="{{route('program.different','Affiliate')}}">Affiliate</a> </li>

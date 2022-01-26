@@ -5,6 +5,7 @@
 <div id="content">
 
     <!-- WHO WE ARE -->
+    @if($teams->where('type','General Committee')->count()>0)
     <section class="team team-wrap padding-top-70 padding-bottom-20">
         <div class="container">
 
@@ -35,6 +36,9 @@
 
         </div>
     </section>
+    @endif
+
+    @if($teams->where('type','Executive Committee')->count()>0)
     <section class="team team-wrap padding-top-70 padding-bottom-20">
         <div class="container">
 
@@ -65,6 +69,9 @@
 
         </div>
     </section>
+    @endif
+
+    @if($teams->where('type','Higher Management')->count()>0)
     <section class="team team-wrap padding-top-70 padding-bottom-20">
         <div class="container">
 
@@ -95,6 +102,9 @@
 
         </div>
     </section>
+    @endif
+
+    @if($teams->where('type','Head Office')->count()>0)
     <section class="team team-wrap padding-top-70 padding-bottom-20">
         <div class="container">
 
@@ -125,6 +135,9 @@
 
         </div>
     </section>
+    @endif
+
+    @if($teams->where('type','Field')->count()>0)
     <section class="team team-wrap padding-top-70 padding-bottom-20">
         <div class="container">
 
@@ -155,5 +168,6 @@
 
         </div>
     </section>
+    @endif
 </div>
 @endsection

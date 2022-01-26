@@ -33,7 +33,7 @@ class SettingController extends Controller
             //add new image
             $image = $request->file('logo');
             $imageName = time() . uniqid() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(150, 80)->save('images/' . $imageName, 50);
+            Image::make($image)->resize(140, 70)->save('images/' . $imageName, 50);
 
             Setting::where('key', 'logo')->update(['value' => $imageName]);
         }
@@ -59,7 +59,7 @@ class SettingController extends Controller
             //add new image
             $image = $request->file('logo_footer');
             $imageName = time() . uniqid() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(150, 80)->save('images/' . $imageName, 50);
+            Image::make($image)->resize(140, 70)->save('images/' . $imageName, 50);
 
             Setting::where('key', 'logo_footer')->update(['value' => $imageName]);
         }

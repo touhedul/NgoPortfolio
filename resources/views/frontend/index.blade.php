@@ -8,7 +8,8 @@
     <ul class="slides">
         @foreach ($sliders as $slider)
         <!-- SLIDER 1 -->
-        <li class="slide-img-1" style="background: url('{{asset('gallery_images/big-'.$slider->image)}}') ;" data-stellar-background-ratio="0.6">
+        <li class="slide-img-1" style="background: url('{{asset('gallery_images/big-'.$slider->image)}}') ;"
+            data-stellar-background-ratio="0.6">
             <div class="position-center-center">
                 <!-- <h1>Sotoful</h1>
                 <h5>NGO at your Service</h5>
@@ -21,7 +22,7 @@
 
 <!-- Content -->
 <div id="content">
-    <section class="padding-top-30 padding-bottom-30">
+    {{-- <section class="padding-top-30 padding-bottom-30">
         <div class="container">
             <div class="heading text-center">
                 <br><br>
@@ -30,14 +31,15 @@
             <div class="who-we">
                 <div class="row">
                     <marquee>
-                    @foreach ($newses as $news)
-                   <a href="{{$news->programUrl()}}"> <span style="font-size: 20px; margin-right: 50px ; color : #52BE80">{{$news->title}}</span></a>
-                    @endforeach
+                        @foreach ($newses as $news)
+                        <a href="{{$news->programUrl()}}"> <span
+                                style="font-size: 20px; margin-right: 50px ; color : #52BE80">{{$news->title}}</span></a>
+                        @endforeach
                     </marquee>
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- WHO WE ARE -->
     <section class="padding-top-30 padding-bottom-30">
@@ -45,11 +47,30 @@
             <div class="who-we">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3 class="font-normal">Shataphool Bangladesh: At a glance</h3>
-                        <h6>Where We Started</h6>
-                        <p class="text-justify">Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have.
-                            In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. By 2001, Shataphool Bangladesh evolved into a formal institution offering micro-credit to poor rural women in Jahanabad Union of Mohanpur Upazila.
-                            Over the next decade the micro credit program diversified, and the organization began providing a variety of micro-credit products for its heterogeneous group of family entrepreneurs, alongside various types of social development programs.</p>
+                        <h3 class="font-normal"> PROLINK GLOBAL: YOUR AUTOMATION PARTNER</h3>
+                        <h6>Our keys for development:</h6>
+                        <p class="text-justify">The company has been formed by a group of expert professionals having
+                            vivid experience and international exposure in Information and Communication Technology
+                            (ICT). People involved here are well known academic in ICT sector, highly qualified business
+                            graduates and qualified engineers from the renowned universities across the globe.
+<br>
+                            The resource personnel involved in collaboration of the sister concern company Prolink
+                            Limited have been consistently providing reliable support, services and consultancy to a
+                            wide variety of corporate houses either in the capacity of executive or as business partner
+                            or consultant. Bottom line of the company philosophy is building a long-term business
+                            partnership with its clients where interpersonal relationship, reliability, assured quality
+                            and target oriented modern technology are the major building blocks.
+                            <br>
+                            It is a company where professionals from both technical and functional field group together
+                            with an objective of providing appropriate solutions based on customer needs. It realizes
+                            the importance of functional knowledge and its impact in developing the solutions. We
+                            constantly endeavor to be a leading technology firm with profound business and functional
+                            knowledge. The key to the company's success is the maintenance of a close working
+                            relationship with the clients through ensuring the best possible solutions to their needs;
+                            to establish and maintain a thorough knowledge and understanding of client's objective and
+                            help them maximize the benefits.
+
+                        </p>
                     </div>
                     <div class="col-md-6">
 
@@ -58,14 +79,30 @@
 
                             <!-- SERVICES -->
                             <li class="col-sm-12"> <i class="fa fa-eye"></i>
-                                <h5>our vision</h5>
-                                <p class="text-justify">To ensure the sustainable economic development which provides human rights, mainstreams gender equality, ensures social justice, assures good governance by active participation of multi-tier people of society through poor friendly microfinance services.</p>
+                                <h5>Our Vision</h5>
+                                <p class="text-justify">Our Vision is to be a globally recognized engineering and
+                                    information technology company trusted by its clients with satisfaction by
+                                    delivering innovative quality products and services at an affordable cost, caring
+                                    for its employees. We are always ready to take our achievements to the next level.
+                                    We are growing and would always like to remain on the growing streak.</p>
                             </li>
 
                             <!-- SERVICES -->
                             <li class="col-sm-12"> <i class="fa fa-rocket"></i>
-                                <h5>our mission</h5>
-                                <p class="text-justify">To establish an apolitical, cosmopolitan, not-for-profit, socioeconomic and philanthropic private voluntary organization which will work with the mission of making people self-dependent of all the religions and color, especially regenerating those who are impoverished and underprivileged.</p>
+                                <h5>Our Mission</h5>
+                                <p class="text-justify">Our Mission is to achieve the reputation of a quality, high
+                                    standard & reliable solution & service Provider Company in the ICT industry. </p>
+                            </li>
+                            <!-- SERVICES -->
+                            <li class="col-sm-12"> <i class="fa fa-users"></i>
+                                <h5>We believe in</h5>
+                                <p class="text-justify">
+                                    • Motivation <br>
+                                    • Collective responsibility and leadership <br>
+                                    • Professionalism and ethics <br>
+                                    • Adding values to our client needs <br>
+
+                                </p>
                             </li>
 
                         </ul>
@@ -95,7 +132,8 @@
                         <!-- <div class="date"> 19 <span>MAY</span> </div> -->
 
                         <!-- Detail -->
-                        <div class="post-detail"> <a href="{{$program->programUrl()}}" class="post-tittle">{{$program->title}}</a>
+                        <div class="post-detail"> <a href="{{$program->programUrl()}}"
+                                class="post-tittle">{{$program->title}}</a>
                             <p>{!!Str::limit($program->details,100)!!}</p>
                         </div>
                     </article>
@@ -123,11 +161,13 @@
             @foreach ($projects as $project)
 
             <div class="cbp-item ana dial growth">
-                <article class="item"><img class="img-responsive" src="{{asset('program_images/'.$project->image)}}" alt="">
+                <article class="item"><img class="img-responsive" src="{{asset('program_images/'.$project->image)}}"
+                        alt="">
                     <!-- Hover -->
                     <div class="over-detail">
                         <!-- Link -->
-                        <div class="top-detail"> <a href="{{$project->programUrl()}}" class=""><i class="fa fa-link"></i> </a> </div>
+                        <div class="top-detail"> <a href="{{$project->programUrl()}}" class=""><i
+                                    class="fa fa-link"></i> </a> </div>
                         <!-- TITTLE HEADING -->
                         <div class="bottom-detail">
                             <h3>{{$project->title}}</h3>
@@ -143,7 +183,7 @@
 
         <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
             <div> <a href="{{route('program.different','Project')}}" class="btn btn-1">
-                    View All  <i class="fa fa-caret-right"></i>
+                    View All <i class="fa fa-caret-right"></i>
                 </a>
             </div>
         </div>
@@ -202,28 +242,32 @@
             <!-- Team Member -->
             <ul class="row">
                 <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfService}}" data-from="0"></span> </span>
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{$numberOfService}}" data-from="0"></span> </span>
                         <h5>Associates</h5>
                     </div>
                 </li>
 
                 <!-- Line Of Codes -->
                 <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfEvent}}" data-from="0"></span> </span>
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{$numberOfEvent}}" data-from="0"></span> </span>
                         <h5>Events</h5>
                     </div>
                 </li>
 
                 <!-- Satisfied Client -->
                 <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfProject}}" data-from="0"></span> </span>
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{$numberOfProject}}" data-from="0"></span> </span>
                         <h5>Projects</h5>
                     </div>
                 </li>
 
                 <!-- PSD file included -->
                 <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfProgram}}" data-from="0"></span> </span>
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{$numberOfProgram}}" data-from="0"></span> </span>
                         <h5>Programs</h5>
                     </div>
                 </li>
@@ -251,11 +295,13 @@
                         <div class="col-md-12">
 
                             <!-- Post -->
-                            <article> <img class="img-responsive col-md-12" src="{{asset('program_images/'.$event->image)}}" alt="">
+                            <article> <img class="img-responsive col-md-12"
+                                    src="{{asset('program_images/'.$event->image)}}" alt="">
                                 <!-- Date -->
                                 {{-- <div class="date"> 19 <span>MAY</span> </div> --}}
                                 <!-- Detail -->
-                                <div class="post-detail" style="border-bottom: 0px;"> <a href="{{$event->programUrl()}}" class="post-tittle padding-20">{{$event->title}}</a>
+                                <div class="post-detail" style="border-bottom: 0px;"> <a href="{{$event->programUrl()}}"
+                                        class="post-tittle padding-20">{{$event->title}}</a>
 
                                 </div>
                             </article>
@@ -271,7 +317,7 @@
 
         <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
             <div> <a href="{{route('program.different','Event')}}" class="btn btn-1">
-                    View All  <i class="fa fa-caret-right"></i>
+                    View All <i class="fa fa-caret-right"></i>
                 </a>
             </div>
         </div>
@@ -296,9 +342,10 @@
                         <!-- PANEL HEADING -->
                         <div class="panel-heading" style="border: 0px;"> <a href="{{$notice->programUrl()}}">
                                 <div class="job-tittle">
-                                   <div class="media-left">
+                                    <div class="media-left">
                                         <div class="date"> {{date('d ',strtotime($notice->created_at))}}
-                                            <span>{{date('M ',strtotime($notice->created_at))}}</span> </div>
+                                            <span>{{date('M ',strtotime($notice->created_at))}}</span>
+                                        </div>
                                     </div>
                                     <div class="media-body">
                                         <h5>{{$notice->title}}</h5>
