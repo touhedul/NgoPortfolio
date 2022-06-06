@@ -63,14 +63,15 @@
                     </div>
                 </div>
             </a>
+            <img class="img-responsive" src="{{asset('job_images/'.$job->image)}}" alt="">
             <p>{!!Str::limit($job->details,100)!!}</p>
         </div>
 
         <!-- ADD INFO HERE -->
         <div id="job{{$job->id}}" class="panel-collapse collapse">
+
             <div class="panel-body">
                 <p>
-
                     {!!substr($job->details, 100, 65530)!!}
                 </p>
 

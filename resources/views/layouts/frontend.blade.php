@@ -144,7 +144,7 @@
                             </li>
                             <li> <a href="{{route('program.different','Associate')}}">Associates </a> </li>
                             <li> <a href="{{route('publications')}}">Resources </a> </li>
-                            <li> <a href="{{route('jobs')}}">Career </a> </li>
+                            <li> <a href="{{route('career')}}">Career </a> </li>
                             <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
                             <li> <a href="{{route('notices')}}">Notices </a> </li>
                             <li> <a href="{{route('contact')}}">Contact</a> </li>
@@ -208,7 +208,7 @@
                         </ul>
                         <ul class="col-md-6 tweet">
                             <li> <a href="{{route('program.different','Resource')}}">Resource</a> </li>
-                            <li> <a href="{{route('jobs')}}">Career</a> </li>
+                            <li> <a href="{{route('career')}}">Career</a> </li>
                             <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
                             <li> <a href="{{route('notices')}}">Notices </a> </li>
                         </ul>
