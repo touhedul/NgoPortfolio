@@ -2,7 +2,6 @@
 
 // *****************************Frontend **************************
 
-
 Route::namespace('Frontend')->group(function () {
     Route::get('/', 'IndexController@index')->name('index');
     //Give feed back and contact User side
@@ -27,18 +26,16 @@ Route::namespace('Frontend')->group(function () {
     Route::get('/career', 'AllController@jobs')->name('career');
     Route::get('/notices', 'AllController@notices')->name('notices');
     Route::get('/publications', 'AllController@publications')->name('publications');
-    Route::get('/founder',function(){
+    Route::get('/founder', function () {
         return view('frontend.founder');
     })->name('founder');
-    Route::get('/legal-entity',function(){
+    Route::get('/legal-entity', function () {
         return view('frontend.legal_entity');
     })->name('legal.entity');
-    Route::get('/partner-network',function(){
+    Route::get('/partner-network', function () {
         return view('frontend.partner_network');
     })->name('partner.network');
 });
-
-
 
 // ********************************USER********************************
 
@@ -64,11 +61,6 @@ Route::prefix('user')->group(function () {
     });
 });
 
-
-
-
-
-
 // **************************************************ADMIN************************************************
 //admin Login, logout, forget password routes
 Route::prefix('rt-admin')->group(function () {
@@ -86,7 +78,6 @@ Route::prefix('rt-admin')->group(function () {
         Route::post('password/reset', 'Auth\Admin\ResetPasswordController@reset')->name('password.update');
     });
 });
-
 
 Route::prefix('rt-admin')->group(function () {
     Route::name('admin.')->group(function () {
@@ -106,7 +97,7 @@ Route::prefix('rt-admin')->group(function () {
                 // User
                 // Route::resource('user', 'UserController');
                 //blog
-                // Route::resource('blog', 'BlogController');
+                Route::resource('blog', 'BlogController');
                 //team
                 Route::resource('team', 'TeamController');
                 //team

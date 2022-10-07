@@ -75,7 +75,6 @@ class ProgramController extends Controller
         // return $request->all();
         $this->validate($request, [
             'title' => 'required|max:191',
-            'details' => 'required|max:65500',
             'image' => 'nullable|image|max:15000',
             'file' => 'nullable|max:15000',
             'category' => 'nullable|string|max:191',
@@ -135,7 +134,6 @@ class ProgramController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|max:191',
-            'details' => 'required|max:65500',
             'image' => 'nullable|image|max:15000',
             'tags' => 'nullable|string|max:191',
             'posted_by' => 'nullable|string|max:191',

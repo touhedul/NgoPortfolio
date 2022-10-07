@@ -76,7 +76,6 @@ class GalleryController extends Controller
                 $constraint->aspectRatio();
             })->save('gallery_images/big-' . $imageName, 50);
         }
-
         Gallery::create(array_merge($request->all(), ['image' => $imageName]));
         return back()->with('success', 'Successfully Created.');
     }

@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use App\Models\ContactFeedback;
 use App\Models\Gallery;
 use App\Models\Program;
+use App\Models\Team;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
@@ -20,12 +22,16 @@ class IndexController extends Controller
         $notices = Program::where('category', 'Notice')->latest()->get();
         $associates = Program::where('category', 'Associate')->latest()->take(3)->get();
         $events = Program::where('category', 'Event')->latest()->take(3)->get();
-        $testimonials = Testimonial::latest()->get();
         $numberOfService = Program::where('category', 'Associate')->count();
         $numberOfProject = Program::where('category', 'Project')->count();
         $numberOfProgram = Program::where('category', 'Program')->count();
         $numberOfEvent = Program::where('category', 'Event')->count();
-        return view('frontend.index', compact('sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials','newses', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
+        $teams = Team::latest()->get();
+        $testimonials = Testimonial::latest()->get();
+        $clients = Program::where('category', 'Client')->latest()->get();
+        $blogs = Blog::latest()->take(5)->get();
+        $gallaries = Gallery::where('category', 'Gallery')->latest()->get();
+        return view('frontend.index', compact('gallaries', 'blogs', 'clients', 'testimonials', 'teams', 'sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials', 'newses', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
     }
 
     public function termsAndConditions()

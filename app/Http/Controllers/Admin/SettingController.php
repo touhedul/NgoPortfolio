@@ -7,12 +7,13 @@ use App\Models\Setting;
 use Illuminate\Http\Request;
 use File;
 use Image;
+
 class SettingController extends Controller
 {
     public function setting()
     {
-         $settings = Setting::all();
-        return view('admin.setting',compact('settings'));
+        $settings = Setting::all();
+        return view('admin.setting', compact('settings'));
     }
 
     public function settingCompany(Request $request)
@@ -24,7 +25,7 @@ class SettingController extends Controller
         Setting::where('key', 'facebook')->update(['value' => $request->facebook]);
         Setting::where('key', 'linkedin')->update(['value' => $request->linkedin]);
 
-        $setting = Setting::where('key','logo')->first();
+        $setting = Setting::where('key', 'logo')->first();
         if ($request->hasFile('logo')) {
             //delete previous image
             if (File::exists('images/' . $setting->logo)) {
@@ -33,12 +34,12 @@ class SettingController extends Controller
             //add new image
             $image = $request->file('logo');
             $imageName = time() . uniqid() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(150, 80)->save('images/' . $imageName, 50);
+            Image::make($image)->save('images/' . $imageName, 50);
 
             Setting::where('key', 'logo')->update(['value' => $imageName]);
         }
 
-        return back()->with('success','Information Updated Successful.');
+        return back()->with('success', 'Information Updated Successful.');
     }
 
     public function settingOffice(Request $request)
@@ -50,7 +51,7 @@ class SettingController extends Controller
         Setting::where('key', 'office_map')->update(['value' => $request->office_map]);
         Setting::where('key', 'youtube')->update(['value' => $request->youtube]);
 
-        $setting = Setting::where('key','logo_footer')->first();
+        $setting = Setting::where('key', 'logo_footer')->first();
         if ($request->hasFile('logo_footer')) {
             //delete previous image
             if (File::exists('images/' . $setting->logo_footer)) {
@@ -64,6 +65,6 @@ class SettingController extends Controller
             Setting::where('key', 'logo_footer')->update(['value' => $imageName]);
         }
 
-        return back()->with('success','Information Updated Successful.');
+        return back()->with('success', 'Information Updated Successful.');
     }
 }
