@@ -65,7 +65,7 @@
         </div>
     </div>
 
-    <section class="flat-row pad-bottom90px">
+    <section class="flat-row pad-bottom90px" id="about_us">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -172,7 +172,7 @@
         </div>
     </section>
 
-    <section class="flat-row portfolio-row-page">
+    <section class="flat-row portfolio-row-page" id="gallery">
         <div class="flat-portfolio v1">
             <div class="portfolio-wrap clearfix gallery_image">
                 @foreach ($gallaries as $gallary)
@@ -194,7 +194,7 @@
         </div>
     </section>
 
-    <section class="flat-row">
+    <section class="flat-row" id="why_chose_us">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -274,7 +274,7 @@
     </section>
 
     <section class="flat-row parallax parallax3 bg-overlay pad-top90px
-    pad-bottom110px">
+    pad-bottom110px" id="clients">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -325,7 +325,7 @@
     </section>
 
     <section class="flat-row row-testimonilas-slider flat-animation" data-animation="fadeInUp" data-animation-delay="0"
-        data-animation-offset="75%">
+        data-animation-offset="75%" id="testimonials">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 pd-162px">
@@ -358,7 +358,7 @@
         </div>
     </section>
 
-    <div class="flat-row row-contact-us">
+    <div class="flat-row row-contact-us" id="contact_us">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -476,7 +476,46 @@
             </div>
         </div>
     </section>
+    <section class="counter padding-top-30 padding-bottom-30">
+        <div class="container">
+            <!-- Team Member -->
+            <ul class="row">
+                <li class="col-md-3">
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{ $numberOfService }}" data-from="0"></span>
+                        </span>
+                        <h5>Associates</h5>
+                    </div>
+                </li>
 
+                <!-- Line Of Codes -->
+                <li class="col-md-3">
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{ $numberOfEvent }}" data-from="0"></span> </span>
+                        <h5>Events</h5>
+                    </div>
+                </li>
+
+                <!-- Satisfied Client -->
+                <li class="col-md-3">
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{ $numberOfProject }}" data-from="0"></span>
+                        </span>
+                        <h5>Projects</h5>
+                    </div>
+                </li>
+
+                <!-- PSD file included -->
+                <li class="col-md-3">
+                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
+                                data-refresh-interval="10" data-to="{{ $numberOfProgram }}" data-from="0"></span>
+                        </span>
+                        <h5>Programs</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
     <div class="flat-row pad-top60px pad-bottom0px bg-contact">
         <div class="container">
             <div class="row">
