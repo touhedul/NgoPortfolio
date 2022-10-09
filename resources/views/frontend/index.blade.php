@@ -172,7 +172,7 @@
         </div>
     </section>
 
-    <section class="flat-row portfolio-row-page" id="gallery">
+    <section class="flat-row portfolio-row-page" id="gallery" style="margin-bottom: 22px;">
         <div class="flat-portfolio v1">
             <div class="portfolio-wrap clearfix gallery_image">
                 @foreach ($gallaries as $gallary)
@@ -194,7 +194,7 @@
         </div>
     </section>
 
-    <section class="flat-row" id="why_chose_us">
+    {{-- <section class="flat-row" id="why_chose_us">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -271,7 +271,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="flat-row parallax parallax3 bg-overlay pad-top90px
     pad-bottom110px" id="clients">
@@ -358,7 +358,7 @@
         </div>
     </section>
 
-    <div class="flat-row row-contact-us" id="contact_us">
+    <div class="flat-row row-contact-us">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -371,7 +371,7 @@
     </div>
 
     <section class="flat-row pad-top90px pad-bottom0px flat-animation" data-animation="fadeInLeft"
-        data-animation-delay="0" data-animation-offset="75%">
+        data-animation-delay="0" data-animation-offset="75%" id="team">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -432,7 +432,7 @@
         </div>
     </section>
 
-    <section class="flat-row pad-top80px main-content blog-posts">
+    <section class="flat-row pad-top80px main-content blog-posts" id="blog">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
@@ -516,7 +516,7 @@
             </ul>
         </div>
     </section>
-    <div class="flat-row pad-top60px pad-bottom0px bg-contact">
+    <div class="flat-row pad-top60px pad-bottom0px bg-contact" id="contact_us">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">

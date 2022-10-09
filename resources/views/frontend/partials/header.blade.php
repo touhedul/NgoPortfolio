@@ -19,13 +19,16 @@
                         <a href="#gallery">gallery</a>
                     </li>
                     <li class="home">
-                        <a href="#why_chose_us">Why chose us</a>
+                        <a href="#team">Team</a>
                     </li>
                     <li class="home">
                         <a href="#clients">Clients</a>
                     </li>
                     <li class="home">
-                        <a href="#testimonials">Testimonials</a>
+                        <a href="#testimonials">Testimonial</a>
+                    </li>
+                    <li class="home">
+                        <a href="#blog">Blog</a>
                     </li>
                     <li class="home">
                         <a href="#contact_us">Contact Us</a>
