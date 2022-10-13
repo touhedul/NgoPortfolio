@@ -30,7 +30,7 @@ class IndexController extends Controller
         $teams = Team::latest()->get();
         $testimonials = Testimonial::latest()->get();
         $clients = Program::where('category', 'Client')->latest()->get();
-        $blogs = Blog::latest()->take(5)->get();
+        $blogs = Blog::latest()->get();
         $gallaries = Gallery::where('category', 'Gallery')->latest()->get();
         $setting = Setting::all();
         return view('frontend.index', compact('setting', 'gallaries', 'blogs', 'clients', 'testimonials', 'teams', 'sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials', 'newses', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
@@ -45,10 +45,7 @@ class IndexController extends Controller
     {
         return view('frontend.privacy_policy');
     }
-    public function contact()
-    {
-        return view('frontend.contact');
-    }
+
 
     public function feedback()
     {
@@ -71,5 +68,57 @@ class IndexController extends Controller
         $feedback->feedback = $request->feedback;
         $feedback->save();
         return back()->with('success', 'Thank you.');
+    }
+
+    public function gallery()
+    {
+        $gallaries = Gallery::where('category', 'Gallery')->latest()->get();
+        return view('frontend.gallery-page', compact('gallaries'));
+    }
+
+    public function about()
+    {
+        return view('frontend.about-page');
+    }
+
+    public function blog()
+    {
+        $blogs = Blog::latest()->get();
+        return view('frontend.blog-page', compact('blogs'));
+    }
+
+    public function contact()
+    {
+        return view('frontend.contact-page');
+    }
+
+    public function project()
+    {
+        $projects = Program::where('category', 'Project')->latest()->get();
+        return view('frontend.project-page', compact('projects'));
+    }
+
+    public function team()
+    {
+        $teams = Team::latest()->get();
+        return view('frontend.team-page', compact('teams'));
+    }
+
+    public function service()
+    {
+        $programs = Program::where('category', 'Program')->latest()->get();
+        return view('frontend.service-page', compact('programs'));
+    }
+
+    public function client()
+    {
+        $clients = Program::where('category', 'Client')->latest()->get();
+        return view('frontend.client-page', compact('clients'));
+    }
+
+    public function testimonial()
+    {
+        $testimonials = Testimonial::latest()->get();
+        return view('frontend.testimonial-page', compact('testimonials'));
     }
 }

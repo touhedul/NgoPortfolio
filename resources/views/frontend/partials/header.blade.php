@@ -13,25 +13,25 @@
                         <a href="{{ route('index') }}">Home</a>
                     </li>
                     <li class="home">
-                        <a href="#about_us">About us</a>
+                        <a href="{{ route('about.page') }}">About us</a>
                     </li>
                     <li class="home">
-                        <a href="#gallery">gallery</a>
+                        <a href="{{ route('gallery.page') }}">gallery</a>
                     </li>
                     <li class="home">
-                        <a href="#team">Team</a>
+                        <a href="{{ route('team.page') }}">Team</a>
                     </li>
                     <li class="home">
-                        <a href="#clients">Clients</a>
+                        <a href="{{ route('client.page') }}">Clients</a>
                     </li>
                     <li class="home">
-                        <a href="#testimonials">Testimonial</a>
+                        <a href="{{ route('testimonial.page') }}">Testimonial</a>
                     </li>
                     <li class="home">
-                        <a href="#blog">Blog</a>
+                        <a href="{{ route('blog.page') }}">Blog</a>
                     </li>
                     <li class="home">
-                        <a href="#contact_us">Contact Us</a>
+                        <a href="{{ route('contact.page') }}">Contact Us</a>
                     </li>
                 </ul>
             </nav>

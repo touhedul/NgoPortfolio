@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 @section('title')
-    {{ setting('website_name') }}
+    Home
 @endsection
 @section('css')
     <style>
@@ -150,22 +150,30 @@
     <section class="flat-row portfolio-row-page" id="gallery" style="margin-bottom: 22px;">
         <div class="flat-portfolio v1">
             <div class="portfolio-wrap clearfix gallery_image">
-                @foreach ($gallaries as $gallary)
-                    <div class="item">
-                        <a href="{{ asset('gallery_images/big-' . $gallary->image) }}" style="width:193px;height:125px;">
-                            <img src="{{ asset('gallery_images/big-' . $gallary->image) }}" alt="images">
-                            <div class="overlay">
-                            </div>
-                            <div class="plus">
-                                <img src="{{ asset('frontend/images/portfolio/v1/icon-plus.png') }}" alt="images">
-                            </div>
-                        </a>
-
-
-
-                    </div>
+                @foreach ($gallaries as $index => $gallary)
+                    @if ($index < 4)
+                        <div class="item">
+                            <a href="{{ asset('gallery_images/big-' . $gallary->image) }}"
+                                style="width:193px;height:125px;">
+                                <img src="{{ asset('gallery_images/big-' . $gallary->image) }}" alt="images">
+                                <div class="overlay">
+                                </div>
+                                <div class="plus">
+                                    <img src="{{ asset('frontend/images/portfolio/v1/icon-plus.png') }}" alt="images">
+                                </div>
+                            </a>
+                        </div>
+                    @endif
                 @endforeach
             </div>
+            <br>
+            @if (count($gallaries) > 4)
+                <a href="route('gallery.page')">
+                    <center>
+                        <button>More Gallery</button>
+                    </center>
+                </a>
+            @endif
         </div>
     </section>
 
@@ -264,30 +272,40 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="post-wrap">
-                        @foreach ($programs as $program)
-                            <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
-                                data-animation-offset="75%">
-                                <div class="entry-border">
-                                    <div class="feature-post">
-                                        <img src="{{ asset('program_images/' . $program->image) }}" alt="image">
-                                    </div>
-                                    <div class="main-post">
-                                        <h2 class="entry-title"><a href="blog-single.html">{{ $program->title }}</a></h2>
-                                        {{-- <div class="entry-meta">
+                        @foreach ($programs as $index => $program)
+                            @if ($index <= 3)
+                                <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
+                                    data-animation-offset="75%">
+                                    <div class="entry-border">
+                                        <div class="feature-post">
+                                            <img src="{{ asset('program_images/' . $program->image) }}" alt="image">
+                                        </div>
+                                        <div class="main-post">
+                                            <h2 class="entry-title"><a href="blog-single.html">{{ $program->title }}</a>
+                                            </h2>
+                                            {{-- <div class="entry-meta">
                                             <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
                                             <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
                                         </div> --}}
-                                        <div class="entry-content">
-                                            <p>{!! Str::limit($program->details, 100) !!} <a href="{{ $program->programUrl() }}"
-                                                    style="color: red; font-size: 16px;">Read more</a>
-                                            </p>
+                                            <div class="entry-content">
+                                                <p>{!! Str::limit($program->details, 100) !!} <a href="{{ $program->programUrl() }}"
+                                                        style="color: red; font-size: 16px;">Read more</a>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
+                            @endif
                         @endforeach
-
                     </div>
+                    @if (count($programs) > 3)
+                        <a href="route('blog.page')">
+                            <center>
+                                <button>More Service</button>
+                            </center>
+                        </a>
+                    @endif
+
                 </div>
             </div>
         </div>
@@ -317,8 +335,6 @@
                                     alt="images">
                             </div>
                         @endforeach
-
-
                     </div>
                 </div>
             </div>
@@ -411,15 +427,16 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="flat-team-carosuel" data-item="3" data-nav="true" data-dots="false" data-auto="false">
-                        @foreach ($teams as $team)
-                            <div class="flat-team">
-                                <h3 class="name">{{ $team->name }}</h3>
-                                <div class="avatar">
-                                    <div class="overlay">
-                                    </div>
-                                    <img src="{{ asset('team_images/' . $team->image) }}" alt="image">
-                                    <ul class="short-code flat-socials">
-                                        {{-- <li class="facebook">
+                        @foreach ($teams as $key => $team)
+                            @if ($key <= 3)
+                                <div class="flat-team">
+                                    <h3 class="name">{{ $team->name }}</h3>
+                                    <div class="avatar">
+                                        <div class="overlay">
+                                        </div>
+                                        <img src="{{ asset('team_images/' . $team->image) }}" alt="image">
+                                        <ul class="short-code flat-socials">
+                                            {{-- <li class="facebook">
                                             <a href="#"><i
                                                     class="fa
                                             fa-facebook"></i></a>
@@ -439,13 +456,20 @@
                                                     class="fa
                                             fa-linkedin"></i></a>
                                         </li> --}}
-                                    </ul>
+                                        </ul>
+                                    </div>
+                                    <span class="position">{{ $team->designation }}</span>
                                 </div>
-                                <span class="position">{{ $team->designation }}</span>
-                            </div>
+                            @endif
                         @endforeach
-
                     </div>
+                    @if (count($teams) > 3)
+                        <a href="route('team.page')">
+                            <center>
+                                <button>More Team</button>
+                            </center>
+                        </a>
+                    @endif
                 </div>
             </div>
         </div>
@@ -468,31 +492,41 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="post-wrap">
-                        @foreach ($blogs as $blog)
-                            <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
-                                data-animation-offset="75%">
-                                <div class="entry-border">
-                                    <div class="feature-post">
-                                        <img src="{{ asset('blog_images/' . $blog->image) }}" alt="image">
-                                    </div>
-                                    <div class="main-post">
-                                        <h2 class="entry-title"><a href="blog-single.html">{{ $blog->title }}</a></h2>
-                                        <div class="entry-meta">
-                                            <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
-                                            <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
+                        @foreach ($blogs as $key => $blog)
+                            @if ($key <= 3)
+                                <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
+                                    data-animation-offset="75%">
+                                    <div class="entry-border">
+                                        <div class="feature-post">
+                                            <img src="{{ asset('blog_images/' . $blog->image) }}" alt="image">
                                         </div>
-                                        <div class="entry-content">
-                                            <p>{!! Str::limit($blog->details, 100) !!} <a href="{{ $blog->blogUrl() }}"
-                                                    style="color: red; font-size: 16px;">Read more</a>
+                                        <div class="main-post">
+                                            <h2 class="entry-title"><a href="blog-single.html">{{ $blog->title }}</a>
+                                            </h2>
+                                            <div class="entry-meta">
+                                                <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
+                                                <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
+                                            </div>
+                                            <div class="entry-content">
+                                                <p>{!! Str::limit($blog->details, 100) !!} <a href="{{ $blog->blogUrl() }}"
+                                                        style="color: red; font-size: 16px;">Read more</a>
+                                                </p>
+                                            </div>
                                             </p>
                                         </div>
-                                        </p>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
+                            @endif
                         @endforeach
 
                     </div>
+                    @if (count($blogs) > 3)
+                        <a href="route('blog.page')">
+                            <center>
+                                <button>More blog</button>
+                            </center>
+                        </a>
+                    @endif
                 </div>
             </div>
         </div>
@@ -515,35 +549,45 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="post-wrap">
-                        @foreach ($projects as $project)
-                            <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
-                                data-animation-offset="75%">
-                                <div class="entry-border">
-                                    <div class="feature-post">
-                                        <img src="{{ asset('program_images/' . $project->image) }}" alt="image">
-                                    </div>
-                                    <div class="main-post">
-                                        <h2 class="entry-title"><a href="blog-single.html">{{ $project->title }}</a></h2>
-                                        {{-- <div class="entry-meta">
+                        @foreach ($projects as $key => $project)
+                            @if ($key <= 3)
+                                <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
+                                    data-animation-offset="75%">
+                                    <div class="entry-border">
+                                        <div class="feature-post">
+                                            <img src="{{ asset('program_images/' . $project->image) }}" alt="image">
+                                        </div>
+                                        <div class="main-post">
+                                            <h2 class="entry-title"><a href="blog-single.html">{{ $project->title }}</a>
+                                            </h2>
+                                            {{-- <div class="entry-meta">
                                             <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
                                             <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
                                         </div> --}}
-                                        <div class="entry-content">
-                                            <p>{!! Str::limit($project->details, 100) !!}<a href="{{ $project->programUrl() }}"
-                                                    style="color: red; font-size: 16px;">Read more</a>
-                                            </p>
+                                            <div class="entry-content">
+                                                <p>{!! Str::limit($project->details, 100) !!}<a href="{{ $project->programUrl() }}"
+                                                        style="color: red; font-size: 16px;">Read more</a>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
+                                </article>
+                            @endif
                         @endforeach
 
                     </div>
+                    @if (count($projects) > 3)
+                        <a href="route('project.page')">
+                            <center>
+                                <button>More Project</button>
+                            </center>
+                        </a>
+                    @endif
                 </div>
             </div>
         </div>
     </section>
-    <section class="counter padding-top-30 padding-bottom-30">
+    {{-- <section class="counter padding-top-30 padding-bottom-30">
         <div class="container">
             <!-- Team Member -->
             <ul class="row">
@@ -582,7 +626,7 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> --}}
     <div class="flat-row pad-top60px pad-bottom0px bg-contact" id="contact_us">
         <div class="container">
             <div class="row">

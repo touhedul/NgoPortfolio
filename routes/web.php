@@ -37,6 +37,18 @@ Route::namespace('Frontend')->group(function () {
     Route::get('/partner-network', function () {
         return view('frontend.partner_network');
     })->name('partner.network');
+
+
+    // page view
+    Route::get('/gallery', 'IndexController@gallery')->name('gallery.page');
+    Route::get('/about', 'IndexController@about')->name('about.page');
+    Route::get('/service', 'IndexController@service')->name('service.page');
+    Route::get('/client', 'IndexController@client')->name('client.page');
+    Route::get('/testimonial', 'IndexController@testimonial')->name('testimonial.page');
+    Route::get('/team', 'IndexController@team')->name('team.page');
+    Route::get('/blog', 'IndexController@blog')->name('blog.page');
+    Route::get('/project', 'IndexController@project')->name('project.page');
+    Route::get('/contact', 'IndexController@contact')->name('contact.page');
 });
 
 // ********************************USER********************************
