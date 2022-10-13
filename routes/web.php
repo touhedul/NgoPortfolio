@@ -16,6 +16,8 @@ Route::namespace('Frontend')->group(function () {
     Route::get('blog/{id}-{slug}', 'BlogController@blogSingle')->name('blog.single');
     Route::get('/about', 'AllController@about')->name('about');
 
+    // service
+    // Route::get('service/{id}-{slug}', '@blogSingle')->name('blog.single');
     Route::get('/program/{category}', 'AllController@programDifferent')->name('program.different');
     Route::get('/single/{program}-{slug}', 'AllController@programSingle')->name('program.single');
     Route::get('/branches', 'AllController@branches')->name('branches');

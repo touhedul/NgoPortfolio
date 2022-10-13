@@ -103,7 +103,7 @@
                     class="sidebar-item @isset($category) @if ($category == 'Program') selected @endif @endisset"">
                     <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                         aria-expanded="false"><i class="mdi mdi-airplay"></i>
-                        <span class="hide-menu">Programs </span></a>
+                        <span class="hide-menu">Services </span></a>
 
                     <ul style="margin-left:20px" aria-expanded="false"
                         class="collapse first-level @isset($category) @if ($category == 'Program') in @endif
@@ -116,7 +116,7 @@
                             </form>
                             <a onclick="document.getElementById('add-form-program').submit();" href="#"
                                 class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
-                                    Add Program
+                                    Add Service
                                 </span></a>
                         </li>
                         {{-- Manage --}}
@@ -127,11 +127,9 @@
                             </form>
                             <a onclick="document.getElementById('manage-form-program').submit();" href="#"
                                 class="sidebar-link active "><i class="mdi mdi-creation"></i><span class="hide-menu">
-                                    Manage Program
+                                    Manage Service
                                 </span></a>
                         </li>
-
-
                     </ul>
                 </li>
                 {{-- Project --}}

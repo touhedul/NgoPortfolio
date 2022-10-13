@@ -65,113 +65,88 @@
         </div>
     </div>
 
-    <section class="flat-row pad-bottom90px" id="about_us">
+    <section class="flat-row pad-top90px pad-bottom0px flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+        data-animation-offset="75%" id="team">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="flat-iconbox flat-animation" data-animation="fadeInUp" data-animation-delay="0"
-                        data-animation-offset="75%">
-                        <div class="icon">
-                            <img src="{{ asset('frontend/images/icon/icon-box1.png') }}" alt="images">
+                <div class="col-md-12">
+                    <div class="title-section">
+                        <h1 class="title">About us</h1>
+                        <span class="border-icon">
+                            <span class="title-icon"></span>
+                        </span>
+                        <div class="desc">Inspection Engineering & Survey (IES) Limited is a highly reputed trustworthy
+                            digital land
+                            surveying company in Bangladesh. IES Company was formed on 2009 and at present IES is renowned
+                            as a first class trustworthy company in Survey & Valuation area in Bangladesh through high
+                            skills,
+                            dependable activities, dedications and honest activities. IES Limited is appreciated by the
+                            honorable
+                            clients for the smooth services. IES expertly provides services for the 19 highest reputed Banks
+                            and 7
+                            financial organization in Bangladesh.</div>
+                        <div class="desc">IES Limited was founded by honorable Mr. Delower Hossain who is very famous in
+                            Survey &
+                            Valuation Sector in Bangladesh for his mastery knowledge and practical skills. He is giving
+                            direction as a
+                            Managing Director in IES Limited. A group of talented, hardworking, skillful bonafide teams are
+                            practicing their professional talent in IES Limited. IES limited assigned high skilled and well
+                            trained
+                            employee in several district in Bangladesh.</div>
+                        <div class="desc">IES Limited Head Office is situated at Motijheel C/A in Dhaka and Chittangong
+                            Branch office at,
+                            Moddho Solimpur (Opposite side of Foujdarhat Cadet College) , Sitakunda,Chattogram, Chittagong.
+                            In a
+                            short time IES Limited expanding new Branches in Khulna, Rajshahi, Sylhet, Bogura to provide
+                            smooth
+                            services for honorable clients.</div>
+                        <div class="desc" style="font-size: 33px;  font-weight: bold;">
+                            MOTO
                         </div>
-                        <div class="content">
-                            <div class="title"><a href="#">general
-                                    contracting</a></div>
-                            <p>Morbi at ex porta, cursus magna nec,
-                                laoreet purus. Pellentesque tortor
-                                augue, finibus non massa a, sollicitudin
-                                facilisis dui. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flat-iconbox flat-animation" data-animation="fadeInUp" data-animation-delay="0.2s"
-                        data-animation-offset="75%">
-                        <div class="icon">
-                            <img src="{{ asset('frontend/images/icon/icon-box2.png') }}" alt="images">
-                        </div>
-                        <div class="content">
-                            <div class="title"><a href="#">construction
-                                    consultant</a></div>
-                            <p>Morbi at ex porta, cursus magna nec,
-                                laoreet purus. Pellentesque tortor
-                                augue, finibus non massa a, sollicitudin
-                                facilisis dui. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flat-iconbox flat-animation" data-animation="fadeInUp" data-animation-delay="0.4s"
-                        data-animation-offset="75%">
-                        <div class="icon">
-                            <img src="{{ asset('frontend/images/icon/icon-box3.png') }}" alt="images">
-                        </div>
-                        <div class="content">
-                            <div class="title"><a href="#">tiling and
-                                    painting</a></div>
-                            <p>Morbi at ex porta, cursus magna nec,
-                                laoreet purus. Pellentesque tortor
-                                augue, finibus non massa a, sollicitudin
-                                facilisis dui. </p>
+                        <div class="desc">To secure the investment of honorable clients IES Team collect required
+                            information's, make sure
+                            authenticity, business risk minimization and finally make honorable client’s Business safe.
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="flat-divider d45px"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="flat-iconbox flat-animation" data-animation="fadeInUp" data-animation-delay="0.6s"
-                        data-animation-offset="75%">
-                        <div class="icon">
-                            <img src="{{ asset('frontend/images/icon/icon-box4.png') }}" alt="images">
-                        </div>
-                        <div class="content">
-                            <div class="title"><a href="#">Green
-                                    Building</a></div>
-                            <p>Morbi at ex porta, cursus magna nec,
-                                laoreet purus. Pellentesque tortor
-                                augue, finibus non massa a, sollicitudin
-                                facilisis dui. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flat-iconbox flat-animation" data-animation="fadeInUp" data-animation-delay="0.8s"
-                        data-animation-offset="75%">
-                        <div class="icon">
-                            <img src="{{ asset('frontend/images/icon/icon-box5.png') }}" alt="images">
-                        </div>
-                        <div class="content">
-                            <div class="title"><a href="#">house
-                                    renovation</a></div>
-                            <p>Morbi at ex porta, cursus magna nec,
-                                laoreet purus. Pellentesque tortor
-                                augue, finibus non massa a, sollicitudin
-                                facilisis dui. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flat-iconbox flat-animation" data-animation="fadeInUp" data-animation-delay="1s"
-                        data-animation-offset="75%">
-                        <div class="icon">
-                            <img src="{{ asset('frontend/images/icon/icon-box6.png') }}" alt="images">
-                        </div>
-                        <div class="content">
-                            <div class="title"><a href="#">Metal Roofing</a></div>
-                            <p>Morbi at ex porta, cursus magna nec,
-                                laoreet purus. Pellentesque tortor
-                                augue, finibus non massa a, sollicitudin
-                                facilisis dui. </p>
-                        </div>
-                    </div>
+                    <div class="flat-divider d25px"></div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="flat-row pad-top90px pad-bottom0px flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+        data-animation-offset="75%" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-section">
+                        <h1 class="title">Company Founder</h1>
+                        <span class="border-icon">
+                            <span class="title-icon"></span>
+                        </span>
+                        <div class="desc">IES Limited founded by honorable Mr. Delower Hossain on 2009. He is an icon for
+                            his
+                            knowledge in the sector of Digital survey & valuation in Bangladesh. He is also one of the
+                            founder and vice president of Bangladesh Survey & Valuation Association (BSVA). He is
+                            also leading IES Limited as Managing Director. He has above 20 years experienced in this
+                            area.</div>
+                        <div class="desc">He completed his graduation Msc in Geography and then
+                            Diploma in Survey & Valuation. He is providing his
+                            knowledge to improve Survey & Valuation sector in
+                            Bangladesh. He often makes policy to secure investment
+                            of Banks or Financial organizations. He do analyze to
+                            secure and safe investment of Banks or financial
+                            organizations. He does thesis on how to minimize the risk
+                            of investments and assisting clients by providing authentic
+                            valuable information to take the right decision. He is the
+                            mastermind in the sector of Digital Survey & Valuation in
+                            Bangladesh.</div>
+                    </div>
+                    <div class="flat-divider d25px"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="flat-row portfolio-row-page" id="gallery" style="margin-bottom: 22px;">
         <div class="flat-portfolio v1">
             <div class="portfolio-wrap clearfix gallery_image">
@@ -272,7 +247,51 @@
             </div>
         </div>
     </section> --}}
+    <section class="flat-row pad-top80px main-content blog-posts" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+                    data-animation-offset="75%">
+                    <div class="title-section">
+                        <h1 class="title">Our Services</h1>
+                        <span class="border-icon">
+                            <span class="title-icon"></span>
+                        </span>
+                    </div>
+                    <div class="flat-divider d20px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-wrap">
+                        @foreach ($programs as $program)
+                            <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
+                                data-animation-offset="75%">
+                                <div class="entry-border">
+                                    <div class="feature-post">
+                                        <img src="{{ asset('program_images/' . $program->image) }}" alt="image">
+                                    </div>
+                                    <div class="main-post">
+                                        <h2 class="entry-title"><a href="blog-single.html">{{ $program->title }}</a></h2>
+                                        {{-- <div class="entry-meta">
+                                            <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
+                                            <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
+                                        </div> --}}
+                                        <div class="entry-content">
+                                            <p>{!! Str::limit($program->details, 100) !!} <a href="{{ $program->programUrl() }}"
+                                                    style="color: red; font-size: 16px;">Read more</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        @endforeach
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="flat-row parallax parallax3 bg-overlay pad-top90px
     pad-bottom110px" id="clients">
         <div class="overlay"></div>
@@ -463,7 +482,55 @@
                                             <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
                                         </div>
                                         <div class="entry-content">
-                                            <p>{!! $blog->details !!}
+                                            <p>{!! Str::limit($blog->details, 100) !!} <a href="{{ $blog->blogUrl() }}"
+                                                    style="color: red; font-size: 16px;">Read more</a>
+                                            </p>
+                                        </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        @endforeach
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flat-row pad-top80px main-content blog-posts" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+                    data-animation-offset="75%">
+                    <div class="title-section">
+                        <h1 class="title">Our Project</h1>
+                        <span class="border-icon">
+                            <span class="title-icon"></span>
+                        </span>
+                    </div>
+                    <div class="flat-divider d20px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-wrap">
+                        @foreach ($projects as $project)
+                            <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
+                                data-animation-offset="75%">
+                                <div class="entry-border">
+                                    <div class="feature-post">
+                                        <img src="{{ asset('program_images/' . $project->image) }}" alt="image">
+                                    </div>
+                                    <div class="main-post">
+                                        <h2 class="entry-title"><a href="blog-single.html">{{ $project->title }}</a></h2>
+                                        {{-- <div class="entry-meta">
+                                            <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
+                                            <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
+                                        </div> --}}
+                                        <div class="entry-content">
+                                            <p>{!! Str::limit($project->details, 100) !!}<a href="{{ $project->programUrl() }}"
+                                                    style="color: red; font-size: 16px;">Read more</a>
                                             </p>
                                         </div>
                                     </div>
@@ -524,26 +591,20 @@
                     flat-animation"
                         data-animation="fadeInLeft" data-animation-delay="0" data-animation-offset="75%">
                         <ul class="information">
-                            <li><span>Phone: </span>61 3 8376 6284</li>
-                            <li><span>Address: </span>121 King Street,
-                                Melbourne Victoria 3000 Australia</li>
-                            <li><span>Email: </span><a href="https://themesflat.com/cdn-cgi/l/email-protection"
-                                    class="__cf_email__"
-                                    data-cfemail="1f5e73766b6c6b6a7b76706c5f78727e7673317c7072">[email&#160;protected]</a>
+                            <li><span>Phone: </span>{{ setting('office_phone') }}</li>
+                            <li><span>Address: </span>{{ setting('office_address') }}</li>
+                            <li><span>Email: </span> {{ setting('office_email') }}
                             </li>
                         </ul>
                         <ul class="short-code flat-socials">
                             <li class="facebook">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="{{ setting('facebook') }}"><i class="fa fa-facebook"></i></a>
                             </li>
                             <li class="twitter">
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li class="instagram">
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="{{ setting('youtube') }}"><i class="fa fa-youtube"></i></a>
                             </li>
                             <li class="linkedin">
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="{{ setting('linkedin') }}"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -551,7 +612,8 @@
                 </div>
                 <div class="col-md-5 flat-animation" data-animation="fadeInRight" data-animation-delay="0"
                     data-animation-offset="75%">
-                    <div id="map" class="flat-map shadow margin-left" style="width: 530px; height: 262px; "></div>
+                    <iframe src="{{ setting('office_map') }}" width="100%" height="400" frameborder="0"
+                        style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="col-md-3">
                     <div class="single-images">
