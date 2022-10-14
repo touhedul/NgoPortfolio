@@ -34,7 +34,7 @@ class SettingController extends Controller
             //add new image
             $image = $request->file('logo');
             $imageName = time() . uniqid() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->save('images/' . $imageName, 50);
+            Image::make($image)->resize(150, 45)->save('images/' . $imageName);
 
             Setting::where('key', 'logo')->update(['value' => $imageName]);
         }

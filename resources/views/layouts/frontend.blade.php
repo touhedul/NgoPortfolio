@@ -43,10 +43,10 @@
     </section>
 
     <div class="boxed">
-        @include('frontend/partials/topbar');
-        @include('frontend/partials/header');
-        @yield('content');
-        @include('frontend/partials/footer');
+        @include('frontend/partials/topbar')
+        @include('frontend/partials/header')
+        @yield('content')
+        @include('frontend/partials/footer')
     </div>
 
     <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>

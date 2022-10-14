@@ -19,8 +19,47 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <center>
+            <h1>Contact with us</h1>
+        </center>
+        @if (session()->has('success'))
+            <div class="alert alert-success">
+                {{ session()->get('success') }}
+            </div>
+        @endif
+        <form class="contact-form" data-parsley-validate method="POST" action="{{ route('submit.feedback') }}">
+            @csrf
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="">Name</label>
+                    <input type="text" class="form-contrl" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="">Email</label>
+                    <input type="text" class="form-contrl" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="">Phone</label>
+                    <input type="text" class="form-contrl" name="phone" placeholder="Enter your phone" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="">Message</label>
+                    <input type="text" class="form-contrl" name="message" placeholder="Enter your message" required>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                    <button type="submit" style="float: right">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
     <div class="flat-row pad-top60px pad-bottom0px bg-contact" id="contact_us">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-4">
                     <div class="widget-sv sv-information border

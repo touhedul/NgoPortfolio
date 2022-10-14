@@ -46,23 +46,6 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="flat-divider d74px"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
-                    data-animation-offset="75%">
-                    <div class="flat-client" data-item="6" data-nav="false" data-dots="false" data-auto="true">
-                        @foreach ($clients as $client)
-                            <div class="item"><img src="{{ asset('program_images/' . $client->image) }}" alt="images">
-                            </div>
-                        @endforeach
-
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 @endsection

@@ -18,7 +18,7 @@ class IndexController extends Controller
     {
         $sliders = Gallery::where('category', 'Slider')->get();
         $projects = Program::where('category', 'Project')->latest()->get();
-        $newses = Program::where('category', 'News')->latest()->get();
+        $news = Program::where('category', 'News')->latest()->get();
         $programs = Program::where('category', 'Program')->latest()->get();
         $notices = Program::where('category', 'Notice')->latest()->get();
         $associates = Program::where('category', 'Associate')->latest()->take(3)->get();
@@ -33,7 +33,7 @@ class IndexController extends Controller
         $blogs = Blog::latest()->get();
         $gallaries = Gallery::where('category', 'Gallery')->latest()->get();
         $setting = Setting::all();
-        return view('frontend.index', compact('setting', 'gallaries', 'blogs', 'clients', 'testimonials', 'teams', 'sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials', 'newses', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
+        return view('frontend.index', compact('setting', 'gallaries', 'blogs', 'clients', 'testimonials', 'teams', 'sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials', 'news', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
     }
 
     public function termsAndConditions()
@@ -58,14 +58,12 @@ class IndexController extends Controller
             'email' => 'required|string|email|max:191',
             'phone' => 'nullable|string|max:191',
             'message' => 'nullable|string|max:65500',
-            'feedback' => 'nullable|integer'
         ]);
         $feedback = new ContactFeedback();
         $feedback->name = $request->name;
         $feedback->email = $request->email;
         $feedback->phone = $request->phone;
         $feedback->message = $request->message;
-        $feedback->feedback = $request->feedback;
         $feedback->save();
         return back()->with('success', 'Thank you.');
     }

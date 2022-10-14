@@ -5,7 +5,11 @@
     <div class="col-md-12">
         <div class="card card-default">
             <div class="card-header card-header-border-bottom">
-                <h2>Add {{ $category }}</h2>
+                @if ($category == 'Program')
+                    <h2>Add Service</h2>
+                @else
+                    <h2>Add {{ $category }}</h2>
+                @endif
             </div>
             <div class="card-body">
                 <form data-parsley-validate enctype="multipart/form-data" action="{{ route('admin.program.store') }}"

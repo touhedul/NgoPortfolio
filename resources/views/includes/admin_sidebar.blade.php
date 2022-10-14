@@ -278,7 +278,7 @@
                     </ul>
                 </li>
                 {{-- Resource --}}
-                <li
+                {{-- <li
                     class="sidebar-item @isset($category) @if ($category == 'Resource') selected @endif @endisset">
 
                     <a class=" sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
@@ -289,7 +289,7 @@
                         class="collapse first-level @isset($category) @if ($category == 'Resource') in @endif
                               @endisset">
                         {{-- Add --}}
-                        <li class="sidebar-item">
+                {{-- <li class="sidebar-item">
                             <form id="add-form-resource" style="display: none"
                                 action="{{ route('admin.program.create') }}">
                                 <input type="hidden" name="category" value="Resource">
@@ -298,9 +298,9 @@
                                 class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
                                     Add Resource
                                 </span></a>
-                        </li>
-                        {{-- Manage --}}
-                        <li class="sidebar-item">
+                        </li> --}}
+                {{-- Manage --}}
+                {{-- <li class="sidebar-item">
                             <form id="manage-form-resource" style="display: none"
                                 action="{{ route('admin.program.index') }}">
                                 <input type="hidden" name="category" value="Resource">
@@ -313,7 +313,7 @@
 
 
                     </ul>
-                </li>
+                </li> --}}
                 {{-- Blog --}}
                 @if (Route::has('admin.blog.index'))
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
@@ -366,7 +366,7 @@
                     </ul>
                 </li>
                 {{-- Job --}}
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                         href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-cart"></i>
                         <span class="hide-menu">Jobs </span></a>
 
@@ -379,9 +379,9 @@
                                     class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
                                     Job </span></a></li>
                     </ul>
-                </li>
+                </li> --}}
                 {{-- Branch --}}
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                         href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-blogger"></i>
                         <span class="hide-menu">Branches </span></a>
 
@@ -395,7 +395,7 @@
                                     class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
                                     Branch </span></a></li>
                     </ul>
-                </li>
+                </li> --}}
                 {{-- Gallery --}}
                 <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                         href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-file-image"></i>

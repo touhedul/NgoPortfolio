@@ -100,9 +100,9 @@
                             short time IES Limited expanding new Branches in Khulna, Rajshahi, Sylhet, Bogura to provide
                             smooth
                             services for honorable clients.</div>
-                        <div class="desc" style="font-size: 33px;  font-weight: bold;">
+                        {{-- <div class="desc" style="font-size: 33px;  font-weight: bold;">
                             MOTO
-                        </div>
+                        </div> --}}
                         <div class="desc">To secure the investment of honorable clients IES Team collect required
                             information's, make sure
                             authenticity, business risk minimization and finally make honorable client’s Business safe.
@@ -310,6 +310,7 @@
             </div>
         </div>
     </section>
+
     <section class="flat-row parallax parallax3 bg-overlay pad-top90px
     pad-bottom110px" id="clients">
         <div class="overlay"></div>
@@ -335,24 +336,6 @@
                                     alt="images">
                             </div>
                         @endforeach
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="flat-divider d74px"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
-                    data-animation-offset="75%">
-                    <div class="flat-client" data-item="6" data-nav="false" data-dots="false" data-auto="true">
-                        @foreach ($clients as $client)
-                            <div class="item"><img src="{{ asset('program_images/' . $client->image) }}"
-                                    alt="images">
-                            </div>
-                        @endforeach
-
                     </div>
                 </div>
             </div>
@@ -494,31 +477,29 @@
                     <div class="post-wrap">
                         @foreach ($blogs as $key => $blog)
                             @if ($key <= 3)
-                                <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
+                                <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
                                     data-animation-offset="75%">
                                     <div class="entry-border">
                                         <div class="feature-post">
                                             <img src="{{ asset('blog_images/' . $blog->image) }}" alt="image">
                                         </div>
                                         <div class="main-post">
-                                            <h2 class="entry-title"><a href="blog-single.html">{{ $blog->title }}</a>
+                                            <h2 class="entry-title"><a href="">{{ $blog->title }}</a>
                                             </h2>
                                             <div class="entry-meta">
-                                                <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
+                                                <span class="author"><a href="">{{ $blog->posted_by }}</a></span>
                                                 <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
                                             </div>
                                             <div class="entry-content">
-                                                <p>{!! Str::limit($blog->details, 100) !!} <a href="{{ $blog->blogUrl() }}"
-                                                        style="color: red; font-size: 16px;">Read more</a>
-                                                </p>
+                                                {!! Str::limit($blog->details, 100) !!} <a href="{{ $blog->blogUrl() }}"
+                                                    style="color: red; font-size: 16px;">Read more</a>
+
                                             </div>
-                                            </p>
                                         </div>
                                     </div>
                                 </article>
                             @endif
                         @endforeach
-
                     </div>
                     @if (count($blogs) > 3)
                         <a href="route('blog.page')">
@@ -551,7 +532,7 @@
                     <div class="post-wrap">
                         @foreach ($projects as $key => $project)
                             @if ($key <= 3)
-                                <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
+                                <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
                                     data-animation-offset="75%">
                                     <div class="entry-border">
                                         <div class="feature-post">
@@ -583,6 +564,95 @@
                             </center>
                         </a>
                     @endif
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flat-row pad-top80px main-content blog-posts" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+                    data-animation-offset="75%">
+                    <div class="title-section">
+                        <h1 class="title">News</h1>
+                        <span class="border-icon">
+                            <span class="title-icon"></span>
+                        </span>
+                    </div>
+                    <div class="flat-divider d20px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-wrap">
+                        @foreach ($news as $key => $new)
+                            @if ($key <= 3)
+                                <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
+                                    data-animation-offset="75%">
+                                    <div class="entry-border">
+                                        <div class="feature-post">
+                                            <img src="{{ asset('program_images/' . $new->image) }}" alt="image">
+                                        </div>
+                                        <div class="main-post">
+                                            <h2 class="entry-title"><a href="">{{ $new->title }}</a>
+                                            </h2>
+                                            <div class="entry-content">
+                                                {!! Str::limit($new->details, 100) !!}
+                                                {{-- <a href="{{ $news->blogUrl() }}" --}}
+                                                {{-- style="color: red; font-size: 16px;">Read more</a> --}}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="flat-row pad-top80px main-content blog-posts" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+                    data-animation-offset="75%">
+                    <div class="title-section">
+                        <h1 class="title">Events</h1>
+                        <span class="border-icon">
+                            <span class="title-icon"></span>
+                        </span>
+                    </div>
+                    <div class="flat-divider d20px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-wrap">
+                        @foreach ($events as $key => $event)
+                            @if ($key <= 3)
+                                <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
+                                    data-animation-offset="75%">
+                                    <div class="entry-border">
+                                        <div class="feature-post">
+                                            <img src="{{ asset('program_images/' . $event->image) }}" alt="image">
+                                        </div>
+                                        <div class="main-post">
+                                            <h2 class="entry-title"><a href="">{{ $event->title }}</a>
+                                            </h2>
+                                            <div class="entry-content">
+                                                {!! Str::limit($event->details, 100) !!}
+                                                {{-- <a href="{{ $news->blogUrl() }}" --}}
+                                                {{-- style="color: red; font-size: 16px;">Read more</a> --}}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            @endif
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
@@ -629,6 +699,8 @@
     </section> --}}
     <div class="flat-row pad-top60px pad-bottom0px bg-contact" id="contact_us">
         <div class="container">
+            <p style="font-size: 32px; margin-bottom: 18px;">If any query or contact <a
+                    href="{{ route('contact.page') }}" style="color: orange">click here</a></p>
             <div class="row">
                 <div class="col-md-4">
                     <div class="widget-sv sv-information border
@@ -678,10 +750,6 @@
             mainClass: 'mfp-with-zoom mfp-img-mobile',
             image: {
                 verticalFit: true,
-                // titleSrc: function(item) {
-                //     return item.el.attr('title') + ' &middot; <a class="image-source-link" href="' + item.el
-                //         .attr('data-source') + '" target="_blank">image source</a>';
-                // }
             },
             gallery: {
                 enabled: true
@@ -690,10 +758,10 @@
                 enabled: true,
                 duration: 300, // don't foget to change the duration also in CSS
                 opener: function(element) {
-                    return element.find('img');
+                    return element.find('img')
                 }
             }
 
-        });
+        })
     </script>
 @endsection
