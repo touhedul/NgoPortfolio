@@ -252,7 +252,7 @@
                         class="collapse first-level @isset($category) @if ($category == 'Notice') in @endif
                               @endisset">
                         {{-- Add --}}
-                        <li class="sidebar-item">
+                        {{-- <li class="sidebar-item">
                             <form id="add-form-notice" style="display: none"
                                 action="{{ route('admin.program.create') }}">
                                 <input type="hidden" name="category" value="Notice">
@@ -261,7 +261,7 @@
                                 class="sidebar-link active"><i class="mdi mdi-creation"></i><span class="hide-menu">
                                     Add Notice
                                 </span></a>
-                        </li>
+                        </li> --}}
                         {{-- Manage --}}
                         <li class="sidebar-item">
                             <form id="manage-form-notice" style="display: none"
