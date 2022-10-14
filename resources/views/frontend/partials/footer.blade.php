@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="copyright">
-                    <p>© Copyright <a href="#">Alitstudio</a> 2015. All Rights Reserved.
+                    <p> Copyright © IES LTD 2022. Tech Partner <a href="https://skoder.co">Skoder<a>
                     </p>
                 </div>
             </div>
