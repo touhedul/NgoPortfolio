@@ -576,6 +576,90 @@
             </div>
         </div>
     </section>
+    <section class="flat-row parallax parallax3 bg-overlay pad-top90px
+    pad-bottom110px" id="clients">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" data-animation="fadeInRight" data-animation-delay="0"
+                    data-animation-offset="75%">
+
+                    <div class="row">
+                        <div class="item col-md-3" style="text-align: center;">
+                            <h1 style="color: white;">PROJECTS</h1>
+                            <h1>{{ count($projects) }}</h1>
+                        </div>
+                        <div class="item col-md-3" style="text-align: center;">
+                            <h1 style="color: white;">SERVICES</h1>
+                            <h1>{{ count($programs) }}</h1>
+                        </div>
+                        <div class="item col-md-3" style="text-align: center;">
+                            <h1 style="color: white;">JOBS</h1>
+                            <h1>{{ count($jobs) }}</h1>
+                        </div>
+                        <div class="item col-md-3" style="text-align: center;">
+                            <h1 style="color: white;">CLIENTS</h1>
+                            <h1>{{ count($clients) }}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="flat-row pad-top80px main-content blog-posts" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+                    data-animation-offset="75%">
+                    <div class="title-section">
+                        <h1 class="title">Our Career</h1>
+                        <span class="border-icon">
+                            <span class="title-icon"></span>
+                        </span>
+                    </div>
+                    <div class="flat-divider d20px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-wrap">
+                        @foreach ($jobs as $key => $job)
+                            @if ($key <= 3)
+                                <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
+                                    data-animation-offset="75%">
+                                    <div class="entry-border">
+                                        <div class="feature-post">
+                                            <img src="{{ asset('job_images/' . $job->image) }}" alt="image">
+                                        </div>
+                                        <div class="main-post">
+                                            <h2 class="entry-title"><a href="">{{ $job->title }}</a>
+                                            </h2>
+                                            <div class="entry-meta">
+                                                <span class="author"><a href="">{{ $job->location }}</a></span>
+                                                <span class="date">{{ $job->last_date }}</span>
+                                            </div>
+                                            <div class="entry-content">
+                                                {!! Str::limit($job->details, 100) !!} <a href="{{ $job->jobUrl() }}"
+                                                    style="color: red; font-size: 16px;">Read more</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            @endif
+                        @endforeach
+                    </div>
+                    @if (count($jobs) > 3)
+                        <a href="{{ route('job.page') }}">
+                            <center>
+                                <button>More View</button>
+                            </center>
+                        </a>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="flat-row pad-top80px main-content blog-posts" id="blog">
         <div class="container">

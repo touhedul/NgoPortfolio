@@ -24,14 +24,17 @@
                     <li class="home">
                         <a href="{{ route('team.page') }}">Team</a>
                     </li>
-                    <li class="home">
+                    {{-- <li class="home">
                         <a href="{{ route('gallery.page') }}">gallery</a>
-                    </li>
+                    </li> --}}
                     <li class="home">
                         <a href="{{ route('client.page') }}">Clients</a>
                     </li>
                     <li class="home">
                         <a href="{{ route('contact.page') }}">Contact</a>
+                    </li>
+                    <li class="home">
+                        <a href="{{ route('job.page') }}">Career</a>
                     </li>
                 </ul>
             </nav>

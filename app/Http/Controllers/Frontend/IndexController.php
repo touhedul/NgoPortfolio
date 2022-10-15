@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\ContactFeedback;
 use App\Models\Gallery;
+use App\Models\Job;
 use App\Models\Program;
 use App\Models\Setting;
 use App\Models\Team;
@@ -33,7 +34,8 @@ class IndexController extends Controller
         $blogs = Blog::latest()->get();
         $gallaries = Gallery::where('category', 'Gallery')->latest()->get();
         $setting = Setting::all();
-        return view('frontend.index', compact('setting', 'gallaries', 'blogs', 'clients', 'testimonials', 'teams', 'sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials', 'news', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
+        $jobs = Job::latest()->get();
+        return view('frontend.index', compact('jobs', 'setting', 'gallaries', 'blogs', 'clients', 'testimonials', 'teams', 'sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials', 'news', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
     }
 
     public function termsAndConditions()
@@ -118,5 +120,17 @@ class IndexController extends Controller
     {
         $testimonials = Testimonial::latest()->get();
         return view('frontend.testimonial-page', compact('testimonials'));
+    }
+
+    public function jobs()
+    {
+        $jobs = Job::latest()->get();
+        return view('frontend.job-page', compact('jobs'));
+    }
+
+    public function jobDetails($id)
+    {
+        $job = Job::findOrFail($id);
+        return view('frontend.job-single', compact('job'));
     }
 }

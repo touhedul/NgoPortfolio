@@ -49,6 +49,8 @@ Route::namespace('Frontend')->group(function () {
     Route::get('/blog', 'IndexController@blog')->name('blog.page');
     Route::get('/project', 'IndexController@project')->name('project.page');
     Route::get('/contact', 'IndexController@contact')->name('contact.page');
+    Route::get('/jobs', 'IndexController@jobs')->name('job.page');
+    Route::get('/job-details/{id}-{slug}', 'IndexController@jobDetails')->name('job.single');
 });
 
 // ********************************USER********************************
