@@ -2,59 +2,64 @@
     <div class="footer-widgets">
         <div class="container">
             <div class="row">
-                <div class="col-md-2" style="margin-top: 45px;">
+                <div class="col-md-4" style="margin-top: 45px;">
                     <img src="{{ asset('images/' . setting('logo')) }}" alt="image">
+                    <p>Dhaka Office :</p>
+                    <p>Monzuri Bhaban, 6th Floor, 08, D.I.T Ex.Ave, Motijheel C/A, Dhaka.</p>
+                    <p>Chittagong Office:</p>
+                    <p>1556, East Nasirabad, Sananda R/A, 2nd Floor, Panchlaish, Chattogram.</p>
+                    <p>Sylhet Office :</p>
+                    <p>Noor Mansion, Daudnagar Bazar, Shayestaganj, Hobiganj.</p>
+                    <p>Khulna Office :</p>
+                    <p>15, Moulovipara Mosjid Lane, Khulna Sadar, Khulna.</p>
+                    <p>Gazipur Office :</p>
+                    <p>221, Anonda Bazar, Kapataiapara, Mawna, Sreepur, Gazipur.</p>
+                    <p>Sister Concern :</p>
+                    <p>IES Agro Park<br>
+                        221, Anonda Bazar, Kapatapara, Mawna, Sreepur, Gazipur.</p>
                 </div>
                 <div class="col-md-4">
-                    <div class="widget widget_text">
-                        <h4 class="widget-title">about us</h4>
-                        <div class="textwidget">
-                            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-                                mus. Phasellus finibus augue non tellus viverra, eget finibus lacus sagittis.
+                    <div class="widget widget-categories" style="text-align: center">
+                        <h4 class="widget-title">Follow Us -</h4>
+                        <ul style="display: flex; justify-content: center;">
+                            <li class="facebook" style="margin: 0px 5px; font-size: 38px;">
+                                <a href="{{ setting('facebook') }}"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li class="twitter" style="margin: 0px 5px; font-size: 38px;">
+                                <a href="{{ setting('youtube') }}"><i class="fa fa-youtube"></i></a>
+                            </li>
+                            <li class="linkedin" style="margin: 0px 5px; font-size: 38px;">
+                                <a href="{{ setting('linkedin') }}"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                        <div style="margin-top: 60%;">
+                            <p> Copyright © IES LTD 2022. Tech Partner <a href="https://skoder.co">Skoder<a>
                             </p>
                         </div>
+
                     </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="widget widget-categories">
-                        <h4 class="widget-title">company</h4>
-                        <ul>
-                            <li><a href="{{ route('index') }}">Home</a></li>
-                            <li><a href="{{ route('team.page') }}">Team</a></li>
-                            <li><a href="{{ route('service.page') }}">Services</a></li>
-                            <li><a href="{{ route('project.page') }}">Project</a></li>
-                        </ul>
-                    </div>
+
                 </div>
                 <div class="col-md-4">
                     <div class="widget widget-text">
-                        <h4 class="widget-title">business hour</h4>
+                        <h4 class="widget-title">Office hours</h4>
                         <div class="textwidget">
-                            <p>Our support available to help you 24 hours a day, seven days a week.</p>
-                            <p class="time">Monday-Friday: 9am to 5pm</p>
-                            <p class="time">Saturday: 10am to 2pm</p>
-                            <p class="time">Sunday: Closed</p>
+                            <p>Visit one of our locations today and get started on
+                                your next project</p>
+                            <p class="time">Saturday: 9:00 am > 05:00 pm</p>
+                            <p class="time">Sunday: 9:00 am > 05:00 pm</p>
+                            <p class="time">Monday: 9:00 am > 05:00 pm</p>
+                            <p class="time">Tuesday: 9:00 am > 05:00 pm</p>
+                            <p class="time">Wednesday: 9:00 am > 05:00 pm</p>
+                            <p class="time">Thursday: 9:00 am > 05:00 pm</p>
+                            <p class="time">Friday: Closed</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </footer>
-
-<div class="bottom flat-animation" data-animation="fadeInDown" data-animation-delay="0" data-animation-offset="75%">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="copyright">
-                    <p> Copyright © IES LTD 2022. Tech Partner <a href="https://skoder.co">Skoder<a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <a class="go-top">
     <i class="fa fa-angle-up"></i>

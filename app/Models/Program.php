@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Str;
 class Program extends Model
 {
-     protected $fillable=['title','details','image','category'];
+     protected $fillable=['title','details','image','type','category'];
      
      public function programUrl()
      {

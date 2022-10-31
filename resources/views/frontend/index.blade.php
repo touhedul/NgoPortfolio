@@ -278,156 +278,150 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="post-wrap">
-                        @foreach ($programs as $index => $program)
-                            @if ($index <= 3)
-                                <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
-                                    data-animation-offset="75%">
-                                    <div class="entry-border">
-                                        <div class="feature-post">
-                                            <img src="{{ asset('program_images/' . $program->image) }}" alt="image">
-                                        </div>
-                                        <div class="main-post">
-                                            <h2 class="entry-title"><a href="blog-single.html">{{ $program->title }}</a>
-                                            </h2>
-                                            {{-- <div class="entry-meta">
-                                            <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
-                                            <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
-                                        </div> --}}
-                                            <div class="entry-content">
-                                                <p>{!! Str::limit($program->details, 100) !!} <a href="{{ $program->programUrl() }}"
-                                                        style="color: red; font-size: 16px;">Read more</a>
-                                                </p>
-                                            </div>
-                                        </div>
+
+                <div class="">
+                    @php
+                        $m = 1;
+                    @endphp
+                    @foreach ($service as $key => $value)
+                        @if ($m <= 6)
+                            <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
+                                data-animation-offset="75%">
+
+                                <div class="entry-border" style="padding:10px;border:1px solid black">
+                                    <div class="feature-post">
+                                        <img style="height: 220px;width:100%" src="{{ asset('demo/' . $m . '.jpg') }}"
+                                            alt="image">
                                     </div>
-                                </article>
-                            @endif
-                        @endforeach
-                    </div>
-                    @if (count($programs) > 3)
-                        <a href="{{ route('blog.page') }}">
-                            <center>
-                                <button>More View</button>
-                            </center>
-                        </a>
+                                    <div style="margin-top: -26px;text-align:center;font-size:20px">
+                                        <a
+                                            href="{{ route('service.type', preg_replace('/\s+/im', '_', $key)) }}">{{ $key }}</a>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        @else
+                        @break
                     @endif
-
-                </div>
+                    @php
+                        $m++;
+                    @endphp
+                @endforeach
             </div>
         </div>
-    </section>
+    </div>
+    </div>
+</section>
 
-    <section class="flat-row parallax parallax3 bg-overlay pad-top90px
+<section class="flat-row parallax parallax3 bg-overlay pad-top90px
     pad-bottom110px" id="clients">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
-                    data-animation-offset="75%">
-                    <div class="title-section text-white">
-                        <h1 class="title">Our Cliens Trust in us</h1>
-                        <span class="border-icon">
-                            <span class="title-icon"></span>
-                        </span>
-                    </div>
-                    <div class="flat-divider d35px"></div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+                data-animation-offset="75%">
+                <div class="title-section text-white">
+                    <h1 class="title">Our Cliens Trust in us</h1>
+                    <span class="border-icon">
+                        <span class="title-icon"></span>
+                    </span>
                 </div>
+                <div class="flat-divider d35px"></div>
             </div>
-            <div class="row">
-                <div class="col-md-12 flat-animation" data-animation="fadeInRight" data-animation-delay="0"
-                    data-animation-offset="75%">
-                    <div class="flat-client" data-item="6" data-nav="false" data-dots="false" data-auto="true">
-                        @foreach ($clients as $client)
-                            <div class="item"><img src="{{ asset('program_images/' . $client->image) }}"
-                                    alt="images">
-                            </div>
-                        @endforeach
-                    </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 flat-animation" data-animation="fadeInRight" data-animation-delay="0"
+                data-animation-offset="75%">
+                <div class="flat-client" data-item="6" data-nav="false" data-dots="false" data-auto="true">
+                    @foreach ($clients as $client)
+                        <div class="item"><img src="{{ asset('program_images/' . $client->image) }}"
+                                alt="images">
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="flat-row row-testimonilas-slider flat-animation" data-animation="fadeInUp" data-animation-delay="0"
-        data-animation-offset="75%" id="testimonials">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 pd-162px">
-                    <div class="flat-testimonials-images">
-                        <div class="flat-testimonials-slider">
-                            <div id="flat-testimonials-flexslider">
-                                <ul class="slides">
-                                    @foreach ($testimonials as $testimonial)
-                                        <li>
-                                            <p>{!! $testimonial->message !!}</p>
-                                        </li>
-                                    @endforeach
+<section class="flat-row row-testimonilas-slider flat-animation" data-animation="fadeInUp" data-animation-delay="0"
+    data-animation-offset="75%" id="testimonials">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pd-162px">
+                <div class="flat-testimonials-images">
+                    <div class="flat-testimonials-slider">
+                        <div id="flat-testimonials-flexslider">
+                            <ul class="slides">
+                                @foreach ($testimonials as $testimonial)
+                                    <li>
+                                        <p>{!! $testimonial->message !!}</p>
+                                    </li>
+                                @endforeach
 
-                                </ul>
-                            </div>
-                            <div id="flat-testimonials-carousel">
-                                <ul class="slides">
-                                    @foreach ($testimonials as $testimonial)
-                                        <li>
-                                            <img alt="image"
-                                                src="{{ asset('testimonial_images/' . $testimonial->image) }}">
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                            </ul>
+                        </div>
+                        <div id="flat-testimonials-carousel">
+                            <ul class="slides">
+                                @foreach ($testimonials as $testimonial)
+                                    <li>
+                                        <img alt="image"
+                                            src="{{ asset('testimonial_images/' . $testimonial->image) }}">
+                                    </li>
+                                @endforeach
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <div class="flat-row row-contact-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="flat-contact-us">
-                        <h1>Have a Question? <a href="{{ route('contact.page') }}"><span>contact us now</span></a></h1>
-                    </div>
+<div class="flat-row row-contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="flat-contact-us">
+                    <h1>Have a Question? <a href="{{ route('contact.page') }}"><span>contact us now</span></a></h1>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <section class="flat-row pad-top90px pad-bottom0px flat-animation" data-animation="fadeInLeft"
-        data-animation-delay="0" data-animation-offset="75%" id="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="title-section">
-                        <h1 class="title">Meet the team</h1>
-                        <span class="border-icon">
-                            <span class="title-icon"></span>
-                        </span>
-                        <div class="desc">Proin aliquam ante quis
-                            sagittis blandit. In hac habitasse platea
-                            dictumst. In sit amet pharetra<br> tellus.
-                            Morbi sed consequat augue. Quisque
-                            ultricies, ex et sagittis commodo.</div>
-                    </div>
-                    <div class="flat-divider d25px"></div>
+<section class="flat-row pad-top90px pad-bottom0px flat-animation" data-animation="fadeInLeft"
+    data-animation-delay="0" data-animation-offset="75%" id="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <h1 class="title">Meet the team</h1>
+                    <span class="border-icon">
+                        <span class="title-icon"></span>
+                    </span>
+                    <div class="desc">Proin aliquam ante quis
+                        sagittis blandit. In hac habitasse platea
+                        dictumst. In sit amet pharetra<br> tellus.
+                        Morbi sed consequat augue. Quisque
+                        ultricies, ex et sagittis commodo.</div>
                 </div>
+                <div class="flat-divider d25px"></div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="flat-team-carosuel" data-item="3" data-nav="true" data-dots="false" data-auto="false">
-                        @foreach ($teams as $key => $team)
-                            @if ($key <= 3)
-                                <div class="flat-team">
-                                    <h3 class="name">{{ $team->name }}</h3>
-                                    <div class="avatar">
-                                        <div class="overlay">
-                                        </div>
-                                        <img src="{{ asset('team_images/' . $team->image) }}" alt="image">
-                                        <ul class="short-code flat-socials">
-                                            {{-- <li class="facebook">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="flat-team-carosuel" data-item="3" data-nav="true" data-dots="false" data-auto="false">
+                    @foreach ($teams as $key => $team)
+                        @if ($key <= 3)
+                            <div class="flat-team">
+                                <h3 class="name">{{ $team->name }}</h3>
+                                <div class="avatar">
+                                    <div class="overlay">
+                                    </div>
+                                    <img src="{{ asset('team_images/' . $team->image) }}" alt="image">
+                                    <ul class="short-code flat-socials">
+                                        {{-- <li class="facebook">
                                             <a href="#"><i
                                                     class="fa
                                             fa-facebook"></i></a>
@@ -447,413 +441,374 @@
                                                     class="fa
                                             fa-linkedin"></i></a>
                                         </li> --}}
-                                        </ul>
-                                    </div>
-                                    <span class="position">{{ $team->designation }}</span>
+                                    </ul>
                                 </div>
-                            @endif
-                        @endforeach
-                    </div>
-                    @if (count($teams) > 3)
-                        <a href="{{ route('team.page') }}">
-                            <center>
-                                <button>More View</button>
-                            </center>
-                        </a>
-                    @endif
+                                <span class="position">{{ $team->designation }}</span>
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
+                @if (count($teams) > 3)
+                    <a href="{{ route('team.page') }}">
+                        <center>
+                            <button>More View</button>
+                        </center>
+                    </a>
+                @endif
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="flat-row pad-top80px main-content blog-posts" id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
-                    data-animation-offset="75%">
-                    <div class="title-section">
-                        <h1 class="title">New from our blog</h1>
-                        <span class="border-icon">
-                            <span class="title-icon"></span>
-                        </span>
-                    </div>
-                    <div class="flat-divider d20px"></div>
+<section class="flat-row pad-top80px main-content blog-posts" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+                data-animation-offset="75%">
+                <div class="title-section">
+                    <h1 class="title">Our Project & Service</h1>
+                    <span class="border-icon">
+                        <span class="title-icon"></span>
+                    </span>
                 </div>
+                <div class="flat-divider d20px"></div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="post-wrap">
-                        @foreach ($blogs as $key => $blog)
-                            @if ($key <= 3)
-                                <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
-                                    data-animation-offset="75%">
-                                    <div class="entry-border">
-                                        <div class="feature-post">
-                                            <img src="{{ asset('blog_images/' . $blog->image) }}" alt="image">
-                                        </div>
-                                        <div class="main-post">
-                                            <h2 class="entry-title"><a href="">{{ $blog->title }}</a>
-                                            </h2>
-                                            <div class="entry-meta">
-                                                <span class="author"><a href="">{{ $blog->posted_by }}</a></span>
-                                                <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
-                                            </div>
-                                            <div class="entry-content">
-                                                {!! Str::limit($blog->details, 100) !!} <a href="{{ $blog->blogUrl() }}"
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="">
+                    @foreach ($projects as $key => $project)
+                        @if ($key <= 2)
+                            <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
+                                data-animation-offset="75%">
+                                <div class="entry-border">
+                                    <div class="feature-post">
+                                        <img src="{{ asset('program_images/' . $project->image) }}" alt="image">
+                                    </div>
+                                    <div class="main-post">
+                                        <h2 class="entry-title"><a href="blog-single.html">{{ $project->title }}</a>
+                                        </h2>
+                                        {{-- <div class="entry-meta">
+                                        <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
+                                        <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
+                                    </div> --}}
+                                        <div class="entry-content">
+                                            <p>{!! Str::limit($project->details, 100) !!}<a href="{{ $project->programUrl() }}"
                                                     style="color: red; font-size: 16px;">Read more</a>
-
-                                            </div>
+                                            </p>
                                         </div>
                                     </div>
-                                </article>
-                            @endif
-                        @endforeach
-                    </div>
-                    @if (count($blogs) > 3)
-                        <a href="{{ route('blog.page') }}">
-                            <center>
-                                <button>More View</button>
-                            </center>
-                        </a>
-                    @endif
-                </div>
-            </div>
-        </div>
-    </section>
+                                </div>
+                            </article>
+                        @endif
+                    @endforeach
 
-    <section class="flat-row pad-top80px main-content blog-posts" id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
-                    data-animation-offset="75%">
-                    <div class="title-section">
-                        <h1 class="title">Our Project</h1>
-                        <span class="border-icon">
-                            <span class="title-icon"></span>
-                        </span>
-                    </div>
-                    <div class="flat-divider d20px"></div>
                 </div>
+                @if (count($projects) > 3)
+                    <a href="{{ route('project.page') }}">
+                        <center>
+                            <button>More View</button>
+                        </center>
+                    </a>
+                @endif
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="post-wrap">
-                        @foreach ($projects as $key => $project)
-                            @if ($key <= 3)
-                                <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
-                                    data-animation-offset="75%">
-                                    <div class="entry-border">
-                                        <div class="feature-post">
-                                            <img src="{{ asset('program_images/' . $project->image) }}" alt="image">
-                                        </div>
-                                        <div class="main-post">
-                                            <h2 class="entry-title"><a href="blog-single.html">{{ $project->title }}</a>
-                                            </h2>
-                                            {{-- <div class="entry-meta">
-                                            <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
-                                            <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
-                                        </div> --}}
-                                            <div class="entry-content">
-                                                <p>{!! Str::limit($project->details, 100) !!}<a href="{{ $project->programUrl() }}"
-                                                        style="color: red; font-size: 16px;">Read more</a>
-                                                </p>
-                                            </div>
+
+            <div class="col-md-6">
+                <div class="">
+                    @foreach ($programs as $index => $program)
+                        @if ($index <= 2)
+                            <article class="entry flat-animation" data-animation="fadeInUp" data-animation-delay="0"
+                                data-animation-offset="75%">
+                                <div class="entry-border">
+                                    <div class="feature-post">
+                                        <img src="{{ asset('program_images/' . $program->image) }}" alt="image">
+                                    </div>
+                                    <div class="main-post">
+                                        <h2 class="entry-title"><a>{{ $program->title }}</a>
+                                        </h2>
+                                        {{-- <div class="entry-meta">
+                                        <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
+                                        <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
+                                    </div> --}}
+                                        <div class="entry-content">
+                                            <p>{!! Str::limit($program->details, 100) !!} <a href="{{ $program->programUrl() }}"
+                                                    style="color: red; font-size: 16px;">Read more</a>
+                                            </p>
                                         </div>
                                     </div>
-                                </article>
-                            @endif
-                        @endforeach
-
-                    </div>
-                    @if (count($projects) > 3)
-                        <a href="{{ route('project.page') }}">
-                            <center>
-                                <button>More View</button>
-                            </center>
-                        </a>
-                    @endif
+                                </div>
+                            </article>
+                        @endif
+                    @endforeach
                 </div>
+                @if (count($programs) > 3)
+                    <a href="{{ route('blog.page') }}">
+                        <center>
+                            <button>More View</button>
+                        </center>
+                    </a>
+                @endif
+
             </div>
         </div>
-    </section>
-    <section class="flat-row parallax parallax3 bg-overlay pad-top90px
+    </div>
+</section>
+<section class="flat-row parallax parallax3 bg-overlay pad-top90px
     pad-bottom110px" id="clients">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12" data-animation="fadeInRight" data-animation-delay="0"
-                    data-animation-offset="75%">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" data-animation="fadeInRight" data-animation-delay="0"
+                data-animation-offset="75%">
 
-                    <div class="row">
-                        <div class="item col-md-3" style="text-align: center;">
-                            <h1 style="color: white;">PROJECTS</h1>
-                            <h1>{{ count($projects) }}</h1>
-                        </div>
-                        <div class="item col-md-3" style="text-align: center;">
-                            <h1 style="color: white;">SERVICES</h1>
-                            <h1>{{ count($programs) }}</h1>
-                        </div>
-                        <div class="item col-md-3" style="text-align: center;">
-                            <h1 style="color: white;">JOBS</h1>
-                            <h1>{{ count($jobs) }}</h1>
-                        </div>
-                        <div class="item col-md-3" style="text-align: center;">
-                            <h1 style="color: white;">CLIENTS</h1>
-                            <h1>{{ count($clients) }}</h1>
-                        </div>
+                <div class="row">
+                    <div class="item col-md-3" style="text-align: center;">
+                        <h1 style="color: white;">PROJECTS</h1>
+                        <h1>{{ count($projects) }}</h1>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="flat-row pad-top80px main-content blog-posts" id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
-                    data-animation-offset="75%">
-                    <div class="title-section">
-                        <h1 class="title">Our Career</h1>
-                        <span class="border-icon">
-                            <span class="title-icon"></span>
-                        </span>
+                    <div class="item col-md-3" style="text-align: center;">
+                        <h1 style="color: white;">SERVICES</h1>
+                        <h1>{{ count($programs) }}</h1>
                     </div>
-                    <div class="flat-divider d20px"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="post-wrap">
-                        @foreach ($jobs as $key => $job)
-                            @if ($key <= 3)
-                                <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
-                                    data-animation-offset="75%">
-                                    <div class="entry-border">
-                                        <div class="feature-post">
-                                            <img src="{{ asset('job_images/' . $job->image) }}" alt="image">
-                                        </div>
-                                        <div class="main-post">
-                                            <h2 class="entry-title"><a href="">{{ $job->title }}</a>
-                                            </h2>
-                                            <div class="entry-meta">
-                                                <span class="author"><a href="">{{ $job->location }}</a></span>
-                                                <span class="date">{{ $job->last_date }}</span>
-                                            </div>
-                                            <div class="entry-content">
-                                                {!! Str::limit($job->details, 100) !!} <a href="{{ $job->jobUrl() }}"
-                                                    style="color: red; font-size: 16px;">Read more</a>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            @endif
-                        @endforeach
+                    <div class="item col-md-3" style="text-align: center;">
+                        <h1 style="color: white;">JOBS</h1>
+                        <h1>{{ count($jobs) }}</h1>
                     </div>
-                    @if (count($jobs) > 3)
-                        <a href="{{ route('job.page') }}">
-                            <center>
-                                <button>More View</button>
-                            </center>
-                        </a>
-                    @endif
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="flat-row pad-top80px main-content blog-posts" id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
-                    data-animation-offset="75%">
-                    <div class="title-section">
-                        <h1 class="title">News</h1>
-                        <span class="border-icon">
-                            <span class="title-icon"></span>
-                        </span>
-                    </div>
-                    <div class="flat-divider d20px"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="post-wrap">
-                        @foreach ($news as $key => $new)
-                            @if ($key <= 3)
-                                <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
-                                    data-animation-offset="75%">
-                                    <div class="entry-border">
-                                        <div class="feature-post">
-                                            <img src="{{ asset('program_images/' . $new->image) }}" alt="image">
-                                        </div>
-                                        <div class="main-post">
-                                            <h2 class="entry-title"><a href="">{{ $new->title }}</a>
-                                            </h2>
-                                            <div class="entry-content">
-                                                {!! Str::limit($new->details, 100) !!}
-                                                {{-- <a href="{{ $news->blogUrl() }}" --}}
-                                                {{-- style="color: red; font-size: 16px;">Read more</a> --}}
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            @endif
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="flat-row pad-top80px main-content blog-posts" id="blog">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
-                    data-animation-offset="75%">
-                    <div class="title-section">
-                        <h1 class="title">Events</h1>
-                        <span class="border-icon">
-                            <span class="title-icon"></span>
-                        </span>
-                    </div>
-                    <div class="flat-divider d20px"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="post-wrap">
-                        @foreach ($events as $key => $event)
-                            @if ($key <= 3)
-                                <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
-                                    data-animation-offset="75%">
-                                    <div class="entry-border">
-                                        <div class="feature-post">
-                                            <img src="{{ asset('program_images/' . $event->image) }}" alt="image">
-                                        </div>
-                                        <div class="main-post">
-                                            <h2 class="entry-title"><a href="">{{ $event->title }}</a>
-                                            </h2>
-                                            <div class="entry-content">
-                                                {!! Str::limit($event->details, 100) !!}
-                                                {{-- <a href="{{ $news->blogUrl() }}" --}}
-                                                {{-- style="color: red; font-size: 16px;">Read more</a> --}}
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            @endif
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    {{-- <section class="counter padding-top-30 padding-bottom-30">
-        <div class="container">
-            <!-- Team Member -->
-            <ul class="row">
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{ $numberOfService }}" data-from="0"></span>
-                        </span>
-                        <h5>Associates</h5>
-                    </div>
-                </li>
-
-                <!-- Line Of Codes -->
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{ $numberOfEvent }}" data-from="0"></span> </span>
-                        <h5>Events</h5>
-                    </div>
-                </li>
-
-                <!-- Satisfied Client -->
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{ $numberOfProject }}" data-from="0"></span>
-                        </span>
-                        <h5>Projects</h5>
-                    </div>
-                </li>
-
-                <!-- PSD file included -->
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000"
-                                data-refresh-interval="10" data-to="{{ $numberOfProgram }}" data-from="0"></span>
-                        </span>
-                        <h5>Programs</h5>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section> --}}
-    <div class="flat-row pad-top60px pad-bottom0px bg-contact" id="contact_us">
-        <div class="container">
-            <p style="font-size: 32px; margin-bottom: 18px;">If any query or contact <a
-                    href="{{ route('contact.page') }}" style="color: orange">click here</a></p>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="widget-sv sv-information border
-                    flat-animation"
-                        data-animation="fadeInLeft" data-animation-delay="0" data-animation-offset="75%">
-                        <ul class="information">
-                            <li><span>Phone: </span>{{ setting('office_phone') }}</li>
-                            <li><span>Address: </span>{{ setting('office_address') }}</li>
-                            <li><span>Email: </span> {{ setting('office_email') }}
-                            </li>
-                        </ul>
-                        <ul class="short-code flat-socials">
-                            <li class="facebook">
-                                <a href="{{ setting('facebook') }}"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li class="twitter">
-                                <a href="{{ setting('youtube') }}"><i class="fa fa-youtube"></i></a>
-                            </li>
-                            <li class="linkedin">
-                                <a href="{{ setting('linkedin') }}"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flat-divider d70px"></div>
-                </div>
-                <div class="col-md-5 flat-animation" data-animation="fadeInRight" data-animation-delay="0"
-                    data-animation-offset="75%">
-                    <iframe src="{{ setting('office_map') }}" width="100%" height="400" frameborder="0"
-                        style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-                <div class="col-md-3">
-                    <div class="single-images">
-                        <img src="{{ asset('frontend/images/member/1.2.png') }}" alt="images">
+                    <div class="item col-md-3" style="text-align: center;">
+                        <h1 style="color: white;">CLIENTS</h1>
+                        <h1>{{ count($clients) }}</h1>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
+<section class="flat-row pad-top80px main-content blog-posts" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+                data-animation-offset="75%">
+                <div class="title-section">
+                    <h1 class="title">Career & News</h1>
+                    <span class="border-icon">
+                        <span class="title-icon"></span>
+                    </span>
+                </div>
+                <div class="flat-divider d20px"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="">
+                    @foreach ($news as $key => $new)
+                        @if ($key <= 2)
+                            <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
+                                data-animation-offset="75%">
+                                <div class="entry-border">
+                                    <div class="feature-post">
+                                        <img src="{{ asset('program_images/' . $new->image) }}" alt="image">
+                                    </div>
+                                    <div class="main-post">
+                                        <h2 class="entry-title"><a href="">{{ $new->title }}</a>
+                                        </h2>
+                                        <div class="entry-content">
+                                            {!! Str::limit($new->details, 100) !!}
+                                            {{-- <a href="{{ $news->blogUrl() }}" --}}
+                                            {{-- style="color: red; font-size: 16px;">Read more</a> --}}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="">
+                    @foreach ($jobs as $key => $job)
+                        @if ($key <= 2)
+                            <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
+                                data-animation-offset="75%">
+                                <div class="entry-border">
+                                    <div class="feature-post">
+                                        <img src="{{ asset('job_images/' . $job->image) }}" alt="image">
+                                    </div>
+                                    <div class="main-post">
+                                        <h2 class="entry-title"><a href="">{{ $job->title }}</a>
+                                        </h2>
+                                        <div class="entry-meta">
+                                            <span class="author"><a href="">{{ $job->location }}</a></span>
+                                            <span class="date">{{ $job->last_date }}</span>
+                                        </div>
+                                        <div class="entry-content">
+                                            {!! Str::limit($job->details, 100) !!} <a href="{{ $job->jobUrl() }}"
+                                                style="color: red; font-size: 16px;">Read more</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        @endif
+                    @endforeach
+                </div>
+                @if (count($jobs) > 3)
+                    <a href="{{ route('job.page') }}">
+                        <center>
+                            <button>More View</button>
+                        </center>
+                    </a>
+                @endif
+            </div>
+        </div>
+    </div>
+</section>
+<section class="flat-row pad-top80px main-content blog-posts" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+                data-animation-offset="75%">
+                <div class="title-section">
+                    <h1 class="title">Events & Blog</h1>
+                    <span class="border-icon">
+                        <span class="title-icon"></span>
+                    </span>
+                </div>
+                <div class="flat-divider d20px"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="">
+                    @foreach ($events as $key => $event)
+                        @if ($key <= 3)
+                            <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
+                                data-animation-offset="75%">
+                                <div class="entry-border">
+                                    <div class="feature-post">
+                                        <img src="{{ asset('program_images/' . $event->image) }}" alt="image">
+                                    </div>
+                                    <div class="main-post">
+                                        <h2 class="entry-title"><a href="">{{ $event->title }}</a>
+                                        </h2>
+                                        <div class="entry-content">
+                                            {!! Str::limit($event->details, 100) !!}
+                                            {{-- <a href="{{ $news->blogUrl() }}" --}}
+                                            {{-- style="color: red; font-size: 16px;">Read more</a> --}}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="">
+                    @foreach ($blogs as $key => $blog)
+                        @if ($key <= 3)
+                            <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
+                                data-animation-offset="75%">
+                                <div class="entry-border">
+                                    <div class="feature-post">
+                                        <img src="{{ asset('blog_images/' . $blog->image) }}" alt="image">
+                                    </div>
+                                    <div class="main-post">
+                                        <h2 class="entry-title"><a href="">{{ $blog->title }}</a>
+                                        </h2>
+                                        <div class="entry-meta">
+                                            <span class="author"><a href="">{{ $blog->posted_by }}</a></span>
+                                            <span class="date">{{ $blog->created_at->diffForHumans() }}</span>
+                                        </div>
+                                        <div class="entry-content">
+                                            {!! Str::limit($blog->details, 100) !!} <a href="{{ $blog->blogUrl() }}"
+                                                style="color: red; font-size: 16px;">Read more</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        @endif
+                    @endforeach
+                </div>
+                @if (count($blogs) > 3)
+                    <a href="{{ route('blog.page') }}">
+                        <center>
+                            <button>More View</button>
+                        </center>
+                    </a>
+                @endif
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="flat-row pad-top60px pad-bottom0px bg-contact" id="contact_us">
+    <div class="container">
+        <p style="font-size: 32px; margin-bottom: 18px;">If any query or contact <a
+                href="{{ route('contact.page') }}" style="color: orange">click here</a></p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="widget-sv sv-information border
+                flat-animation"
+                    data-animation="fadeInLeft" data-animation-delay="0" data-animation-offset="75%">
+                    <ul class="information">
+                        <li><span>Phone: </span>{{ setting('office_phone') }}</li>
+                        <li><span>Address: </span>{{ setting('office_address') }}</li>
+                        <li><span>Email: </span> {{ setting('office_email') }}
+                        </li>
+                    </ul>
+                    <ul class="short-code flat-socials">
+                        <li class="facebook">
+                            <a href="{{ setting('facebook') }}"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="twitter">
+                            <a href="{{ setting('youtube') }}"><i class="fa fa-youtube"></i></a>
+                        </li>
+                        <li class="linkedin">
+                            <a href="{{ setting('linkedin') }}"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flat-divider d70px"></div>
+            </div>
+            <div class="col-md-8 flat-animation" data-animation="fadeInRight" data-animation-delay="0"
+                data-animation-offset="75%">
+                <iframe src="{{ setting('office_map') }}" width="100%" height="400" frameborder="0"
+                    style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            {{-- <div class="col-md-3">
+                <div class="single-images">
+                    <img src="{{ asset('frontend/images/member/1.2.png') }}" alt="images">
+                </div>
+            </div> --}}
+        </div>
+    </div>
+</div>
 @endsection
 @section('js')
-    <script>
-        $('.gallery_image').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            closeOnContentClick: false,
-            closeBtnInside: false,
-            mainClass: 'mfp-with-zoom mfp-img-mobile',
-            image: {
-                verticalFit: true,
-            },
-            gallery: {
-                enabled: true
-            },
-            zoom: {
-                enabled: true,
-                duration: 300, // don't foget to change the duration also in CSS
-                opener: function(element) {
-                    return element.find('img')
-                }
+<script>
+    $('.gallery_image').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        closeOnContentClick: false,
+        closeBtnInside: false,
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        image: {
+            verticalFit: true,
+        },
+        gallery: {
+            enabled: true
+        },
+        zoom: {
+            enabled: true,
+            duration: 300, // don't foget to change the duration also in CSS
+            opener: function(element) {
+                return element.find('img')
             }
+        }
 
-        })
-    </script>
+    })
+</script>
 @endsection

@@ -1080,7 +1080,7 @@ textarea.type-input.error {
 	width: 270px;
 	position: absolute;
 	right: 15px;
-	top: 0;
+	bottom: 238px;
 }
 
 /* Style 2 background white */

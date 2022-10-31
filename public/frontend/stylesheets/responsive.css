@@ -409,7 +409,11 @@
 	.flat-contact-form.style2 .submit-wrap {
 		position: relative;
 		left: 0;
+		width: 100%;
 	}
+	 .custom{
+	bottom: 101px;
+}
 
 	.flat-testimonials.owl-carousel .owl-controls {
 		left: 0;
@@ -520,8 +524,10 @@
 }
 
 /* Mobile Landscape Size */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-	
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.custom{
+		top: 393px;
+	}
 }
 
 /* Mobile Portrait Size */

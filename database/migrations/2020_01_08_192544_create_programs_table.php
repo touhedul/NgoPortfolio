@@ -17,6 +17,7 @@ class CreateProgramsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->text('details');
+            $table->string('type');
             $table->string('category');
             $table->string('image')->nullable();
             $table->timestamps();

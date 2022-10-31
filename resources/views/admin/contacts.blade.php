@@ -19,6 +19,7 @@
                                 <th><h5>Email</h5></th>
                                 <th><h5>Phone</h5></th>
                                 <th><h5>Message</h5></th>
+                                <th><h5>Inquiry</h5></th>
                                 <th><h5>Time</h5></th>
                                 <th><h5>Action</h5></th>
                             </tr>
@@ -48,6 +49,7 @@
                 {data: 'email', name: 'email'},
                 {data: 'phone', name: 'phone'},
                 {data: 'message', name: 'message'},
+                {data: 'Inquiry', name: 'Inquiry'},
                 {data: 'created_at', name: 'created_at'},
                 {data: 'action', name: 'action',orderable: false, searchable: false},
             ],

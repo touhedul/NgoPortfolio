@@ -73,12 +73,15 @@ class ProgramController extends Controller
     public function store(Request $request)
     {
         // return $request->all();
+       
         $this->validate($request, [
             'title' => 'required|max:191',
             'image' => 'nullable|image|max:15000',
             'file' => 'nullable|max:15000',
+            'type' => 'required',
             'category' => 'nullable|string|max:191',
         ]);
+      
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');

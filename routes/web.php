@@ -2,6 +2,8 @@
 
 // *****************************Frontend **************************
 
+use Illuminate\Support\Facades\Route;
+
 Route::namespace('Frontend')->group(function () {
     Route::get('/', 'IndexController@index')->name('index');
     //Give feed back and contact User side
@@ -43,9 +45,11 @@ Route::namespace('Frontend')->group(function () {
     Route::get('/gallery', 'IndexController@gallery')->name('gallery.page');
     Route::get('/about', 'IndexController@about')->name('about.page');
     Route::get('/service', 'IndexController@service')->name('service.page');
+    Route::get('/service/{serviceType}', 'IndexController@serviceType')->name('service.type');
     Route::get('/client', 'IndexController@client')->name('client.page');
     Route::get('/testimonial', 'IndexController@testimonial')->name('testimonial.page');
     Route::get('/team', 'IndexController@team')->name('team.page');
+    Route::get('team/{teamType}','IndexController@teamType')->name('team.type');
     Route::get('/blog', 'IndexController@blog')->name('blog.page');
     Route::get('/project', 'IndexController@project')->name('project.page');
     Route::get('/contact', 'IndexController@contact')->name('contact.page');

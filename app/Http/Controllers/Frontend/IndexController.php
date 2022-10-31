@@ -12,6 +12,7 @@ use App\Models\Setting;
 use App\Models\Team;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class IndexController extends Controller
 {
@@ -28,7 +29,7 @@ class IndexController extends Controller
         $numberOfProject = Program::where('category', 'Project')->count();
         $numberOfProgram = Program::where('category', 'Program')->count();
         $numberOfEvent = Program::where('category', 'Event')->count();
-        $teams = Team::latest()->get();
+        $teams = Team::where('designation','Manager')->latest()->get();
         $testimonials = Testimonial::latest()->get();
         $clients = Program::where('category', 'Client')->latest()->get();
         $blogs = Blog::latest()->get();
@@ -55,6 +56,7 @@ class IndexController extends Controller
     }
     public function submitFeedback(Request $request)
     {
+  
         $this->validate($request, [
             'name' => 'required|string|max:191',
             'email' => 'required|string|email|max:191',
@@ -65,6 +67,7 @@ class IndexController extends Controller
         $feedback->name = $request->name;
         $feedback->email = $request->email;
         $feedback->phone = $request->phone;
+        $feedback->type = json_encode(request()->type);
         $feedback->message = $request->message;
         $feedback->save();
         return back()->with('success', 'Thank you.');
@@ -109,6 +112,12 @@ class IndexController extends Controller
         $programs = Program::where('category', 'Program')->latest()->get();
         return view('frontend.service-page', compact('programs'));
     }
+    public function serviceType($serviceType)
+    {
+        $type=   str_replace('_', ' ', $serviceType);
+        $programs = Program::where('category', 'Program')->where('type',$type)->latest()->get();
+        return view('frontend.service-type', compact('programs','type'));
+    }
 
     public function client()
     {
@@ -133,4 +142,11 @@ class IndexController extends Controller
         $job = Job::findOrFail($id);
         return view('frontend.job-single', compact('job'));
     }
+    public function teamType($Teamtype){
+       
+      $type=   str_replace('_', ' ', $Teamtype);
+        $teams = Team::where('type',$type)->latest()->get();
+        return view('frontend.team-type', compact('teams','type'));
+    }
+  
 }

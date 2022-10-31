@@ -18,6 +18,7 @@ class CreateContactFeedbackTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->text('phone')->nullable();
+            $table->text('type')->nullable();
             $table->text('message')->nullable();
             $table->integer('feedback')->nullable();
             $table->timestamps();

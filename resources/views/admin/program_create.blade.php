@@ -25,6 +25,26 @@
                         <textarea id="editor" rows="30" required style="background: #f5f6fa" name="details" class="form-control"
                             placeholder="{{ $category }} Details">{{ old('details') }}</textarea>
                     </div>
+                    <div class="form-group">
+                        <label>Type*</label>
+                        <select style="background: #f5f6fa" class="form-control" required name="type" id="">
+                            <option selected disabled>select Type</option>
+                            <option value="Valuation">Valuation</option>
+                            <option value="Building">Building</option>
+                            <option value="Inventory">Inventory</option>
+                            <option value="Digital survey">Digital survey</option>
+                            <option value="Asset valuation
+                            ">Asset valuation
+                            </option>
+                            <option value="Consolatory">Consolatory</option>
+                            <option value="Preparation of project profile
+                            "> Preparation of project profile
+                            </option>
+                            <option value="General
+                            "> General
+                            </option>
+                        </select>
+                    </div>
 
 
                     @if ($category != 'Notice' && $category != 'Resource')

@@ -3,6 +3,7 @@
     Contact
 @endsection
 @section('css')
+
 @endsection
 @section('content')
     <div class="page-title parallax parallax1 bg-black style1">
@@ -50,7 +51,24 @@
                             <div class="textarea-wrap">
                                 <textarea class="type-input" tabindex="3" placeholder="Message" name="message" id="message-contact" required></textarea>
                             </div>
+                            <div class="custom" style="position: absolute;    bottom: 23px;" >
+                                <b >Type of Inquiry:</b>
+                            </div>
+                       
+                            <div class="form-check form-check-inline" style="margin-top: -10px" >
+                                <input class="form-check-input" name="type[]" type="checkbox" id="inlineCheckbox1" value="Valuation & Survey">
+                                <label class="form-check-label" for="inlineCheckbox1" style="margin-left: 8px">Valuation & Survey</label>
+                                <input class="form-check-input" name="type[]" type="checkbox" id="inlineCheckbox2" value="Digital Survey" style="margin-left: 10px">
+                                <label class="form-check-label" for="inlineCheckbox2" style="margin-left: 8px">Digital Survey</label>
+                                <input class="form-check-input" name="type[]" type="checkbox" id="inlineCheckbox3" value="Civil" style="margin-left: 10px">
+                                <label class="form-check-label" for="inlineCheckbox3" style="margin-left: 8px">Civil</label>
+                                <input class="form-check-input" name="type[]" type="checkbox" id="inlineCheckbox4" value="Engineering" style="margin-left: 10px">
+                                <label class="form-check-label"  for="inlineCheckbox4" style="margin-left: 10px">Engineering</label>
+                                <input class="form-check-input" name="type[]" type="checkbox" id="inlineCheckbox5" value="General" style="margin-left: 10px">
+                                <label class="form-check-label" for="inlineCheckbox5"style="margin-left: 8px">General</label>
+                              </div>
                         </div>
+                        
                         <div class="submit-wrap">
                             <button type="submit" class="flat-button bg-theme">send</button>
                         </div>

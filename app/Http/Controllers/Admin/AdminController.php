@@ -70,7 +70,10 @@ class AdminController extends Controller
                 ->addColumn('action', function (ContactFeedback $contactFeedbacks) {
                     return '<a onclick="return confirm(\'Are you sure?\')" href="' . route('admin.contact-feedback.delete', $contactFeedbacks->id) . '">Delete</a> ';
                 })
-                ->rawColumns(['action'])
+                ->addColumn('Inquiry', function (ContactFeedback $contactFeedbacks) {
+             return json_decode($contactFeedbacks->type);
+                })
+                ->rawColumns(['action','Inquiry'])
                 ->make(true);
         }
         return view('admin.contacts');
@@ -79,6 +82,7 @@ class AdminController extends Controller
     public function feedbacks(Request $request)
     {
         $contactFeedbacks = ContactFeedback::whereNull('phone')->get();
+      
         if ($request->ajax()) {
             return DataTables::of($contactFeedbacks)
                 ->addIndexColumn()
@@ -88,8 +92,12 @@ class AdminController extends Controller
                 ->addColumn('action', function (ContactFeedback $contactFeedbacks) {
                     return '<a onclick="return confirm(\'Are you sure?\')" href="' . route('admin.contact-feedback.delete', $contactFeedbacks->id) . '">Delete</a> ';
                 })
-                ->rawColumns(['action'])
+                ->addColumn('Inquiry', function (ContactFeedback $contactFeedbacks) {
+                    return '<a onclick="return confirm(\'Are you sure?\')" href="' . route('admin.contact-feedback.delete', $contactFeedbacks->id) . '">Delete</a> ';
+                })
+                ->rawColumns(['action','Inquiry'])
                 ->make(true);
+        
         }
         $averageFeedback = ContactFeedback::avg('feedback');
         $averageFeedback = round($averageFeedback, 2);

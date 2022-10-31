@@ -40,11 +40,14 @@
                 <div class="form-group">
                     <label>Type*</label>
                     <select style="background: #f5f6fa" class="form-control" required name="type" id="">
-                        <option value="General Committee">General Committee</option>
-                        <option value="Executive Committee">Executive Committee</option>
-                        <option value="Higher Management">Higher Management</option>
-                        <option value="Head Office">Head Office</option>
-                        <option value="Field">Field</option>
+                        <option value="Survey operation team">Survey operation team</option>
+                        <option value="Reporter team">Reporter team</option>
+                        <option value="Audit & quality control team">Audit & quality control team</option>
+                        <option value="Design & Daring team">Design & Daring team</option>
+                        <option value="IT & Online service team">IT & Online service team</option>
+                        <option value="Marketing & Consular">Marketing & Consular</option>
+                        <option value="Human resource & general service team"> Human resource & general service team</option>
+                        <option value="Management">Management</option>
                     </select>
                 </div>
 

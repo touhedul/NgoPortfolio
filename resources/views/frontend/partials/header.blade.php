@@ -14,15 +14,35 @@
                     </li>
                     <li class="home">
                         <a href="{{ route('service.page') }}">Services</a>
+                        <ul class="submenu">
+                            @foreach ($service as $key=> $value )
+                            <li><a href="{{route('service.type', preg_replace('/\s+/im','_',$key))}}">{{$key}}</a></li>
+                            @endforeach
+                      
+                        </ul>
                     </li>
                     <li class="home">
                         <a href="{{ route('about.page') }}">About us</a>
+                        <ul class="submenu">
+                            <li><a href="">Founder </a></li>
+                            <li><a href="">Company Profile</a></li>
+                            @if ($management)
+                            <li><a href="{{route('team.type',preg_replace('/\s+/im','_',$management->type))}}">{{$management->type}}</a></li>
+                            @endif
+                          
+                        </ul>
                     </li>
                     <li class="home">
                         <a href="{{ route('project.page') }}">Projects</a>
                     </li>
                     <li class="home">
                         <a href="{{ route('team.page') }}">Team</a>
+                            <ul class="submenu">
+                                @foreach ($team as $key=> $value )
+                                <li><a href="{{route('team.type',preg_replace('/\s+/im','_',$key))}}">{{$key}}</a></li>
+                                @endforeach
+                          
+                            </ul>
                     </li>
                     {{-- <li class="home">
                         <a href="{{ route('gallery.page') }}">gallery</a>

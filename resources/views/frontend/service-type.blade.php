@@ -12,7 +12,7 @@
                 <div class="col-md-12">
                     <div class="page-title-heading">
                         <h1 class="title">
-                            Service
+                            {{$type}}
                         </h1>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                                         <img src="{{ asset('program_images/' . $program->image) }}" alt="image">
                                     </div>
                                     <div class="main-post">
-                                        <h2 class="entry-title"><a>{{ $program->title }}</a>
+                                        <h2 class="entry-title"><a >{{ $program->title }}</a>
                                         </h2>
                                         {{-- <div class="entry-meta">
                                             <span class="author"><a href="#">{{ $blog->posted_by }}</a></span>
