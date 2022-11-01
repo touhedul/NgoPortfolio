@@ -130,7 +130,7 @@
                         <div class="top-detail"> <a href="{{$project->programUrl()}}" class=""><i class="fa fa-link"></i> </a> </div>
                         <!-- TITTLE HEADING -->
                         <div class="bottom-detail">
-                            <h3>{{$project->title}}</h3>
+                            <p>{{$project->title}}</p>
                         </div>
                     </div>
                 </article>

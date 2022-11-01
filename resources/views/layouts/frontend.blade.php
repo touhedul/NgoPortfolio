@@ -147,6 +147,7 @@
                             <li> <a href="{{route('career')}}">Career </a> </li>
                             <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
                             <li> <a href="{{route('notices')}}">Notices </a> </li>
+                            <li> <a href="https://shataphoolbd.org/single/19-bangabandhu-corner">Bangabandhu</a> </li>
                             <li> <a href="{{route('contact')}}">Contact</a> </li>
                         </ul>
                         <!-- Search -->
