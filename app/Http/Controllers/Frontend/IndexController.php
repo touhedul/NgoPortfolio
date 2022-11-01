@@ -19,7 +19,7 @@ class IndexController extends Controller
         $programs = Program::where('category', 'Program')->latest()->get();
         $notices = Program::where('category', 'Notice')->latest()->get();
         $associates = Program::where('category', 'Associate')->latest()->take(3)->get();
-        $events = Program::where('category', 'Event')->latest()->take(3)->get();
+        $events = Program::where('category', 'Event')->take(3)->get();
         $testimonials = Testimonial::latest()->get();
         $numberOfService = Program::where('category', 'Associate')->count();
         $numberOfProject = Program::where('category', 'Project')->count();
