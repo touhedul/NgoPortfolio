@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Branch;
 use App\Models\ContactFeedback;
 use App\Models\Gallery;
 use App\Models\Job;
@@ -36,7 +37,8 @@ class IndexController extends Controller
         $gallaries = Gallery::where('category', 'Gallery')->latest()->get();
         $setting = Setting::all();
         $jobs = Job::latest()->get();
-        return view('frontend.index', compact('jobs', 'setting', 'gallaries', 'blogs', 'clients', 'testimonials', 'teams', 'sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials', 'news', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent'));
+        $branches = Branch::all();
+        return view('frontend.index', compact('jobs', 'setting', 'gallaries', 'blogs', 'clients', 'testimonials', 'teams', 'sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials', 'news', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent','branches'));
     }
 
     public function termsAndConditions()

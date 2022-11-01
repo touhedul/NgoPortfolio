@@ -381,7 +381,7 @@
                     </ul>
                 </li>
                 {{-- Branch --}}
-                {{-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                         href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-blogger"></i>
                         <span class="hide-menu">Branches </span></a>
 
@@ -395,7 +395,7 @@
                                     class="mdi mdi-multiplication-box"></i><span class="hide-menu"> Manage
                                     Branch </span></a></li>
                     </ul>
-                </li> --}}
+                </li>
                 {{-- Gallery --}}
                 <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                         href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-file-image"></i>
