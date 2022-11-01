@@ -30,7 +30,7 @@ class IndexController extends Controller
         $numberOfProgram = Program::where('category', 'Program')->count();
         $numberOfEvent = Program::where('category', 'Event')->count();
         $teams = Team::where('designation','Manager')->latest()->get();
-        $testimonials = Testimonial::latest()->get();
+        $testimonials = Testimonial::latest()->take(6)->get();
         $clients = Program::where('category', 'Client')->latest()->get();
         $blogs = Blog::latest()->get();
         $gallaries = Gallery::where('category', 'Gallery')->latest()->get();
@@ -56,7 +56,7 @@ class IndexController extends Controller
     }
     public function submitFeedback(Request $request)
     {
-  
+
         $this->validate($request, [
             'name' => 'required|string|max:191',
             'email' => 'required|string|email|max:191',
@@ -143,10 +143,10 @@ class IndexController extends Controller
         return view('frontend.job-single', compact('job'));
     }
     public function teamType($Teamtype){
-       
+
       $type=   str_replace('_', ' ', $Teamtype);
         $teams = Team::where('type',$type)->latest()->get();
         return view('frontend.team-type', compact('teams','type'));
     }
-  
+
 }
