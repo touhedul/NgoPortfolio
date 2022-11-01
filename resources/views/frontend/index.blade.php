@@ -166,7 +166,7 @@
                     <div class="">
                         @foreach ($branches as $key => $branch)
                             @if ($key <= 5)
-                                <article  style="width: 20%;" class="entry" data-animation="fadeInUp" data-animation-delay="0"
+                                <article  class="entry" data-animation="fadeInUp" data-animation-delay="0"
                                     data-animation-offset="75%">
                                     <div class="entry-border">
                                         <div class="feature-post">
