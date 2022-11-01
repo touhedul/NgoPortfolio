@@ -22,8 +22,8 @@
                         <li class="phone"><a href="{{ setting('office_phone') }}">{{ setting('office_phone') }}</a>
                         </li>
                         <li class="address">{{ setting('office_address') }}</li>
-                        <a href="{{ route('career') }}" style="margin-left: 11px; color: white;">CAREER</a>
-                        <a href="" style="color: white;">FAQ</a>
+                        {{-- <a href="{{ route('career') }}" style="margin-left: 11px; color: white;">CAREER</a> --}}
+                        {{-- <a href="" style="color: white;">FAQ</a> --}}
                     </ul>
                 </div>
             </div>

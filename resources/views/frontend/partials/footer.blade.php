@@ -4,9 +4,9 @@
             <div class="row">
                 <div class="col-md-4" style="margin-top: 45px;">
                     <img src="{{ asset('images/' . setting('logo')) }}" alt="image">
-                    <p>Dhaka Office :</p>
+                    <p>Head Office :</p>
                     <p>Monzuri Bhaban, 6th Floor, 08, D.I.T Ex.Ave, Motijheel C/A, Dhaka.</p>
-                    <p>Chittagong Office:</p>
+                    {{-- <p>Chittagong Office:</p>
                     <p>1556, East Nasirabad, Sananda R/A, 2nd Floor, Panchlaish, Chattogram.</p>
                     <p>Sylhet Office :</p>
                     <p>Noor Mansion, Daudnagar Bazar, Shayestaganj, Hobiganj.</p>
@@ -16,11 +16,11 @@
                     <p>221, Anonda Bazar, Kapataiapara, Mawna, Sreepur, Gazipur.</p>
                     <p>Sister Concern :</p>
                     <p>IES Agro Park<br>
-                        221, Anonda Bazar, Kapatapara, Mawna, Sreepur, Gazipur.</p>
+                        221, Anonda Bazar, Kapatapara, Mawna, Sreepur, Gazipur.</p> --}}
                 </div>
                 <div class="col-md-4">
                     <div class="widget widget-categories" style="text-align: center">
-                        <h4 class="widget-title">Follow Us -</h4>
+                        <h4 class="widget-title">Follow Us On-</h4>
                         <ul style="display: flex; justify-content: center;">
                             <li class="facebook" style="margin: 0px 5px; font-size: 38px;">
                                 <a href="{{ setting('facebook') }}"><i class="fa fa-facebook"></i></a>
@@ -32,7 +32,7 @@
                                 <a href="{{ setting('linkedin') }}"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
-                        <div style="margin-top: 60%;">
+                        <div style="margin-top: 20%;">
                             <p> Copyright © IES LTD 2022. Tech Partner <a href="https://skoder.co">Skoder<a>
                             </p>
                         </div>
@@ -46,12 +46,12 @@
                         <div class="textwidget">
                             <p>Visit one of our locations today and get started on
                                 your next project</p>
-                            <p class="time">Saturday: 9:00 am > 05:00 pm</p>
-                            <p class="time">Sunday: 9:00 am > 05:00 pm</p>
+                            <p class="time">Saturday - Thursday: 9:00 am > 05:00 pm</p>
+                            {{-- <p class="time">Sunday: 9:00 am > 05:00 pm</p>
                             <p class="time">Monday: 9:00 am > 05:00 pm</p>
                             <p class="time">Tuesday: 9:00 am > 05:00 pm</p>
                             <p class="time">Wednesday: 9:00 am > 05:00 pm</p>
-                            <p class="time">Thursday: 9:00 am > 05:00 pm</p>
+                            <p class="time">Thursday: 9:00 am > 05:00 pm</p> --}}
                             <p class="time">Friday: Closed</p>
                         </div>
                     </div>

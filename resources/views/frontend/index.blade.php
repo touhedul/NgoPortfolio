@@ -42,6 +42,35 @@
             outline: none !important;
             -webkit-backface-visibility: hidden;
         }
+
+
+        /* Zoom In #1 */
+        .hover01 figure img {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        .hover01 figure:hover img {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+
+        .feature-post {
+            background: #02251e;
+        }
+        .feature-post img {
+            opacity: 1;
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+        .feature-post:hover img {
+            opacity: .5;
+        }
+
+
+
+
     </style>
 @endsection
 @section('content')
@@ -73,13 +102,14 @@
             <div class="portfolio-wrap clearfix service_image">
                 @foreach ($service as $key => $values)
                     @if ($m < 7)
+
                         <div  style="width: 33.33%;height:250px" class="item">
                             <a href=""
                                 style="width:193px;height:125px;">
                                 <img style="height:100%;width:100%"  src="{{ asset('demo/' . $m . '.jpg') }}" alt="images">
                                 <div class="overlay">
-                                    <div style="margin: auto; width: 50%; height:50%; padding: 10px;">
-                                        <a href="{{ route('service.type', preg_replace('/\s+/im', '_', $key)) }}"><h1 style="font-size: 20px">{{ $key }} Services</h1></a>
+                                    <div style="transform: translate(-50%, -50%);position: absolute; top: 50%; left: 50%;">
+                                        <a href="{{ route('service.type', preg_replace('/\s+/im', '_', $key)) }}"><h1>{{ $key }}</h1></a>
                                     </div>
                                 </div>
 
@@ -164,20 +194,21 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="">
+
                         @foreach ($branches as $key => $branch)
                             @if ($key <= 5)
-                                <article  class="entry" data-animation="fadeInUp" data-animation-delay="0"
-                                    data-animation-offset="75%">
-                                    <div class="entry-border">
-                                        <div class="feature-post">
-                                            <img src="{{ asset('branch_images/' . $branch->image) }}" alt="image">
-                                        </div>
-                                        <div class="main-post">
-                                            <h2 class="entry-title">{{ $branch->title }} </h2>
 
-                                        </div>
+                            <div class="col-md-2">
+                                <div class="entry-border">
+                                    <div class="feature-post">
+                                        <img src="{{ asset('branch_images/' . $branch->image) }}" alt="image">
                                     </div>
-                                </article>
+                                    <div class="main-post">
+                                        <p class="entry-title">{{ $branch->title }} </p>
+                                    </div>
+                                </div>
+                            </div>
+
                             @endif
                         @endforeach
 
@@ -366,8 +397,10 @@
                             <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
                                 data-animation-offset="75%">
                                 <div class="entry-border">
-                                    <div class="feature-post">
-                                        <img src="{{ asset('program_images/' . $project->image) }}" alt="image">
+                                    <div class="feature-post hover12 column">
+                                        <figure>
+                                            <img src="{{ asset('program_images/' . $project->image) }}" alt="image">
+                                        </figure>
                                     </div>
                                     <div class="main-post">
                                         <h2 class="entry-title"><a href="blog-single.html">{{ $project->title }}</a>

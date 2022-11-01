@@ -18,7 +18,7 @@
                             @foreach ($service as $key=> $value )
                             <li><a href="{{route('service.type', preg_replace('/\s+/im','_',$key))}}">{{$key}}</a></li>
                             @endforeach
-                      
+
                         </ul>
                     </li>
                     <li class="home">
@@ -29,7 +29,7 @@
                             @if ($management)
                             <li><a href="{{route('team.type',preg_replace('/\s+/im','_',$management->type))}}">{{$management->type}}</a></li>
                             @endif
-                          
+
                         </ul>
                     </li>
                     <li class="home">
@@ -41,7 +41,7 @@
                                 @foreach ($team as $key=> $value )
                                 <li><a href="{{route('team.type',preg_replace('/\s+/im','_',$key))}}">{{$key}}</a></li>
                                 @endforeach
-                          
+
                             </ul>
                     </li>
                     {{-- <li class="home">

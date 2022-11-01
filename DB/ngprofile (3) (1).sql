@@ -250,7 +250,7 @@ INSERT INTO `programs` (`id`, `title`, `details`, `type`, `category`, `image`, `
 (5, 'fdsfsd', '<p>sdfsdfdsa</p>', 'Digital survey', 'Program', '1667155190635ec4f657e03.png', '2022-10-30 18:39:50', '2022-10-30 18:39:50'),
 (6, 'fdsfdssdf', '<p>fsdf</p>', 'Consolatory', 'Program', '1667156574635eca5e2a138.png', '2022-10-30 19:02:54', '2022-10-30 19:02:54'),
 (7, 'dsfsds', '<p>fsdfdsfsdd fsd fsd f</p>', 'General', 'Program', '1667156593635eca7161eec.png', '2022-10-30 19:03:13', '2022-10-30 19:03:13'),
-(8, 'vcxv', '<p>xvcv</p>', 'Preparation of project profile', 'Program', '1667156844635ecb6cdfb6f.jpeg', '2022-10-30 19:07:25', '2022-10-30 19:07:25');
+(8, 'vcxv', '<p>xvcv</p>', 'Project Profiling', 'Program', '1667156844635ecb6cdfb6f.jpeg', '2022-10-30 19:07:25', '2022-10-30 19:07:25');
 
 -- --------------------------------------------------------
 
