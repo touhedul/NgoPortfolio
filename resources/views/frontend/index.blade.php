@@ -231,71 +231,7 @@
         </div>
     </section>
 
-<section class="flat-row parallax parallax3 bg-overlay pad-top90px
-    pad-bottom110px" id="clients">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
-                data-animation-offset="75%">
-                <div class="title-section text-white">
-                    <h1 class="title">Our Cliens Trust in us</h1>
-                    <span class="border-icon">
-                        <span class="title-icon"></span>
-                    </span>
-                </div>
-                <div class="flat-divider d35px"></div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-12 flat-animation" data-animation="fadeInRight" data-animation-delay="0"
-                data-animation-offset="75%">
-                <div class="flat-client" data-item="{{$clients->count()+1}}" data-nav="false" data-dots="false" data-auto="true">
-                    @foreach ($clients as $client)
-                        <div class="item"><img src="{{ asset('program_images/' . $client->image) }}"
-                                alt="images">
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="flat-row row-testimonilas-slider flat-animation" data-animation="fadeInUp" data-animation-delay="0"
-    data-animation-offset="75%" id="testimonials">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 pd-162px">
-                <div class="flat-testimonials-images">
-                    <div class="flat-testimonials-slider">
-                        <div id="flat-testimonials-flexslider">
-                            <ul class="slides">
-                                @foreach ($testimonials as $testimonial)
-                                    <li>
-                                        <p>{!! $testimonial->message !!}</p>
-                                    </li>
-                                @endforeach
-
-                            </ul>
-                        </div>
-                        <div id="flat-testimonials-carousel">
-                            <ul class="slides">
-                                @foreach ($testimonials as $testimonial)
-                                    <li>
-                                        <img alt="image"
-                                            src="{{ asset('testimonial_images/' . $testimonial->image) }}">
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <div class="flat-row row-contact-us">
     <div class="container">
@@ -647,19 +583,83 @@
 </section>
 
 
+<section class="flat-row parallax parallax3 bg-overlay pad-top90px
+    pad-bottom110px" id="clients">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
+                data-animation-offset="75%">
+                <div class="title-section text-white">
+                    <h1 class="title">Our Cliens Trust in us</h1>
+                    <span class="border-icon">
+                        <span class="title-icon"></span>
+                    </span>
+                </div>
+                <div class="flat-divider d35px"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 flat-animation" data-animation="fadeInRight" data-animation-delay="0"
+                data-animation-offset="75%">
+                <div class="flat-client" data-item="{{$clients->count()+1}}" data-nav="false" data-dots="false" data-auto="true">
+                    @foreach ($clients as $client)
+                        <div class="item"><img src="{{ asset('program_images/' . $client->image) }}"
+                                alt="images">
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="flat-row row-testimonilas-slider flat-animation" data-animation="fadeInUp" data-animation-delay="0"
+    data-animation-offset="75%" id="testimonials">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 pd-162px">
+                <div class="flat-testimonials-images">
+                    <div class="flat-testimonials-slider">
+                        <div id="flat-testimonials-flexslider">
+                            <ul class="slides">
+                                @foreach ($testimonials as $testimonial)
+                                    <li>
+                                        <p>{!! $testimonial->message !!}</p>
+                                    </li>
+                                @endforeach
+
+                            </ul>
+                        </div>
+                        <div id="flat-testimonials-carousel">
+                            <ul class="slides">
+                                @foreach ($testimonials as $testimonial)
+                                    <li>
+                                        <img alt="image"
+                                            src="{{ asset('testimonial_images/' . $testimonial->image) }}">
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <div class="flat-row pad-top60px pad-bottom0px bg-contact" id="contact_us">
     <div class="container">
-        <p style="font-size: 32px; margin-bottom: 18px;">If any query or contact <a
-                href="{{ route('contact.page') }}" style="color: orange">click here</a></p>
+        
         <div class="row">
             <div class="col-md-4">
-                <div class="widget-sv sv-information border
-                flat-animation"
-                    data-animation="fadeInLeft" data-animation-delay="0" data-animation-offset="75%">
+                <div class="widget-sv sv-information border flat-animation" data-animation="fadeInLeft" data-animation-delay="0" data-animation-offset="75%">
                     <ul class="information">
-                        <li><span>Phone: </span>{{ setting('office_phone') }}</li>
-                        <li><span>Address: </span>{{ setting('office_address') }}</li>
-                        <li><span>Email: </span> {{ setting('office_email') }}
+                        <li><span>Phone: </span><br>{{ setting('office_phone') }}</li>
+                        <li><span>Address: </span><br>{{ setting('office_address') }}</li>
+                        <li><span>Email: </span><br> {{ setting('office_email') }}
                         </li>
                     </ul>
                     <ul class="short-code flat-socials">
@@ -673,7 +673,14 @@
                             <a href="{{ setting('linkedin') }}"><i class="fa fa-linkedin"></i></a>
                         </li>
                     </ul>
+                    <br>
+                    <a href="{{ route('contact.page') }}">
+                        <button type="button" class="btn btn-dark">Click to Contact Us</button>
+                    </a>
+
                 </div>
+
+
                 <div class="flat-divider d70px"></div>
             </div>
             <div class="col-md-8 flat-animation" data-animation="fadeInRight" data-animation-delay="0"
