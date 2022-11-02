@@ -35,7 +35,7 @@ class AllController extends Controller
 
     public function teams()
     {
-        $teams = Team::latest()->get();
+        $teams = Team::all();
         return view('frontend.teams', compact('teams'));
     }
     public function jobs()

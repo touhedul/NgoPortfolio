@@ -41,7 +41,7 @@
                 <div class="form-group">
                     <label>Type*</label>
                     <select style="background: #f5f6fa" class="form-control" required name="type" id="">
-                        <option @if ($team->type == "General") selected
+                        {{-- <option @if ($team->type == "General") selected
                             @endif value="General">General</option>
                         <option @if ($team->type == "Executive") selected
                             @endif value="Executive">Executive</option>
@@ -55,7 +55,17 @@
                         <option @if ($team->type == "Head Office") selected
                             @endif value="Head Office">Head Office</option>
                         <option @if ($team->type == "Field") selected
-                            @endif value="Field">Field</option>
+                            @endif value="Field">Field</option> --}}
+
+
+                        <option @if ($team->type == "Advisor") selected @endif value="Advisor">Advisor</option>
+                        <option @if ($team->type == "Director") selected @endif value="Director">Director</option>
+                        <option @if ($team->type == "Higher Management") selected @endif value="Higher Management">Higher Management</option>
+                        <option @if ($team->type == "Team Member") selected @endif value="Team Member">Team Member</option>
+
+
+
+
                     </select>
                 </div>
 
