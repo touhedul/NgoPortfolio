@@ -68,6 +68,10 @@
             opacity: .5;
         }
 
+        /* team */
+
+
+
 
 
 
@@ -311,67 +315,36 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="title-section">
-                    <h1 class="title">Meet the team</h1>
+                    <h1 class="title">Our Superintendency</h1>
                     <span class="border-icon">
                         <span class="title-icon"></span>
                     </span>
-                    <div class="desc">Proin aliquam ante quis
-                        sagittis blandit. In hac habitasse platea
-                        dictumst. In sit amet pharetra<br> tellus.
-                        Morbi sed consequat augue. Quisque
-                        ultricies, ex et sagittis commodo.</div>
                 </div>
                 <div class="flat-divider d25px"></div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="flat-team-carosuel" data-item="3" data-nav="true" data-dots="false" data-auto="false">
-                    @foreach ($teams as $key => $team)
-                        @if ($key <= 3)
-                            <div class="flat-team">
-                                <h3 class="name">{{ $team->name }}</h3>
-                                <div class="avatar">
-                                    <div class="overlay">
-                                    </div>
-                                    <img src="{{ asset('team_images/' . $team->image) }}" alt="image">
-                                    <ul class="short-code flat-socials">
-                                        {{-- <li class="facebook">
-                                            <a href="#"><i
-                                                    class="fa
-                                            fa-facebook"></i></a>
-                                        </li>
-                                        <li class="twitter">
-                                            <a href="#"><i
-                                                    class="fa
-                                            fa-twitter"></i></a>
-                                        </li>
-                                        <li class="instagram">
-                                            <a href="#"><i
-                                                    class="fa
-                                            fa-instagram"></i></a>
-                                        </li>
-                                        <li class="linkedin">
-                                            <a href="#"><i
-                                                    class="fa
-                                            fa-linkedin"></i></a>
-                                        </li> --}}
-                                    </ul>
-                                </div>
-                                <span class="position">{{ $team->designation }}</span>
-                            </div>
-                        @endif
-                    @endforeach
+        @foreach ($teams as $key=>$team)
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-6 feature-post">
+                        <img width="100%" src="{{ asset('team_images/' . $team->image) }}" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <br>
+                        <h2 style="font-size: 20px">{{ $team->name }}</h2>
+                        <div class="desc">{{ $team->designation }}</div>
+                        <div class="desc">{!! $team->about !!}</div>
+                    </div>
                 </div>
-                @if (count($teams) > 3)
-                    <a href="{{ route('team.page') }}">
-                        <center>
-                            <button>More View</button>
-                        </center>
-                    </a>
-                @endif
             </div>
+
+            <br>
         </div>
+
+
+        @endforeach
     </div>
 </section>
 

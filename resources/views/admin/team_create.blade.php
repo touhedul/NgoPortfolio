@@ -48,6 +48,7 @@
                         <option value="Marketing & Consular">Marketing & Consular</option>
                         <option value="Human resource & general service team"> Human resource & general service team</option>
                         <option value="Management">Management</option>
+                        <option value="Superintendency">Superintendency</option>
                     </select>
                 </div>
 

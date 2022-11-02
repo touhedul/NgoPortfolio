@@ -30,7 +30,7 @@ class IndexController extends Controller
         $numberOfProject = Program::where('category', 'Project')->count();
         $numberOfProgram = Program::where('category', 'Program')->count();
         $numberOfEvent = Program::where('category', 'Event')->count();
-        $teams = Team::where('designation','Manager')->latest()->get();
+        $teams = Team::where('type','Superintendency')->take(4)->get();
         $testimonials = Testimonial::latest()->take(6)->get();
         $clients = Program::where('category', 'Client')->latest()->get();
         $blogs = Blog::latest()->get();

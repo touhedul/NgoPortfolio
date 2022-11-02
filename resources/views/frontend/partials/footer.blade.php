@@ -33,7 +33,7 @@
                             </li>
                         </ul>
                         <div style="margin-top: 20%;">
-                            <p> Copyright © IES LTD 2022. Tech Partner <a href="https://skoder.co">Skoder<a>
+                            <p> Copyright © IES LTD {{date('Y')}}. Tech Partner <a href="https://skoder.co">Skoder<a>
                             </p>
                         </div>
 

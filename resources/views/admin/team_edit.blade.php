@@ -41,21 +41,21 @@
                 <div class="form-group">
                     <label>Type*</label>
                     <select style="background: #f5f6fa" class="form-control" required name="type" id="">
-                        <option @if ($team->type == "General") selected
-                            @endif value="General">General</option>
-                        <option @if ($team->type == "Executive") selected
-                            @endif value="Executive">Executive</option>
+                        
+                        <option @if ($team->type == "Survey operation team") selected @endif value="Survey operation team">Survey operation team</option>
+                        <option @if ($team->type == "Reporter team") selected @endif value="Reporter team">Reporter team</option>
+                        <option @if ($team->type == "Audit & quality control team") selected @endif value="Audit & quality control team">Audit & quality control team</option>
+                        <option @if ($team->type == "Design & Daring team") selected @endif value="Design & Daring team">Design & Daring team</option>
+                        <option @if ($team->type == "IT & Online service team") selected @endif value="IT & Online service team">IT & Online service team</option>
+                        <option @if ($team->type == "Marketing & Consular") selected @endif value="Marketing & Consular">Marketing & Consular</option>
+                        <option @if ($team->type == "Human resource & general service team") selected @endif value="Human resource & general service team"> Human resource & general service team</option>
+                        <option @if ($team->type == "Management") selected @endif value="Management">Management</option>
+                        <option @if ($team->type == "Superintendency") selected @endif value="Superintendency">Superintendency</option>
 
-                        <option @if ($team->type == "General Committee") selected
-                            @endif value="General Committee">General Committee</option>
-                        <option @if ($team->type == "Executive Executive") selected
-                            @endif value="Executive Committee">Executive Committee</option>
-                        <option @if ($team->type == "Higher Management") selected
-                            @endif value="Higher Management">Higher Management</option>
-                        <option @if ($team->type == "Head Office") selected
-                            @endif value="Head Office">Head Office</option>
-                        <option @if ($team->type == "Field") selected
-                            @endif value="Field">Field</option>
+
+
+
+
                     </select>
                 </div>
 
