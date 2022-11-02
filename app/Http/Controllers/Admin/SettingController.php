@@ -18,12 +18,17 @@ class SettingController extends Controller
 
     public function settingCompany(Request $request)
     {
+        // return $request;
         Setting::where('key', 'website_name')->update(['value' => $request->website_name]);
         Setting::where('key', 'address')->update(['value' => $request->address]);
         Setting::where('key', 'phone_number')->update(['value' => $request->phone_number]);
         Setting::where('key', 'email')->update(['value' => $request->email]);
         Setting::where('key', 'facebook')->update(['value' => $request->facebook]);
         Setting::where('key', 'linkedin')->update(['value' => $request->linkedin]);
+        Setting::where('key', 'experience')->update(['value' => $request->experience]);
+        Setting::where('key', 'bank')->update(['value' => $request->bank]);
+        Setting::where('key', 'corporate')->update(['value' => $request->corporate]);
+        Setting::where('key', 'project')->update(['value' => $request->project]);
 
         $setting = Setting::where('key', 'logo')->first();
         if ($request->hasFile('logo')) {
@@ -34,7 +39,7 @@ class SettingController extends Controller
             //add new image
             $image = $request->file('logo');
             $imageName = time() . uniqid() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(250,60)->save('images/' . $imageName);
+            Image::make($image)->resize(500,100)->save('images/' . $imageName,90);
 
             Setting::where('key', 'logo')->update(['value' => $imageName]);
         }
@@ -60,7 +65,7 @@ class SettingController extends Controller
             //add new image
             $image = $request->file('logo_footer');
             $imageName = time() . uniqid() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(250,605)->save('images/' . $imageName, 50);
+            Image::make($image)->resize(100,100)->save('images/' . $imageName, 90);
 
             Setting::where('key', 'logo_footer')->update(['value' => $imageName]);
         }

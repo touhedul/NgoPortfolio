@@ -38,7 +38,16 @@ class IndexController extends Controller
         $setting = Setting::all();
         $jobs = Job::latest()->get();
         $branches = Branch::all();
-        return view('frontend.index', compact('jobs', 'setting', 'gallaries', 'blogs', 'clients', 'testimonials', 'teams', 'sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials', 'news', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent','branches'));
+
+
+        $settings = Setting::all();
+        $experienceC = $settings->where('key','experience')->first()->value ?? 100;
+        $bankC = $settings->where('key','bank')->first()->value ?? 100;
+        $corporateC = $settings->where('key','corporate')->first()->value ?? 100;
+        $projectC = $settings->where('key','project')->first()->value ?? 100;
+
+
+        return view('frontend.index', compact('jobs', 'setting', 'gallaries', 'blogs', 'clients', 'testimonials', 'teams', 'sliders', 'projects', 'programs', 'associates', 'events', 'notices', 'testimonials', 'news', 'numberOfService', 'numberOfProject', 'numberOfProgram', 'numberOfEvent','branches','experienceC','bankC','corporateC','projectC',));
     }
 
     public function termsAndConditions()

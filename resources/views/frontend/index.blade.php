@@ -358,33 +358,36 @@
 
                 <div class="row">
                     <div class="item col-md-3" style="text-align: center;">
-                        <h1 style="color: white;">PROJECTS</h1>
-                        <h1>{{ count($projects) }}</h1>
+                        <h1 style="color: white;">Experience</h1>
+                        <h1 id="experienceC">{{ ($experienceC) }}</h1>
                     </div>
                     <div class="item col-md-3" style="text-align: center;">
-                        <h1 style="color: white;">SERVICES</h1>
-                        <h1>{{ count($programs) }}</h1>
+                        <h1 style="color: white;">Banks</h1>
+                        <h1 id="bankC">{{ ($bankC) }}+</h1>
                     </div>
                     <div class="item col-md-3" style="text-align: center;">
-                        <h1 style="color: white;">JOBS</h1>
-                        <h1>{{ count($jobs) }}</h1>
+                        <h1 style="color: white;">Corporates</h1>
+                        <h1 id="corporateC">{{ ($corporateC) }}+</h1>
                     </div>
                     <div class="item col-md-3" style="text-align: center;">
-                        <h1 style="color: white;">CLIENTS</h1>
-                        <h1>{{ count($clients) }}</h1>
+                        <h1 style="color: white;">Projects</h1>
+                        <h1 id="projectC">{{ ($projectC) }}+</h1>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+
 <section class="flat-row pad-top80px main-content blog-posts" id="blog">
     <div class="container">
         <div class="row">
             <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
                 data-animation-offset="75%">
                 <div class="title-section">
-                    <h1 class="title">Career & News</h1>
+                    <h1 class="title">Recent News</h1>
                     <span class="border-icon">
                         <span class="title-icon"></span>
                     </span>
@@ -393,7 +396,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="">
                     @foreach ($news as $key => $new)
                         @if ($key <= 2)
@@ -419,52 +422,24 @@
                     @endforeach
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="">
-                    @foreach ($jobs as $key => $job)
-                        @if ($key <= 2)
-                            <article class="entry" data-animation="fadeInUp" data-animation-delay="0"
-                                data-animation-offset="75%">
-                                <div class="entry-border">
-                                    <div class="feature-post">
-                                        <img src="{{ asset('job_images/' . $job->image) }}" alt="image">
-                                    </div>
-                                    <div class="main-post">
-                                        <h2 class="entry-title"><a href="">{{ $job->title }}</a>
-                                        </h2>
-                                        <div class="entry-meta">
-                                            <span class="author"><a href="">{{ $job->location }}</a></span>
-                                            <span class="date">{{ $job->last_date }}</span>
-                                        </div>
-                                        <div class="entry-content">
-                                            {!! Str::limit($job->details, 100) !!} <a href="{{ $job->jobUrl() }}"
-                                                style="color: red; font-size: 16px;">Read more</a>
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        @endif
-                    @endforeach
-                </div>
-                @if (count($jobs) > 3)
-                    <a href="{{ route('job.page') }}">
-                        <center>
-                            <button>More View</button>
-                        </center>
-                    </a>
-                @endif
-            </div>
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
 <section class="flat-row pad-top80px main-content blog-posts" id="event">
     <div class="container">
         <div class="row">
             <div class="col-md-12 flat-animation" data-animation="fadeInLeft" data-animation-delay="0"
                 data-animation-offset="75%">
                 <div class="title-section">
-                    <h1 class="title">Our Events</h1>
+                    <h1 class="title">Events and Activities</h1>
                     <span class="border-icon">
                         <span class="title-icon"></span>
                     </span>
@@ -652,7 +627,7 @@
 
 <div class="flat-row pad-top60px pad-bottom0px bg-contact" id="contact_us">
     <div class="container">
-        
+
         <div class="row">
             <div class="col-md-4">
                 <div class="widget-sv sv-information border flat-animation" data-animation="fadeInLeft" data-animation-delay="0" data-animation-offset="75%">
@@ -685,7 +660,7 @@
             </div>
             <div class="col-md-8 flat-animation" data-animation="fadeInRight" data-animation-delay="0"
                 data-animation-offset="75%">
-                <iframe src="{{ setting('office_map') }}" width="100%" height="400" frameborder="0"
+                <iframe style="filter: invert(100%)" src="{{ setting('office_map') }}" width="100%" height="550" frameborder="0"
                     style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
             {{-- <div class="col-md-3">
@@ -719,6 +694,43 @@
             }
         }
 
-    })
+    });
+
+
+
+
+
+
+
+    function animateValue(obj, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            obj.innerHTML = Math.floor(progress * (end - start) + start)+'+';
+            if (progress < 1) {
+            window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+        // const obj = document.getElementById("value");
+    }
+
+    animateValue(document.getElementById("experienceC"), 0, {{$experienceC}}, 3000);
+    animateValue(document.getElementById("bankC"), 0, {{$bankC}}, 3000);
+    animateValue(document.getElementById("corporateC"), 0, {{$corporateC}}, 3000);
+    animateValue(document.getElementById("projectC"), 0, {{$projectC}}, 3000);
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 @endsection

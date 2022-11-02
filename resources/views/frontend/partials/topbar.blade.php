@@ -1,7 +1,7 @@
 <div class="top">
     <div class="">
         <div class="row">
-            <div class="col-md-6 mt-2">
+            <div class="col-md-4 mt-2">
                 <ul class="short-code flat-socials  float-left" style="margin-top: 11px;">
                     <li class="facebook">
                         <a href="{{ setting('facebook') }}"><i class="fa fa-facebook"></i></a>
@@ -14,7 +14,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-6 float-right">
+            <div class="col-md-8 float-right">
                 <div class="language">
                     <ul class="flat-information">
                         <li class="email"><a href="{{ setting('office_email') }}">{{ setting('office_email') }}</a>

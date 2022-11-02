@@ -57,6 +57,31 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Experience</label>
+                        <input value="{{ $settings->where('key','experience')->first()->value ?? old('experience') }}"
+                            name="experience" style="background: #f5f6fa" type="number" class="form-control "
+                            placeholder="Enter Experience...">
+                    </div>
+                    <div class="form-group">
+                        <label>Banks</label>
+                        <input value="{{ $settings->where('key','bank')->first()->value ?? old('bank') }}"
+                            name="bank" style="background: #f5f6fa" type="number" class="form-control "
+                            placeholder="Enter Banks...">
+                    </div>
+                    <div class="form-group">
+                        <label>Corporate</label>
+                        <input value="{{ $settings->where('key','corporate')->first()->value ?? old('corporate') }}"
+                            name="corporate" style="background: #f5f6fa" type="number" class="form-control "
+                            placeholder="Enter Corporate...">
+                    </div>
+                    <div class="form-group">
+                        <label>Projects</label>
+                        <input value="{{ $settings->where('key','project')->first()->value ?? old('project') }}"
+                            name="project" style="background: #f5f6fa" type="number" class="form-control "
+                            placeholder="Enter Projects...">
+                    </div>
+
+                    <div class="form-group">
                         <label>Company Logo</label><br>
                         <img src="{{asset('images/'.$settings->where('key','logo')->first()->value)}}"
                             alt="No Image Found"><br>

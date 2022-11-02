@@ -3,6 +3,17 @@
         <div id="logo" class="logo">
             <a href="{{ route('index') }}" rel="home">
                 <img src="{{ asset('images/' . setting('logo')) }}" alt="image">
+                {{-- <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{ asset('images/' . setting('logo')) }}" alt="image">
+                    </div>
+                    <div class="col-md-8">
+                        <h6 style='font-family: "Condensed-Black";font-size: 20px'>Inspection</h6>
+                        <h6 style='font-family: "Condensed-Black";font-size: 10px'>Engineering & Survey Ltd</h6>
+                    </div>
+                </div> --}}
+
+
             </a>
         </div>
         <div class="nav-wrap">

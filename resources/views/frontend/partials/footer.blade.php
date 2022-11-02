@@ -2,10 +2,11 @@
     <div class="footer-widgets">
         <div class="container">
             <div class="row">
-                <div class="col-md-4" style="margin-top: 45px;">
-                    <img src="{{ asset('images/' . setting('logo')) }}" alt="image">
-                    <p>Head Office :</p>
-                    <p>Monzuri Bhaban, 6th Floor, 08, D.I.T Ex.Ave, Motijheel C/A, Dhaka.</p>
+                <div class="col-md-4" style="margin-top: 5px;">
+                    <img src="{{ asset('images/' . setting('logo_footer')) }}" alt="image">
+                    <h6 style='font-family: "Condensed-Black";font-size: 30px'>Inspection</h6>
+                    <h6 style='font-family: "Condensed-Black";font-size: 20px'>Engineering and Survey Limited</h6>
+                    <p style="font-size: 12px">Monzuri Bhaban, 6th Floor, 08, D.I.T Ex.Ave, Motijheel C/A, Dhaka.</p>
                     {{-- <p>Chittagong Office:</p>
                     <p>1556, East Nasirabad, Sananda R/A, 2nd Floor, Panchlaish, Chattogram.</p>
                     <p>Sylhet Office :</p>
@@ -19,6 +20,7 @@
                         221, Anonda Bazar, Kapatapara, Mawna, Sreepur, Gazipur.</p> --}}
                 </div>
                 <div class="col-md-4">
+                    <br>
                     <div class="widget widget-categories" style="text-align: center">
                         <h4 class="widget-title">Follow Us On-</h4>
                         <ul style="display: flex; justify-content: center;">
