@@ -1,28 +1,40 @@
 @extends('layouts.frontend')
-@section('title') Gallery @endsection
+@section('title')
+{{setting('website_name')}}
+@endsection
 @section('content')
-@include('includes.banner',['programName'=>'Gallery'])
-<!-- Content -->
-<div id="content">
-
-    <!-- WHO WE ARE -->
-    <section class="team team-wrap padding-top-70 padding-bottom-70">
-        <div class="container">
-
-            <div class="">
-                <ul class="row items">
-                    @foreach ($galleries as $gallery)
-                    <!-- Member -->
-                    <li class="col-md-4 item market">
-                        <a href="{{asset('gallery_images/big-'.$gallery->image)}}" data-fancybox="roadtrip">
-                            <img class="img-responsive" src="{{asset('gallery_images/'.$gallery->image)}}">
-                        </a>
-                    </li>
-                    @endforeach
-
-                </ul>
-            </div>
+<section  class=" gallery_area">
+    <div class="container ">
+       <div class="text-center">
+          <h3>GALLERY</h3>
+        </div>  
+   <div class="row">
+   
+    @foreach ($galleries as $gallery)
+    <div class="col-md-4">
+        <div class="card p-2 mb-3">
+           <div class="gallary_item">
+                    <img src="{{asset('gallery_images/'.$gallery->image)}}" alt="">
+              {{-- <div class="left-right">
+                 <div class="top">
+                    <div class="img">
+                       <img src="{{asset('gallery_images/'.$gallery->image)}}" alt="">
+                    </div>
+                 </div>
+                 <div class="bottom">
+                    <div class="img">
+                       <img src="{{asset('gallery_images/'.$gallery->image)}}" alt="">
+                    </div>
+                 </div>
+              </div> --}}
+           </div>
         </div>
+     </div>
+    @endforeach
+    
+   </div>
+   
+
+    </div>
     </section>
-</div>
 @endsection

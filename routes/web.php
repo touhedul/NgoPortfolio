@@ -22,7 +22,11 @@ Route::namespace('Frontend')->group(function () {
     Route::get('/branches', 'AllController@branches')->name('branches');
     Route::get('/single-branch/{branch}', 'AllController@branchSingle')->name('branch.single');
     Route::get('/teams', 'AllController@teams')->name('teams');
+    Route::get('/clients', 'AllController@clients')->name('clients');
+    Route::get('/projects', 'AllController@projects')->name('projects');
     Route::get('/galleries', 'AllController@galleries')->name('galleries');
+    Route::get('/services', 'AllController@services')->name('services');
+    Route::get('/service/{id}', 'AllController@serviceSingle')->name('service.single');
     // Route::get('/jobs', 'AllController@jobs')->name('jobs');
     Route::get('/career', 'AllController@jobs')->name('career');
     Route::get('/notices', 'AllController@notices')->name('notices');

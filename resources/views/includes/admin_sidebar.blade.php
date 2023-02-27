@@ -291,7 +291,7 @@
 
                         <a class=" sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                               aria-expanded="false"><i class="mdi mdi-window-restore"></i>
-                              <span class="hide-menu">Resources </span></a>
+                              <span class="hide-menu">Clients </span></a>
 
                         <ul style="margin-left:20px" aria-expanded="false"
                               class="collapse first-level @isset($category) @if($category == "Resource") in @endif
@@ -305,7 +305,7 @@
                                     <a onclick="document.getElementById('add-form-resource').submit();" href="#"
                                           class="sidebar-link active"><i class="mdi mdi-creation"></i><span
                                                 class="hide-menu">
-                                                Add Resource
+                                                Add Client
                                           </span></a>
                               </li>
                               {{-- Manage --}}
@@ -317,7 +317,7 @@
                                     <a onclick="document.getElementById('manage-form-resource').submit();" href="#"
                                           class="sidebar-link active"><i class="mdi mdi-creation"></i><span
                                                 class="hide-menu">
-                                                Manage Resource
+                                                Manage Client
                                           </span></a>
                               </li>
 

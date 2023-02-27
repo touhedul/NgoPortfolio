@@ -36,7 +36,26 @@ class AllController extends Controller
     public function teams()
     {
         $teams = Team::latest()->get();
-        return view('frontend.teams', compact('teams'));
+        $branches = Branch::get();
+        $servicesMenus = Program::where('category', 'Program')->select('id', 'title')->latest()->get();
+        return view('frontend.teams', compact('teams', 'branches', 'servicesMenus'));
+    }
+
+    public function clients()
+    {
+        $resources = Program::where('category', 'Resource')->latest()->get();
+        $branches = Branch::get();
+        $servicesMenus = Program::where('category', 'Program')->select('id', 'title')->latest()->get();
+        return view('frontend.clients', compact('resources', 'branches', 'servicesMenus'));
+    }
+
+    public function projects()
+    {
+        $branches = Branch::get();
+        // $resources = Program::where('category', 'Resource')->latest()->get();
+        $projects = Program::where('category', 'Project')->latest()->get();
+        $servicesMenus = Program::where('category', 'Program')->select('id', 'title')->latest()->get();
+        return view('frontend.projects', compact('projects', 'branches', 'servicesMenus'));
     }
     public function jobs()
     {
@@ -55,8 +74,10 @@ class AllController extends Controller
     }
     public function galleries()
     {
+        $branches = Branch::get();
         $galleries = Gallery::where('category', 'gallery')->latest()->get();
-        return view('frontend.galleries', compact('galleries'));
+        $servicesMenus = Program::where('category', 'Program')->select('id', 'title')->latest()->get();
+        return view('frontend.galleries', compact('galleries', 'branches', 'servicesMenus'));
     }
     public function branchSingle(Branch $branch)
     {
@@ -66,6 +87,25 @@ class AllController extends Controller
 
     public function about()
     {
-        return view('frontend.about');
+        $branches = Branch::get();
+        $servicesMenus = Program::where('category', 'Program')->select('id', 'title')->latest()->get();
+        return view('frontend.about', compact('branches', 'servicesMenus'));
+    }
+
+    public function services()
+    {
+        $branches = Branch::get();
+        $programs = Program::where('category', 'Program')->latest()->get();
+        $servicesMenus = Program::where('category', 'Program')->select('id', 'title')->latest()->get();
+        return view('frontend.services', compact('branches', 'programs', 'servicesMenus'));
+    }
+
+    public function serviceSingle($id)
+    {
+        
+        $branches = Branch::get();
+        $service = Program::where('id', $id)->where('category', 'Program')->first();
+        $servicesMenus = Program::where('category', 'Program')->select('id', 'title')->latest()->get();
+        return view('frontend.single_service', compact('branches', 'servicesMenus', 'service'));
     }
 }

@@ -1,292 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>IES</title>
+      <!--fonts-links  -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet">
+      <!--fonts-links  -->
+      <!-- css -->
+      <link rel="stylesheet" href="{{asset('frontend/assets/plugins/fonts/all.min.css')}}">
+      <link rel="stylesheet" href="{{asset('frontend/assets/plugins/bootstrap/bootstrap.min.css')}}">
+      <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="M_Adnan">
-    <title>@yield('title')</title>
-
-    <meta name="description"
-        content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
-
-    <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="Shataphool Bangladesh">
-    <meta itemprop="description"
-        content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
-    <meta itemprop="image" content="https://portfolio.skoder.tech/gallery_images/big-15957512045f1d3b2467188.jpg">
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://portfolio.skoder.tech">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Shataphool Bangladesh">
-    <meta property="og:description"
-        content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
-    <meta property="og:image" content="https://portfolio.skoder.tech/gallery_images/big-15957512045f1d3b2467188.jpg">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shataphool Bangladesh">
-    <meta name="twitter:description"
-        content="Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have. In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. ">
-    <meta name="twitter:image" content="https://portfolio.skoder.tech/gallery_images/big-15957512045f1d3b2467188.jpg">
-
-    <!-- Meta Tags Generated via http://heymeta.com -->
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('frontend/images/favicon.ico')}}">
-
-    <!-- Bootstrap Core CSS -->
-    <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <!-- <link href="{{asset('frontend/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"> -->
-    <link href="{{asset('frontend/css/ionicons.min.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/css/main.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/css/responsive.css')}}" rel="stylesheet">
-
-    <!-- Online Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,800,200,500' rel='stylesheet' type='text/css'>
-    <link
-        href='https://fonts.googleapis.com/css?family=Open+Sans:400,600italic,400italic,300,300italic,600,700,700italic,800,800italic'
-        rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400italic,400,700' rel='stylesheet'
-        type='text/css'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <!-- COLORS -->
-    <link rel="stylesheet" id="color" href="{{asset('frontend/css/colors/default.css')}}">
-
-    <!-- JavaScripts -->
-    <script src="{{asset('frontend/js/modernizr.js')}}"></script>
-    <script src="https://kit.fontawesome.com/12785a33f8.js" crossorigin="anonymous"></script>
-    <!-- HTML5 Shim and Respond.js')}} IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js')}} doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')}}"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script>
-<![endif]-->
-</head>
-
-<body>
-
-    <!-- Wrap -->
-    <div id="wrap">
-
-        <!-- header -->
-        <header>
-
-            <!-- Top bar -->
-            <!-- <div class="top-bar">
-                <div class="top-info">
-                    <div class="container">
-                        <ul class="personal-info">
-                            <li>
-                                <p><i class="fa fa-phone"></i> +8801711062767 </p>
-                            </li>
-
-                            <li>
-                                <p><i class="fa fa-envelope"></i> shataphool@gmail.com </p>
-                            </li>
-                        </ul> -->
-
-            <!-- Right Sec -->
-            <!-- <div class="right-sec"> -->
-
-            <!-- Language -->
-            <!-- <select class="selectpicker">
-              <option>English</option>
-              <option>French</option>
-              <option>Relish</option>
-            </select> -->
-
-            <!-- social -->
-            <!-- <ul class="social">
-                                <li><a href="#."><i class="fa fa-facebook"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Navigation -->
-            <nav class="navbar">
-                <div class="sticky">
-                    <div class="container">
-
-                        <!-- LOGO -->
-                        <div class="logo" style="margin-top: -20px"> <a href="{{route('index')}}"><img
-                                    class="img-responsive" src="{{asset('images/'.setting('logo'))}}" alt=""></a> </div>
-
-                        <!-- Nav -->
-                        <ul class="nav ownmenu">
-                            <li class=""> <a href="{{route('index')}}">Home </a>
-                            </li>
-                            <li> <a href="{{route('about')}}">About Us</a>
-                                <ul class="dropdown">
-                                    <li> <a href="{{route('founder')}}">Founder</a> </li>
-                                    <li> <a href="{{route('legal.entity')}}">Legal Entity</a> </li>
-                                    <li> <a href="{{route('partner.network')}}">Partner Network</a> </li>
-                                    <li> <a href="{{route('teams')}}">Team</a> </li>
-                                    <li> <a href="{{route('branches')}}">Branches</a> </li>
-                                    {{-- <li> <a href="{{route('program.different','Affiliate')}}">Affiliate</a> </li>
-                                    --}}
-                                    <li> <a href="{{route('galleries')}}">Gallery</a> </li>
-                                </ul>
-                            </li>
-                            <li> <a href="#">Activities</a>
-                                <ul class="dropdown">
-                                    <li> <a href="{{route('program.different','Program')}}">Core Programs </a> </li>
-                                    <li> <a href="{{route('program.different','Project')}}">Projects </a> </li>
-                                </ul>
-                            </li>
-                            <li> <a href="{{route('program.different','Associate')}}">Associates </a> </li>
-                            <li> <a href="{{route('publications')}}">Resources </a> </li>
-                            <li> <a href="{{route('career')}}">Career </a> </li>
-                            <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
-                            <li> <a href="{{route('notices')}}">Notices </a> </li>
-                            <li> <a href="https://shataphoolbd.org/single/19-bangabandhu-corner">Bangabandhu</a> </li>
-                            <li> <a href="{{route('contact')}}">Contact</a> </li>
-                        </ul>
-                        <!-- Search -->
-                        <!-- <div class="search-icon"> <a href="#."><i class="fa fa-search"></i></a>
-                            <form>
-                                <input class="form-control" type="search" placeholder="Type Here">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div> -->
-                    </div>
-                </div>
-            </nav>
-        </header>
-        @yield('content')
-
-        <!-- FOOTER -->
-        <!-- FOOTER -->
-        <footer>
+      <link rel="stylesheet" href="{{asset('frontend/assets/plugins/slick/slick.css')}}">
+      <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
+      <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css') }}">
+      <!-- css -->
+   </head>
+   <body >
+      <!-- header start-->
+      <header>
+         <div class="header_top">
             <div class="container">
-                <div class="row">
-
-                    <!-- ABOUT -->
-                    <div class="col-md-4"> <img src="{{asset('images/'.setting('logo_footer'))}}" alt="">
-                        <div class="about-foot">
-                            <ul>
-                                <li>
-                                    <p><i class="fa fa-map-marker"></i> {{setting('address')}}</p>
-                                </li>
-                                <li>
-                                    <p><i class="fa fa-phone"></i> {{setting('phone_number')}} </p>
-                                </li>
-                                <li>
-                                    <p><i class="fa fa-envelope"></i> {{setting('email')}}</p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <a href=" {{setting('facebook')}}"><i class="fa fa-facebook"
-                                                style="color:#52BE80;"></i></a>
-                                        &nbsp;
-                                        <a href=" {{setting('youtube')}}"><i class="fa fa-youtube-play"
-                                                style="color:#52BE80;"></i></a>
-                                        <a href=" {{setting('linkedin')}}"><i class="fa fa-linkedin"
-                                                style="color:#52BE80;"></i></a>
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Twitter Feed -->
-                    <div class="col-md-4">
-                        <h6>Site Map</h6>
-                        <ul class="col-md-6 tweet">
-                            <li> <a href="{{route('about')}}">About </a> </li>
-                            <li> <a href="{{route('program.different','Program')}}">Core Programs </a> </li>
-                            <li> <a href="{{route('program.different','Project')}}">Projects </a> </li>
-                            <li> <a href="{{route('program.different','Associate')}}">Associates </a> </li>
-
-                        </ul>
-                        <ul class="col-md-6 tweet">
-                            <li> <a href="{{route('program.different','Resource')}}">Resource</a> </li>
-                            <li> <a href="{{route('career')}}">Career</a> </li>
-                            <li> <a href="{{route('program.different','Event')}}">Events </a> </li>
-                            <li> <a href="{{route('notices')}}">Notices </a> </li>
-                        </ul>
-                    </div>
-
-                    <!-- Photostream -->
-                    <div class="col-md-4">
-                        <a href="{{route('galleries')}}">
-                            <h6>Photo Gallery</h6>
-                        </a>
-                        <a href="{{route('galleries')}}">
-                            <p>All Images</p>
-                        </a>
-                        <ul class="photo-steam ">
-                            @foreach (App\Models\Gallery::where('category','gallery')->take(6)->get() as $gallery)
-
-                            <li>
-                                <a href="{{asset('gallery_images/big-'.$gallery->image)}}" data-fancybox="roadtrip">
-                                    <img class="img-responsive" src="{{asset('gallery_images/'.$gallery->image)}}">
-                                </a>
-                            </li>
-                            @endforeach
-
-                        </ul>
-                    </div>
-
-
-                </div>
+               <div class="d-flex align-items-center justify-content-between">
+                  <div class="icons d-flex">
+                     <a href=" {{setting('facebook')}}"><i class="fab fa-facebook-square"></i></a>
+                  </div>
+                  <div class="language d-flex">
+                     <ul class="d-flex left">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                     </ul>
+                     <ul class="d-flex">
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">FAQ</a></li>
+                     </ul>
+                  </div>
+               </div>
             </div>
-        </footer>
-
-        <!-- RIGHTS -->
-        <div class="rights">
+         </div>
+         <div class="header_bottom">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Shataphool © All Rights Reserved || Technology Partner <a class="primary-color margin-0"
-                                href="//skoder.co">Skoder</a> </p>
-                    </div>
-                    <div class="col-md-6 text-right"> <a href="{{route('privacy.policy')}}">Privacy Policy</a> <a
-                            href="{{route('terms.and.conditions')}}">Terms &
-                            Conditions</a> </div>
-                </div>
+
+               <div class="d-flex justify-content-between main">
+                  <div class="header_bottom_item first-item">
+                     <div class="logo d-flex">
+                        <div class="img">
+                           <img class="img-fluid" src="{{asset('frontend/assets/images/logo.png')}}" alt="">
+                        </div>
+                        <div class="text">
+                           <h1>Inspection</h1>
+                           <h3>Engineering & Survey (IES) Limited</h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="header_bottom_item meddel-item">
+                     <div class="d-flex">
+                        <address class="address d-flex align-items-center">
+                           <div class="img">
+                              <a href="https://www.google.com/maps/place/Tongi/@23.9067212,90.3572587,13z/data=!3m1!4b1!4m5!3m4!1s0x3755c4488706e2d9:0xee45004fa6ba8d03!8m2!3d23.9010422!4d90.4088116"><img src="{{asset('frontend/assets/images/location_icon.png')}}" alt="map"></a>
+                              
+                           </div>
+                           <p>Head Office Located <br> {{setting('office_address')}}</p>
+                        </address>
+                        <div class="address d-flex align-items-center mb-3">
+                           <div class="img">
+                              <a href="mailto:info@ieslimitedbd@gmail.com">
+                                 <img src="{{asset('frontend/assets/images/message_icon.png')}}" alt="">
+                              </a>
+                           </div>
+                           <a href="mailto:info@ieslimitedbd@gmail.com">Send us a Message<br>{{setting('office_email')}}</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="header_bottom_item last-item">
+                     <div class="bg-secondary text-white py-2 px-3 ps-5">
+                        <h6 class="ps-3 text-uppercase">Call us Now</h6>
+                        <h5 class="ps-3">{{setting('office_phone')}}</h5>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
+         </div>
+         <div class="navigation">
+            <nav class="navbar navbar-expand-lg menu-fixd">
+               <div class="container ">
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+               <i class="fa fa-bars" aria-hidden="true"></i>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarText">
+                   <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-secondary  px-2 mr-4">
+                     <li class="nav-item">
+                       <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{route('index')}}">Home</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link {{ (request()->is('about')) ? 'active' : '' }}" href="{{route('about')}}">ABOUT US</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link {{ (request()->is('teams')) ? 'active' : '' }}" href="{{ route('teams') }}">OUR TEAM </a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link {{ (request()->is('services') || request()->is('service/*')) ? 'active' : '' }}" href="{{ route('services') }}">SERVICES <i class="fas fa-chevron-down"></i>       
+                     </a>
+                     <ul class="sub-menu">
+                           
+                           @foreach ($servicesMenus as $menu)
+                           <li><a href="{{ route('service.single', $menu->id)}}">{{ $menu->title }}</a></li>
+                           @endforeach
+                           
+                        </ul>              
+                     </li>   
+                     <li class="nav-item">
+                       <a class="nav-link {{ (request()->is('clients')) ? 'active' : '' }}" href="{{ route('clients') }}">CLIENT LIST</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link {{ (request()->is('projects')) ? 'active' : '' }}" href="{{ route('projects') }}">PROJECT</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link {{ (request()->is('galleries')) ? 'active' : '' }}" href="{{ route('galleries') }}">PHOTO</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link {{ (request()->is('contact')) ? 'active' : '' }}" href="{{ route('contact') }}">CONTACT US</a>
+                      </li>
+                  
+                   </ul>
+                   
+                   <span class="navbar-text ">
+                     <h2 class="bg-warning  px-2">Get a Quote</h2>
+                   </span>
+                 </div>
+               </div>
+             </nav>
+             
+         </div>
+      </header>
+  
+      <!-- header end-->
+      <!-- banner start -->
+      @yield('content')
+      <footer class="text-white ">
+         <div class="overlay px-5">
+            <div class="row">
+               <div class="col-md-4 mt-5 ">
+                  <div class="left-item">
+                     <div class="logo d-flex">
+                        <div class="img">
+                           <img class="w-100" src="{{asset('frontend/assets/images/logo-2.png')}}" alt="">
+                        </div>
+                        <div class="text mt-2">
+                           <h1>Inspection</h1>
+                           <h3>Engineering & Survey (IES) Limited</h3>
+                        </div>
+                     </div>
+                     @foreach ($branches as $branch)
+                        <h5>{{ $branch->short_details }}</h5>
+                        <p>{!! $branch->details !!}
+                        </p>
+                     @endforeach
+                     
+                     {{-- <h5>Chittagong Office:</h5>
+                     <p>1556, East Nasirabad, Sananda R/A, 2nd Floor, Panchlaish, Chattogram.
+                     </p>
+                     <h5>Sylhet Office :</h5>
+                     <p>Noor Mansion, Daudnagar Bazar, Shayestaganj, Hobiganj. 
+                     </p>
+                     <h5>Khulna Office :</h5>
+                     <p>15, Moulovipara Mosjid Lane, Khulna Sadar, Khulna.
+                        <h5>Gazipur Office :</h5>
+                        <p>221, Anonda Bazar, Kapatiapara, Mawna, Sreepur, Gazipur. 
+                        </p> --}}
+                 
+   
+                  </div>
+               </div>
+               <div class="col-md-4  order-1 order-sm-0">
+          
+                  <div class="center_item ">
+                     <div class="follow">
+                        <h3 class="text-center mb-4">Follow us -</h3>
+                        <div class="icons d-flex">
+                           <a href=" {{setting('facebook')}}"><i class="fab fa-facebook-square"></i></a>
+                           
+                              </div>
+   
+                     </div>
+                     <div class="text-center mt-3">
+                        <p class="text-white">Sister Concern : </p>
+                        <h5>IES Agro Park</h5>
+                        <p class="text-white">221, Anonda Bazar, Kapatiapara, Mawna, Sreepur, Gazipur. 
+                        </p>
+                     </div>
+                     <div class="btm-area">
+                        <ul>
+                           <li>Career </li>
+                           <li>FAQ</li>
+                        </ul>
+                        <p class="text-white">Copyright ©2022 Eastern Bank Ltd. All Rights Reserved</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 mt-5 order-0 order-sm-1">
+                  <div class="right-item">
+                     <h3 class="mb-4">Office Hours</h3>
+                     <h6 class="mb-3">Visit one of our locations today and get started on
+                        your next project</h6>
+                        <table>
+                           <tr>
+                              <td class="ps-0">Saturday</td>
+                              <td>9:00 am > 05:00 pm
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="ps-0">Saturday</td>
+                              <td>9:00 am > 05:00 pm
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="ps-0">Saturday</td>
+                              <td>9:00 am > 05:00 pm
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="ps-0">Saturday</td>
+                              <td>9:00 am > 05:00 pm
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="ps-0">Saturday</td>
+                              <td>9:00 am > 05:00 pm
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="ps-0">Saturday</td>
+                              <td>9:00 am > 05:00 pm
+                              </td>
+                           </tr>
+                           <tr>
+                              <td class="ps-0">Saturday</td>
+                              <td>9:00 am > 05:00 pm
+                              </td>
+                           </tr>
+                       
+                        </table>
+                  </div>
+               </div>
+   
+            </div>
+         </div>
+  
+      </footer>
+      <!--  -->
+      <!-- script -->
+      <script src="{{asset('frontend/assets/js/jquery-1.12.4.min.js')}}"></script>
+      <script src="{{asset('frontend/assets/plugins/bootstrap/bootstrap.bundle.min.js')}}"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
 
-
-        <script src="{{asset('frontend/js/jquery-1.11.0.min.js')}}"></script>
-        <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
-        <script src="{{asset('frontend/js/own-menu.js')}}"></script>
-        <script src="{{asset('frontend/js/jquery.isotope.min.js')}}"></script>
-        <script src="{{asset('frontend/js/jquery.flexslider-min.js')}}"></script>
-        <script src="{{asset('frontend/js/jquery.countTo.js')}}"></script>
-        <script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
-        <script src="{{asset('frontend/js/jquery.cubeportfolio.min.js')}}"></script>
-        <script src="{{asset('frontend/js/jquery.colio.min.js')}}"></script>
-        <script src="{{asset('frontend/js/main.js')}}"></script>
-        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
-        <script>
-            $(document).ready(function() {
-
-                $("#owl-example").owlCarousel({
-                    items: 1
-                });
-
-            });
-            $(document).ready(function() {
-
-                $("#owl-example2").owlCarousel({
-                    items: 1
-                });
-
-            });
-        </script>
-
-</body>
-
-
+      <script src="{{asset('frontend/assets/plugins/slick/slick.min.js')}}"></script>
+      <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+      <script src="{{asset('frontend/assets/js/script.js')}}"></script>
+      <!-- script -->
+   </body>
 </html>

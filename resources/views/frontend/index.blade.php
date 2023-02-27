@@ -3,346 +3,372 @@
 {{setting('website_name')}}
 @endsection
 @section('content')
-<!-- HOME MAIN SLIDER -->
-<section class="home-slide">
-    <ul class="slides">
-        @foreach ($sliders as $slider)
-        <!-- SLIDER 1 -->
-        <li class="slide-img-1" style="background: url('{{asset('gallery_images/big-'.$slider->image)}}') ;" data-stellar-background-ratio="0.6">
-            <div class="position-center-center">
-                <!-- <h1>Sotoful</h1>
-                <h5>NGO at your Service</h5>
-                <a href="{{route('about')}}" class="btn margin-top-30">Read More <i class="fa fa-caret-right"></i></a> -->
-            </div>
-        </li>
-        @endforeach
-    </ul>
-</section>
 
-<!-- Content -->
-<div id="content">
-    <section class="padding-top-30 padding-bottom-30">
-        <div class="container">
-            <div class="heading text-center">
-                <br><br>
-                <h4>Breaking News</h4>
-            </div>
-            <div class="who-we">
-                <div class="row">
-                    <marquee>
-                    @foreach ($newses as $news)
-                   <a href="{{$news->programUrl()}}"> <span style="font-size: 20px; margin-right: 50px ; color : #52BE80">{{$news->title}}</span></a>
-                    @endforeach
-                    </marquee>
+<section class="hero-area section section-mg">
+    <div class="hero-slider">
+       <div class="hero-bg">
+          <video class="vedio" autoplay loop muted playsinline
+             src="https://www.11-76.com/html5-videos-21/foodex/foodex.mp4">
+          <!-- <iframe width="1280" height="720" src="https://www.youtube.com/embed/e2KE4U1S8Ec" title="12 - Deploy VueJS Application  - Deployapps.io Tutorial Series" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+       </div>
+       @foreach ($sliders as $slider)
+       <div class="hero-bg hero-bg-2" style="background: url('{{asset('gallery_images/big-'.$slider->image)}}') no-repeat center;">
+
+       </div>
+       @endforeach
+    </div>
+
+ </section>
+ <!-- <section class="banner" >
+    <div class="banner-img">
+       <img class="" style="width: 100%;" src="frontend/assets/images/banner.png" alt="">
+       <img class="" style="width: 100%;" src="frontend/assets/images/banner.png" alt="">
+       <img class="" style="width: 100%;" src="frontend/assets/images/banner.png" alt="">
+    </div>
+ </section> -->
+ <!-- banner end -->
+ <!-- Experience -->
+ <section class="experience-area">
+    <div class="container">
+       <div class="experience-item">
+          <div class="row">
+             <div class="col-md-4">
+                <div class="item bg-secondary text-center py-2">
+                   <h4 class="">15 Years</h4>
+                   <p class="">Work Experience</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHO WE ARE -->
-    <section class="padding-top-30 padding-bottom-30">
-        <div class="container">
-            <div class="who-we">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3 class="font-normal">Shataphool Bangladesh: At a glance</h3>
-                        <h6>Where We Started</h6>
-                        <p class="text-justify">Shataphool Bangladesh is a non-government, not-for-profit, non-sectarian, and non-political organization working for social development of vulnerable people who haven’t progressed as they should have.
-                            In 2000, the organization came into being when Mr. M. Shafiqul Islam (UNO of Mohanpur Upazila) founded it with a group of young and energetic people, who were highly motivated and committed to contributing their time, skills and energies for the development and empowerment of socially disadvantaged and vulnerable communities in Mohanpur, addressing poverty issues and eliminating gender based discriminations. By 2001, Shataphool Bangladesh evolved into a formal institution offering micro-credit to poor rural women in Jahanabad Union of Mohanpur Upazila.
-                            Over the next decade the micro credit program diversified, and the organization began providing a variety of micro-credit products for its heterogeneous group of family entrepreneurs, alongside various types of social development programs.</p>
-                    </div>
-                    <div class="col-md-6">
-
-                        <!-- SERVICES -->
-                        <ul class="row">
-
-                            <!-- SERVICES -->
-                            <li class="col-sm-12"> <i class="fa fa-eye"></i>
-                                <h5>our vision</h5>
-                                <p class="text-justify">To ensure the sustainable economic development which provides human rights, mainstreams gender equality, ensures social justice, assures good governance by active participation of multi-tier people of society through poor friendly microfinance services.</p>
-                            </li>
-
-                            <!-- SERVICES -->
-                            <li class="col-sm-12"> <i class="fa fa-rocket"></i>
-                                <h5>our mission</h5>
-                                <p class="text-justify">To establish an apolitical, cosmopolitan, not-for-profit, socioeconomic and philanthropic private voluntary organization which will work with the mission of making people self-dependent of all the religions and color, especially regenerating those who are impoverished and underprivileged.</p>
-                            </li>
-
-                        </ul>
-                    </div>
+             </div>
+             <div class="col-md-4">
+                <div class="item bg-secondary text-center py-2">
+                   <h4 class="">35+</h4>
+                   <p class="">Financial Bank</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Core Program -->
-    <section class="blog light-gray-bg padding-top-30 padding-bottom-30">
-        <div class="container">
-            <!-- Heading -->
-            <div class="heading text-center">
-                <h4>Core Programs</h4>
-            </div>
-            <!-- Blog Row -->
-            <div class="row blog-slide">
-                <!-- Blog Post -->
-                @foreach ($programs as $program)
-
-                <div class="col-md-12 no-padding">
-                    <article> <img class="img-responsive" src="{{asset('program_images/'.$program->image)}}" alt="">
-
-                        <!-- Date -->
-                        <!-- <div class="date"> 19 <span>MAY</span> </div> -->
-
-                        <!-- Detail -->
-                        <div class="post-detail"> <a href="{{$program->programUrl()}}" class="post-tittle">{{$program->title}}</a>
-                            <p>{!!Str::limit($program->details,100)!!}</p>
-                        </div>
-                    </article>
+             </div>
+             <div class="col-md-4">
+                <div class="item bg-secondary text-center py-2">
+                   <h4 class="">48273</h4>
+                   <p class="">Project Done</p>
                 </div>
-                @endforeach
-
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <section  class="experience-area_bottom">
+ <div class="container ">
+    <div class="row">
+      @foreach ($programs as $program)
+      <div class="col-md-4">
+         <div class=" card border-secondary ">
+            <div id="theArt">
+               <div class="artGroup slide">
+                  <div class="artwork"> 
+                        <img src="{{asset('program_images/'.$program->image)}}">
+                     <div class="detail shadow p-3  text-light">
+                        <h3>{{ $program->title }}</h3>
+                        {!! Str::limit($program->details, 300) !!}
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </section>
+            <h6 class="card-text text-center pt-2">{{ $program->title }}</h6>
+         </div>
+      </div>
+      @endforeach
+       
+    </div>
 
-
-    <!-- OUr Projects -->
-    <section class="portfolio  padding-top-30 padding-bottom-20">
-        <div class="container">
-            <!-- Heading -->
-            <div class="heading text-center">
-                <h4>Our Projects</h4>
-            </div>
-
-        </div>
-
-        <!-- PORTFOLIO ROW -->
-        <div class="ajax-work col-3">
-            <!-- ITEMS -->
-            @foreach ($projects as $project)
-
-            <div class="cbp-item ana dial growth">
-                <article class="item"><img class="img-responsive" src="{{asset('program_images/'.$project->image)}}" alt="">
-                    <!-- Hover -->
-                    <div class="over-detail">
-                        <!-- Link -->
-                        <div class="top-detail"> <a href="{{$project->programUrl()}}" class=""><i class="fa fa-link"></i> </a> </div>
-                        <!-- TITTLE HEADING -->
-                        <div class="bottom-detail">
-                            <h6>{{$project->title}}</h6>
-                        </div>
-                    </div>
-                </article>
-            </div>
+ </div>
+ </section>
+ <!-- Experience -->
+ <!-- We are now at -->
+ <section class="">
+    <div class="container">
+       <div class="bg-secondary title-bg w-100 my-5">
+          <h3 class="bg-warning w-25 py-3 px-5 title">We are now at</h3>
+       </div>
+       <div class="devision-item">
+          <div class="row">
+            @foreach ($branches as $key => $branch)
+               @if($key > 0)
+               <div class="col-md-3">
+                  <div class="item bg-secondary text-center py-3">
+                     <h3 class="">{{ $branch->title }}</h3>                    
+                  </div>
+               </div>
+               @endif
             @endforeach
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- We are now at -->
+ <!-- Digital Survey -->
+ <section class="digital_survey mt-5">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-6">
+             <div class="">
 
-        </div>
+          
+                <div class="card border-secondary mb-3 h-100">
 
-        <!-- LOAD MORE -->
-
-        <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
-            <div> <a href="{{route('program.different','Project')}}" class="btn btn-1">
-                    View All  <i class="fa fa-caret-right"></i>
-                </a>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Our associates -->
-    <section class="services padding-top-30 padding-bottom-30">
-        <div class="container">
-            <!-- Heading -->
-            <div class="heading text-center">
-                <h4>Our Associates</h4>
-            </div>
-        </div>
-        <div class="best-services">
-            <!-- Row -->
-            <div class="container">
-                <ul class="row list">
-                    <!-- Analytics -->
-                    @foreach ($associates as $associate)
-                    <li class="col-md-4">
-                        <div class="img-hover-zoom img-hover-zoom--slowmo">
-                            <img src="{{asset('program_images/'.$associate->image)}}" alt="">
-                        </div>
-                        <article class="thumb"><a class="" href="{{$associate->programUrl()}}">
-                                <h5>{{$associate->title}}</h5>
-                                <p>{!!Str::limit($associate->details,100)!!}</p>
-                            </a>
-                        </article>
-                    </li>
-                    @endforeach
-
-                </ul>
-            </div>
-        </div>
-
-        <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
-            <div> <a href="{{route('program.different','Associate')}}" class="btn btn-1">
-                    View All <i class="fa fa-caret-right"></i>
-                </a>
-            </div>
-        </div>
-
-
-    </section>
-
-
-
-
-
-
-    <!-- Counter -->
-    <section class="counter padding-top-30 padding-bottom-30">
-        <div class="container">
-
-            <!-- Team Member -->
-            <ul class="row">
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfService}}" data-from="0"></span> </span>
-                        <h5>Associates</h5>
-                    </div>
-                </li>
-
-                <!-- Line Of Codes -->
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfEvent}}" data-from="0"></span> </span>
-                        <h5>Events</h5>
-                    </div>
-                </li>
-
-                <!-- Satisfied Client -->
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfProject}}" data-from="0"></span> </span>
-                        <h5>Projects</h5>
-                    </div>
-                </li>
-
-                <!-- PSD file included -->
-                <li class="col-md-3">
-                    <div class="count"> <span class="number"> <span class="timer" data-speed="2000" data-refresh-interval="10" data-to="{{$numberOfProgram}}" data-from="0"></span> </span>
-                        <h5>Programs</h5>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Events -->
-    <section class="light-gray-bg  services padding-top-30 padding-bottom-30">
-        <div class="container">
-            <!-- Heading -->
-            <div class="heading text-center">
-                <h4>Events</h4>
-            </div>
-        </div>
-        <div class="blog blog-pages">
-            <!-- Row -->
-            <div class="container">
-                <ul class="row list ">
-                    <!-- Analytics -->
+                   <div class="card-slider">
                     @foreach ($events as $event)
-
-                    <li class="col-md-4">
-
-                        <div class="col-md-12">
-
-                            <!-- Post -->
-                            <article> <img class="img-responsive col-md-12" src="{{asset('program_images/'.$event->image)}}" alt="">
-                                <!-- Date -->
-                                {{-- <div class="date"> 19 <span>MAY</span> </div> --}}
-                                <!-- Detail -->
-                                <div class="post-detail" style="border-bottom: 0px;"> <a href="{{$event->programUrl()}}" class="post-tittle padding-20">{{$event->title}}</a>
-
-                                </div>
-                            </article>
-
+                    <div class="card-body text-secondary d-flex">
+                        <div class="card-item-1">
+                           <h4>{{ $event->title }}</h4>
+                              <p>{!! $event->details !!}</p>
                         </div>
-
-                    </li>
+                        <div class="card-item-2 ">
+                           <div class="img">
+                              <img class="w-100 h-100" src="{{asset('program_images/'.$event->image)}}" alt="">
+                           </div>
+                        </div>
+                     </div>
                     @endforeach
+                   </div>
+                   <div class="bg-secondary w-100">
+                    <h3 class="bg-warning w-25 px-4 py-2">Event</h3>
+                   </div>
+                 </div>
+            
+             </div>
+          </div>
+          <div class="col-md-6">
+             <div class="">
 
-                </ul>
-            </div>
-        </div>
-
-        <div class="text-center margin-top-50 margin-bottom-50 animate fadeInUp" data-wow-delay="0.4s">
-            <div> <a href="{{route('program.different','Event')}}" class="btn btn-1">
-                    View All  <i class="fa fa-caret-right"></i>
-                </a>
-            </div>
-        </div>
-
-
-    </section>
-
-    <!-- Notice -->
-    <section class="padding-top-30 padding-bottom-30">
-        <div class="heading text-center">
-            <h4>Notices</h4>
-        </div>
-
-        <div id="owl-example" class="owl-carousel">
-            @foreach ($notices as $notice)
-            <div class="container col-md-5 text-center" style="float: initial;">
-                <div class="job-content job-post-page margin-20" style="border: 0px;    padding-bottom: 20px;">
-                    <div class="panel panel-default" style="border: 0px;">
-                        <!-- Save -->
-                        <div class="star-save"><a href="{{$notice->programUrl()}}"><i class="fa fa-caret-right"></i></a>
+                <div class="card border-secondary mb-3 h-100">
+                   <div class="card-slider">
+                    @foreach ($newses as $news)
+                    <div class="card-body text-secondary d-flex">
+                        <div class="card-item-1">
+                           <h4>{{ $news->title }}</h4>
+                              <p>{!! $news->details !!}</p>
                         </div>
-                        <!-- PANEL HEADING -->
-                        <div class="panel-heading" style="border: 0px;"> <a href="{{$notice->programUrl()}}">
-                                <div class="job-tittle">
-                                   <div class="media-left">
-                                        <div class="date"> {{date('d ',strtotime($notice->created_at))}}
-                                            <span>{{date('M ',strtotime($notice->created_at))}}</span> </div>
-                                    </div>
-                                    <div class="media-body">
-                                        <h5>{{$notice->title}}</h5>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </a>
-                            <p> {!!Str::limit($notice->details,100)!!}</p>
+                        <div class="card-item-2 ">
+                           <div class="img">
+                              <img class="w-100 h-100" src="{{asset('program_images/'.$news->image)}}" alt="">
+                           </div>
+                   
                         </div>
-                    </div>
+                     </div>
+                    @endforeach
+                   
                 </div>
+                   <div class="bg-secondary w-100">
+                    <h3 class="bg-warning w-25 px-4 py-2">News</h3>
+                   </div>
+                 </div>
+     
+             </div>
+          </div>
+ 
+       </div>
+    </div>
+ </section>
+ <!-- Digital Survey -->
+ <!--  -->
+ <section class="digital_survey  news_area">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-6 mb-3 ">
+             <div class="card border-secondary mb-4 h-100">
+                
+                <div class="card-body text-secondary d-flex">
+                   <ul>
+                    @foreach ($newses as $news)
+                    <li><a>{{ $news->title }}</a></li>
+                    @endforeach
+             
+                   </ul>
+                </div>
+                <div class="bg-secondary w-100">
+                   <h3 class="bg-warning w-50 px-4 py-2 ">News</h3>
+                   </div>
+                </div>
+          </div>
+          <div class="col-md-6 mb-3 ">
+             <div class="card border-secondary mb-4 h-100 build_career">                      
+                <div class="card-body text-secondary ">
+                   <h4 class="mb-3 ">Build career With EIS</h4>                          
+                   <ul >
+                    
+                   <li class="ms-2">  <img style="width: 55px;" src="{{asset('frontend/assets/images/pdf.png')}}" alt=""> Lorem, ipsum dolor.</li>
+                   </ul>                   
+                </div>
+                <div class="bg-secondary w-100">
+                   <h3 class="bg-warning w-50 px-4 py-2 ">Circular / Career
+                   </h3>
+                   </div>
+                </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!--  -->
+ <!-- bank area -->
+ <section class="bank-area mb-5">
+    <div class="container">
+       <h2 class="text-center mb-3">Our Clients List</h2>
+       <div class="bg-secondary bank-area-slider py-3 bank_logo">
+         @foreach ($resources as $resourc)
+            <div class="bank_logo_item">
+               <div class="img"><img src="{{asset('program_images/'.$resourc->image)}}" alt=""></div>
+            </div> 
+         @endforeach
+
+       </div>
+    </div>
+ </section>
+ <!-- bank area -->
+ <!--  -->
+ <section class="superentendency">
+    <div class="container">
+       <div class="bg-secondary title-bg  w-100 my-5">
+          <h3 class="bg-warning w-25 py-3 px-5 title">Superentendency-</h3>
+       </div>
+       <div class="row">
+         @foreach ($teams as $team)
+         <div class="col-md-6 mb-4">
+            <div class="card border-secondary h-100">
+         
+               <div class="card-body text-secondary d-flex justify-content-between align-items-center">
+                  <div class="text">
+                     <h4 class="mb-3 ">{{ $team->name }}</h4>   
+                     <p>{{ $team->designation }}<br>
+                        {!! $team->about !!}
+                     </p>
+                  </div>
+               <div class="img">
+                  <img class="w-100" src="{{asset('team_images/'.$team->image)}}" alt="">
+               </div>                   
+               </div>
+         
             </div>
-            @endforeach
+         </div>
+         @endforeach
+          <div class="col-md-6 mb-4"></div>
+       </div>
 
-        </div>
+    </div>
+ </section>
+ <!--  -->
+ <!--  -->
+ <section class="send_a_messege">
+    <div class="container">
+       <div class="bg-secondary title-bg  w-100 my-5">
+          <h3 class="bg-warning w-25 py-3 px-5 title">Superentendency-</h3>
+       </div>
+       <div class="bg-secondary px-3 pt-5 pb-3">
+          <form class="d-flex justify-content-between send_a_messege_item"  method="POST" action="{{route('submit.feedback')}}">
+            @csrf
+             <div class="  input_item">
+                <div class="input d-flex mb-3">
+                   <label for="" class="w-25">Name</label>
+                   @guest
+                  <input data-parsley-trigger="change" value="{{old('name')}}" required type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="nameHelp" placeholder="Enter name">
+                  @else
+                  <input data-parsley-trigger="change" required type="text" class="form-control" id="exampleInputEmail1" value="{{Auth::user()->name}}" name="name" aria-describedby="nameHelp" placeholder="Enter name">
+                  @endguest
+                </div>
+                <div class="input d-flex mb-3">
+                   <label for="" class="w-25">Contact No.</label>
+                   <input data-parsley-trigger="change" required value="{{old('phone')}}" required type="text" class="form-control" id="exampleInputEmail1" name="phone" aria-describedby="emailHelp" placeholder="Enter phone">
+                </div>
+                <div class="input d-flex mb-3">
+                   <label for="" class="w-25">E-mail</label>
+                   @guest
+                  <input data-parsley-trigger="change" value="{{old('email')}}" required type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                  @else
+                  <input data-parsley-trigger="change" required type="email" class="form-control" id="exampleInputEmail1" value="{{Auth::user()->email}}" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                  @endguest
+                </div>
+                <div class="checkbox">
+                   <h4 class="mb-4">Type of Inquiry:</h4>
+                   <div class="d-flex flex-wrap">
+                      <div class="checkbox-item">
+                         <input type="checkbox" id="Valuation" name="Valuation" value="Valuation">
+                         <label for="Valuation"> Valuation & Survey</label>
+                      </div>
+                      <div class="checkbox-item">
+                         <input type="checkbox" id="Digital" name="Digital" value="Digital">
+                         <label for="Digital"> Digital Survey</label>
+                      </div>
+                      <div class="checkbox-item">
+                         <input type="checkbox" id="Civil" name="Civil" value="Civil">
+                         <label for="Civil"> Civil</label>
+                      </div>
+                      <div class="checkbox-item">
+                         <input type="checkbox" id="Engineering" name="Engineering" value="Engineering">
+                         <label for="Engineering"> Engineering</label>
+                      </div>
+                      <div class="checkbox-item">
+                         <input type="checkbox" id="General" name="General" value="General">
+                         <label for="General">General</label>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <div class=" input_item textarea">
+                <label for="" class="d-block mb-2">Messege:</label>
+                {{-- <textarea  name="" id="" cols="30" rows="7" class="form-control "></textarea> --}}
+                <textarea name="message" required class="form-control" rows="7" cols="30">{{old('message')}}</textarea>
+             <div class="col-12 text-right">
+                <button class="btn btn-warning mt-3">Submit:</button>
+             </div>
+             </div>
+          </form>
+       </div>
 
+    </div>
+ </section>
+ <!--  -->
+ <!--  -->
+ <section class="welcome_head_office mb-5">
+    <div class="container">
+       <div class="bg-secondary title-bg  w-100 my-3">
+          <div class="bg-secondary  w-100  mt-5 mb-3">
+          <h3 class="bg-warning w-25 py-3 px-5 title">Welcome Head Office</h3>
+       </div>
+    </div>
+       <div class="d-flex welcome_head_office_item">
+          <div class="bg-secondary align-items-center justify-content-center d-flex w-25 left-item">
+             <div class="content bg-white px-3 py-4 m-3">
+                <h4 class="mb-3">Head Office :</h4>
+                <p class="mb-3">{{setting('office_address')}}
+                   </p>
+                   <div class="">
+                      <div class="contact d-flex mb-2">
+                         <div class="icon me-2"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                   <div class="contact-info">
+                      <span>{{setting('office_phone')}}</span>
+                   </div>
+                      </div>
+                      {{-- <div class="contact d-flex mb-2">
+                         <div class="icon me-2"><i class="fab fa-facebook-square"></i></div>
+                   <div class="contact-info">
+                      <span>+880 1310 7777777 </span>
+                   </div>
+                      </div> --}}
+                      <div class="contact d-flex mb-2">
+                         <div class="icon me-2"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                   <div class="contact-info">
+                      <a href="mailto:{{ setting('office_email') }}">{{setting('office_email')}}</a>
+                   </div>
+                      </div>
 
-    </section>
+                   </div>
+             </div>
+          </div>
+          <div class="map w-75">
+             <iframe class="w-100 h-100" src="{{ setting('office_map') }}" width="600" height="450" style="border:0;filter: invert(100%)" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             <!-- <iframe class="w-100 h-100"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246783.4114385055!2d-74.1197636697327!3d40.69766374854729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e1!3m2!1sen!2sbd!4v1670348036670!5m2!1sen!2sbd" width="600" height="450" style="border:0; filter: invert(100%)" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+          </div>
 
-    <!-- Testimonial -->
-    <section class="testi-bg padding-top-30 padding-bottom-30">
-        <div class="heading text-center">
-            <h4>Management Thoughts</h4>
-        </div>
-
-        <div id="owl-example2" class="owl-carousel">
-            @foreach ($testimonials as $testimonial)
-            <div class="container col-md-12 text-center">
-                <img class="mt-img" src="{{asset('testimonial_images/'.$testimonial->image)}}" alt="">
-                <br>
-                <br>
-                <p class="font-bold font-italic" style="font-size: larger;">
-                    {!!$testimonial->message!!}
-                </p>
-                <span class="primary-color">
-                    {{$testimonial->name}}
-                </span>
-            </div>
-
-            @endforeach
-        </div>
-
-
-    </section>
-</div>
-
+       </div>
+   
+ </section>
+ <!--  -->
+ <!--  -->
 @endsection
